@@ -20,6 +20,7 @@
 #include "ArrayIntro.cpp"
 #include "algos/SelectionSort.cpp"
 #include "algos/BubbleSort.cpp"
+#include "algos/InBuiltSort.cpp"
 using namespace std;
 
 int length(char arr[]){
@@ -605,7 +606,7 @@ void print2De(int m, int n) {
     }
 }
 int main() {
-    BubbleSort sort;
+    InBuiltSort sort;
     //int n, val;
     //cin >> n; //The number of objects that is going to be created.
     //Person* per[4];

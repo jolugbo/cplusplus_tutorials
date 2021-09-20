@@ -20,17 +20,18 @@ public:
 		}
 	}
 	void SortIt(int arr[],int len) {
+		int flag = 0;
 		for (int i = 0; i < len - 1; i++)
 		{
-			for (int j = 0; j < len -2; j++)
+			for (int j = 0; j < len - i - 1; j++)
 			{
-				bubble(arr, i, i + 1);
+				if (arr[j] > arr[j+1]) {
+					swap(arr[j], arr[j+1]);
+					flag = 1;
+				}
 			}
-		}
-	}
-	void bubble(int arr[], int start, int end) {
-		if (arr[start] > arr[end]) {
-			swap(arr[start], arr[end]);
+			if (flag == 0)
+				break;
 		}
 	}
 };

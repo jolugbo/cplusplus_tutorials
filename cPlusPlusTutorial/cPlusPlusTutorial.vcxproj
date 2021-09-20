@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="algos\BubbleSort.cpp" />
+    <ClCompile Include="algos\InBuiltSort.cpp" />
     <ClCompile Include="algos\SelectionSort.cpp" />
     <ClCompile Include="ArrayIntro.cpp" />
     <ClCompile Include="complexNumber.cpp" />
