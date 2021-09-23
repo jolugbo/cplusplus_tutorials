@@ -45,19 +45,37 @@
     <ClCompile Include="vectorManipulations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\SelectionSort.cpp">
+    <ClCompile Include="algos\sortAlgos\SelectionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\BubbleSort.cpp">
+    <ClCompile Include="algos\sortAlgos\BubbleSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\InBuiltSort.cpp">
+    <ClCompile Include="algos\sortAlgos\InBuiltSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\searchAlgos\LinearSearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\BinarySerchAlgo.cpp">
+    <ClCompile Include="algos\sortAlgos\BinarySerchAlgo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\Factorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\Fibonacci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\Power.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\DigitCount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\SumOfDigit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\recursions\SummedMultiplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

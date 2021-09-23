@@ -18,11 +18,13 @@
 #include "spiralMatrix.cpp"
 #include <sstream>
 #include "ArrayIntro.cpp"
-#include "algos/SelectionSort.cpp"
-#include "algos/BubbleSort.cpp"
-#include "algos/InBuiltSort.cpp"
 #include "algos/searchAlgos/LinearSearch.cpp"
-#include "algos/BinarySerchAlgo.cpp"
+#include "algos/recursions/Factorial.cpp"
+#include "algos/recursions/Fibonacci.cpp"
+#include "algos/recursions/Power.cpp"
+#include "algos/recursions/DigitCount.cpp"
+#include "algos/recursions/SumOfDigit.cpp"
+#include "algos/recursions/SummedMultiplication.cpp"
 using namespace std;
 
 int length(char arr[]){
@@ -608,7 +610,7 @@ void print2De(int m, int n) {
     }
 }
 int main() {
-    BinarySearchAlgo sort;
+    SummedMultiplier sort;
     //int n, val;
     //cin >> n; //The number of objects that is going to be created.
     //Person* per[4];

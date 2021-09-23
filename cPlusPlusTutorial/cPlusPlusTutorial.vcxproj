@@ -140,11 +140,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algos\BinarySerchAlgo.cpp" />
-    <ClCompile Include="algos\BubbleSort.cpp" />
-    <ClCompile Include="algos\InBuiltSort.cpp" />
+    <ClCompile Include="algos\recursions\DigitCount.cpp" />
+    <ClCompile Include="algos\recursions\Factorial.cpp" />
+    <ClCompile Include="algos\recursions\Fibonacci.cpp" />
+    <ClCompile Include="algos\recursions\Power.cpp" />
+    <ClCompile Include="algos\recursions\SummedMultiplication.cpp" />
+    <ClCompile Include="algos\recursions\SumOfDigit.cpp" />
+    <ClCompile Include="algos\sortAlgos\BinarySerchAlgo.cpp" />
+    <ClCompile Include="algos\sortAlgos\BubbleSort.cpp" />
+    <ClCompile Include="algos\sortAlgos\InBuiltSort.cpp" />
     <ClCompile Include="algos\searchAlgos\LinearSearch.cpp" />
-    <ClCompile Include="algos\SelectionSort.cpp" />
+    <ClCompile Include="algos\sortAlgos\SelectionSort.cpp" />
     <ClCompile Include="ArrayIntro.cpp" />
     <ClCompile Include="complexNumber.cpp" />
     <ClCompile Include="cPlusPlusTutorial.cpp" />
