@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.210913.7\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210913.7\build\native\Microsoft.Windows.CppWinRT.props')" />
   <ItemGroup Label="ProjectConfigurations">
@@ -140,11 +140,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algos\recursions\CheckPalindrome.cpp" />
+    <ClCompile Include="algos\recursions\CountOccuranceOfElementInArray.cpp" />
+    <ClCompile Include="algos\recursions\CountZeros.cpp" />
     <ClCompile Include="algos\recursions\DigitCount.cpp" />
     <ClCompile Include="algos\recursions\Factorial.cpp" />
     <ClCompile Include="algos\recursions\Fibonacci.cpp" />
+    <ClCompile Include="algos\recursions\FirstIndexOfElment.cpp" />
+    <ClCompile Include="algos\recursions\GeometricSum.cpp" />
+    <ClCompile Include="algos\recursions\IsArraySorted.cpp" />
+    <ClCompile Include="algos\recursions\LastIndexOf.cpp" />
     <ClCompile Include="algos\recursions\Power.cpp" />
+    <ClCompile Include="algos\recursions\PrintAllPositiionOfElement.cpp" />
+    <ClCompile Include="algos\recursions\PrintAllSubstringOfString.cpp" />
+    <ClCompile Include="algos\recursions\RecursivelyCount.cpp" />
+    <ClCompile Include="algos\recursions\RecursivelyRemove.cpp" />
+    <ClCompile Include="algos\recursions\RecursivelyRemoveConsecutiveDuplicates.cpp" />
+    <ClCompile Include="algos\recursions\RecursivelyReplace.cpp" />
+    <ClCompile Include="algos\recursions\RecursivePrinting.cpp" />
+    <ClCompile Include="algos\recursions\RecursiveSearch.cpp" />
+    <ClCompile Include="algos\recursions\StoreAllSubstringOfSring.cpp" />
+    <ClCompile Include="algos\recursions\StoreItemPositionInArray.cpp" />
     <ClCompile Include="algos\recursions\SummedMultiplication.cpp" />
+    <ClCompile Include="algos\recursions\SumOfArray.cpp" />
     <ClCompile Include="algos\recursions\SumOfDigit.cpp" />
     <ClCompile Include="algos\sortAlgos\BinarySerchAlgo.cpp" />
     <ClCompile Include="algos\sortAlgos\BubbleSort.cpp" />

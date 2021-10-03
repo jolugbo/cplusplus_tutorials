@@ -25,6 +25,24 @@
 #include "algos/recursions/DigitCount.cpp"
 #include "algos/recursions/SumOfDigit.cpp"
 #include "algos/recursions/SummedMultiplication.cpp"
+#include "algos/recursions/CountZeros.cpp"
+#include "algos/recursions/GeometricSum.cpp"
+#include "algos/recursions/IsArraySorted.cpp"
+#include "algos/recursions/SumOfArray.cpp"
+#include "algos/recursions/RecursiveSearch.cpp"
+#include "algos/recursions/FirstIndexOfElment.cpp"
+#include "algos/recursions/LastIndexOf.cpp"
+#include "algos/recursions/PrintAllPositiionOfElement.cpp"
+#include "algos/recursions/CountOccuranceOfElementInArray.cpp"
+#include "algos/recursions/StoreItemPositionInArray.cpp"
+#include "algos/recursions/CheckPalindrome.cpp"
+#include "algos/recursions/RecursivePrinting.cpp"
+#include "algos/recursions/RecursivelyCount.cpp"
+#include "algos/recursions/RecursivelyReplace.cpp"
+#include "algos/recursions/RecursivelyRemove.cpp"
+#include "algos/recursions/RecursivelyRemoveConsecutiveDuplicates.cpp"
+#include "algos/recursions/PrintAllSubstringOfString.cpp"
+#include "algos/recursions/StoreAllSubstringOfSring.cpp"
 using namespace std;
 
 int length(char arr[]){
@@ -610,7 +628,7 @@ void print2De(int m, int n) {
     }
 }
 int main() {
-    SummedMultiplier sort;
+    StoreAllSubstringOfString sort;
     //int n, val;
     //cin >> n; //The number of objects that is going to be created.
     //Person* per[4];
