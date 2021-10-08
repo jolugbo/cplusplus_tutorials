@@ -43,6 +43,13 @@
 #include "algos/recursions/RecursivelyRemoveConsecutiveDuplicates.cpp"
 #include "algos/recursions/PrintAllSubstringOfString.cpp"
 #include "algos/recursions/StoreAllSubstringOfSring.cpp"
+#include "algos/recursions/RecursiveStringToInt.cpp"
+#include "algos/recursions/RecursivelyPrintPermutaion.cpp"
+#include "algos/recursions/RecursivelyPrintDownLink.cpp"
+#include "algos/recursions/RecursiveTowerOfHanoi.cpp"
+#include "algos/sortAlgos/MergeSort.cpp"
+#include "algos/sortAlgos/QuickSort.cpp"
+#include "algos/sortAlgos/QuickSort.cpp"
 using namespace std;
 
 int length(char arr[]){
@@ -628,7 +635,7 @@ void print2De(int m, int n) {
     }
 }
 int main() {
-    StoreAllSubstringOfString sort;
+    QuickSorting sort;
     //int n, val;
     //cin >> n; //The number of objects that is going to be created.
     //Person* per[4];
