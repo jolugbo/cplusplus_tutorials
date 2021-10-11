@@ -150,6 +150,9 @@
     <ClCompile Include="algos\sortAlgos\QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\searchAlgos\FirstAndLastOccurance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">

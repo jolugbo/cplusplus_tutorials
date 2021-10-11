@@ -169,6 +169,7 @@
     <ClCompile Include="algos\recursions\SumOfArray.cpp" />
     <ClCompile Include="algos\recursions\SumOfDigit.cpp" />
     <ClCompile Include="algos\searchAlgos\BinarySerchAlgo.cpp" />
+    <ClCompile Include="algos\searchAlgos\FirstAndLastOccurance.cpp" />
     <ClCompile Include="algos\sortAlgos\BubbleSort.cpp" />
     <ClCompile Include="algos\sortAlgos\InBuiltSort.cpp" />
     <ClCompile Include="algos\searchAlgos\LinearSearch.cpp" />
