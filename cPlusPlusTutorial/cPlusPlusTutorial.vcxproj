@@ -170,6 +170,8 @@
     <ClCompile Include="algos\recursions\SumOfDigit.cpp" />
     <ClCompile Include="algos\searchAlgos\BinarySerchAlgo.cpp" />
     <ClCompile Include="algos\searchAlgos\FirstAndLastOccurance.cpp" />
+    <ClCompile Include="algos\searchAlgos\MajorityElement.cpp" />
+    <ClCompile Include="algos\searchAlgos\SearchInReverseSorted.cpp" />
     <ClCompile Include="algos\sortAlgos\BubbleSort.cpp" />
     <ClCompile Include="algos\sortAlgos\InBuiltSort.cpp" />
     <ClCompile Include="algos\searchAlgos\LinearSearch.cpp" />
@@ -179,6 +181,8 @@
     <ClCompile Include="ArrayIntro.cpp" />
     <ClCompile Include="complexNumber.cpp" />
     <ClCompile Include="cPlusPlusTutorial.cpp" />
+    <ClCompile Include="data_structure\LinkedList\LinkedListRecursive.cpp" />
+    <ClCompile Include="data_structure\LinkedList\Node.cpp" />
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fractor.cpp" />
     <ClCompile Include="main.cpp" />

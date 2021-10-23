@@ -51,6 +51,10 @@
 #include "algos/sortAlgos/QuickSort.cpp"
 #include "algos/sortAlgos/QuickSort.cpp"
 #include "algos/searchAlgos/FirstAndLastOccurance.cpp"
+#include "algos/searchAlgos/SearchInReverseSorted.cpp"
+#include "algos/searchAlgos/MajorityElement.cpp"
+#include "data_structure/LinkedList/Node.cpp"
+#include "data_structure/LinkedList/LinkedListRecursive.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -540,6 +544,7 @@ public:
 		return ::to_string(age) + "," + first_name + "," + last_name + "," + ::to_string(standard);
 	}
 };
+
 class Box {
 private:
 	int l, b, h;
@@ -583,6 +588,7 @@ public:
 		return os;
 	}
 };
+
 class Person {
 public:
 	string name;
@@ -636,7 +642,7 @@ void print2De(int m, int n) {
 	}
 }
 int main() {
-	FirstAndLastOccurance sort;
+	RecursiveNode samples;
 	//int n, val;
 	//cin >> n; //The number of objects that is going to be created.
 	//Person* per[4];
