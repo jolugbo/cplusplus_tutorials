@@ -18,9 +18,25 @@ public:
 		n3.next = &n4;
 		n4.next = &n5;
 		int len = length(head);
-		cout << len;
+		cout << FindItemInLinkedList(head,4,0);
 	}
-	
+	int FindItemInLinkedList(Node* node, int item,int position) {
+		if (node == NULL)
+		{
+			return -1;
+		}
+		else
+		{
+			if (node->data == item)
+			{
+				return position + 1;
+			}
+			else
+			{
+				return FindItemInLinkedList(node->next,item, position + 1);
+			}
+		}
+	}
 	int length(Node* node) {
 		if (node == NULL)
 		{
