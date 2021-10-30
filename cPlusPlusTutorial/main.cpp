@@ -644,7 +644,7 @@ void print2De(int m, int n) {
 int main() {
 	RecursiveNode samples;
 	//int n, val;
-	//cin >> n; //The number of objects that is going to be created.
+	//cin >> n; 
 	//Person* per[4];
 
 	//for (int i = 0; i < n; i++) {
