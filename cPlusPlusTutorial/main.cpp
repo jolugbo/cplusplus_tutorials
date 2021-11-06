@@ -59,6 +59,7 @@
 #include "data_structure/Stacks/Stack.cpp"
 #include "data_structure/Templates/Template.cpp"
 #include "data_structure/Templates/DoubleTemplates.cpp"
+#include "data_structure/Stacks/StackWithLinkedList.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -662,7 +663,16 @@ void StackUse() {
 	cout << s.isEmpty() << endl;
 
 }
-
+void StackWithLinkedListUse() {
+	StackWithLinkedList swl;
+	swl.push(1);
+	swl.push(2);
+	swl.push(3);
+	swl.push(4);
+	swl.pop();
+	swl.pop();
+	swl.pop();
+}
 void templateUse() {
 	Pair<int> temp1;
 	temp1.setX(10);
@@ -688,7 +698,7 @@ void templateUse() {
 }
 
 int main() {
-	StackUse();
+	StackWithLinkedListUse();
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
