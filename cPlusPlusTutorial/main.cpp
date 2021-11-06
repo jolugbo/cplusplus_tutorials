@@ -57,7 +57,8 @@
 #include "data_structure/LinkedList/LinkedListRecursive.cpp"
 #include "data_structure/LinkedList/JosephusCircle.cpp"
 #include "data_structure/Stacks/Stack.cpp"
-#include "data_structure/Template.cpp"
+#include "data_structure/Templates/Template.cpp"
+#include "data_structure/Templates/DoubleTemplates.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -668,6 +669,22 @@ void templateUse() {
 	temp1.setY(20);
 
 	cout << temp1.getY() + temp1.getX() << endl;
+
+	DoublePair<int, double> doublePairs;
+	double x = 10.55;
+	doublePairs.setX(x);
+	doublePairs.setY(x);
+
+	cout << doublePairs.getX() + doublePairs.getY()<< endl;
+
+	DoublePair<DoublePair<int,double>, double> triplet;
+	DoublePair<int, double> doubles;
+	doubles.setX(10);
+	doubles.setY(2.5);
+	triplet.setY(12.1);
+	triplet.setX(doubles);
+	cout << triplet.getX().getX()<<" "<< triplet.getX().getY()<< " " << triplet.getY() <<" "<< triplet.getX().getX() + triplet.getY() << endl;
+
 }
 
 int main() {

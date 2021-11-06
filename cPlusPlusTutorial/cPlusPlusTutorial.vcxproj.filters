@@ -171,7 +171,10 @@
     <ClCompile Include="data_structure\Stacks\Stack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="data_structure\Template.cpp">
+    <ClCompile Include="data_structure\Templates\Template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data_structure\Templates\DoubleTemplates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -191,5 +194,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="..\..\..\..\Documents\Custom Office Templates\Book1.xlsx" />
   </ItemGroup>
 </Project>
