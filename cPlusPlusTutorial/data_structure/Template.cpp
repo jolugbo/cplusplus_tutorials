@@ -2,6 +2,7 @@ template<typename T>
 class Pair {
 	T x;
 	T y;
+public:
 	T getX() {
 		return x;
 	}

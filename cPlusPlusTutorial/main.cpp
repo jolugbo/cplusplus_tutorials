@@ -57,6 +57,7 @@
 #include "data_structure/LinkedList/LinkedListRecursive.cpp"
 #include "data_structure/LinkedList/JosephusCircle.cpp"
 #include "data_structure/Stacks/Stack.cpp"
+#include "data_structure/Template.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -660,8 +661,17 @@ void StackUse() {
 	cout << s.isEmpty() << endl;
 
 }
+
+void templateUse() {
+	Pair<int> temp1;
+	temp1.setX(10);
+	temp1.setY(20);
+
+	cout << temp1.getY() + temp1.getX() << endl;
+}
+
 int main() {
-	StackUse();
+	templateUse();
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
