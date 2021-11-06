@@ -56,6 +56,7 @@
 #include "data_structure/LinkedList/Node.cpp"
 #include "data_structure/LinkedList/LinkedListRecursive.cpp"
 #include "data_structure/LinkedList/JosephusCircle.cpp"
+#include "data_structure/Stacks/Stack.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -642,8 +643,25 @@ void print2De(int m, int n) {
 		}
 	}
 }
+
+void StackUse() {
+	Stack s(4);
+	for (int i = 0; i < 4; i++)
+	{
+		s.push(i * 10);
+	}
+	cout << s.top() << endl;
+	s.pop();
+	cout << s.top() << endl;
+	s.pop();
+	cout << s.top() << endl;
+	s.pop();
+	cout << s.Size() << endl;
+	cout << s.isEmpty() << endl;
+
+}
 int main() {
-	JosephusCircle samples;
+	StackUse();
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

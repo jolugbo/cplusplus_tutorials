@@ -184,6 +184,7 @@
     <ClCompile Include="data_structure\LinkedList\JosephusCircle.cpp" />
     <ClCompile Include="data_structure\LinkedList\LinkedListRecursive.cpp" />
     <ClCompile Include="data_structure\LinkedList\Node.cpp" />
+    <ClCompile Include="data_structure\Stacks\Stack.cpp" />
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fractor.cpp" />
     <ClCompile Include="main.cpp" />
