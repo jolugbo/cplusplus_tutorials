@@ -647,10 +647,10 @@ void print2De(int m, int n) {
 }
 
 void StackUse() {
-	Stack s(4);
+	Stack<char> s(4);
 	for (int i = 0; i < 4; i++)
 	{
-		s.push(i * 10);
+		s.push(i + 100);
 	}
 	cout << s.top() << endl;
 	s.pop();
@@ -688,7 +688,7 @@ void templateUse() {
 }
 
 int main() {
-	templateUse();
+	StackUse();
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

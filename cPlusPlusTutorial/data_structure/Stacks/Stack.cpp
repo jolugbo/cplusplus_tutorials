@@ -1,20 +1,21 @@
 #include <iostream>
 using namespace std;
+template<typename T>
 class Stack {
 private:
-	int* arr;
+	T* arr;
 	int size;
 	int currentIndex;
 public:
 	Stack(int size) {
 		this->size = size;
-		arr = new int[size];
+		arr = new T[size];
 		this->currentIndex = 0;
 	}
 	int Size() {
 		return currentIndex;
 	}
-	void push(int item) {
+	void push(T item) {
 		if (currentIndex == size)
 		{
 			cout << "Stack overflow";
@@ -31,11 +32,11 @@ public:
 		}
 		currentIndex--;
 	}
-	int top() {
+	T top() {
 		if (isEmpty())
 		{
 			cout << "Stack underflow";
-			return INT64_MIN;
+			return 0;
 		}
 		else return arr[currentIndex - 1];
 	}
