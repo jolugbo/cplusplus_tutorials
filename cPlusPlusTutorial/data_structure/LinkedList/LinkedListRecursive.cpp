@@ -10,20 +10,20 @@ public:
 		Node n2(2);
 		Node* head2 = new Node(n2.data);
 		Node n3(3);
-		Node n4(4);
+		Node n4(6);
 		Node n5(5);
-		Node n6(6);
+		Node n6(4);
 		Node* randomNode = new Node(455);
 		head = &n1;
 		head2 = &n2;
-		n1.next = &n3;
-		n2.next = &n4;
-		n3.next = &n5;
-		n4.next = &n6;
-		/*n5.next = &n6;*/
+		n1.next = &n2;
+		n2.next = &n3;
+		n3.next = &n4;
+		n4.next = &n5;
+		n5.next = &n6;
 		int len = length(head);
 		//LinkedListPrinter(head);
-		Node* newNode = mergeTwoSortedListRecursively(head, head2);
+		Node* newNode = sortLinkedList(head);
 		LinkedListPrinter(newNode);
 	}
 	
@@ -206,5 +206,21 @@ public:
 			mergedNode->next = mergeTwoSortedListRecursively(node1, node2->next);
 		}
 		return mergedNode;
+	}
+
+	Node* sortLinkedList(Node* node) {
+		if (node == NULL | node->next == NULL)return node;
+		Node* slow = node;
+		Node* fast = node->next;
+		while (fast && fast->next)
+		{
+			slow = slow->next;
+			fast = fast->next->next;
+		}
+		Node* nodeSplit = slow->next;
+		slow->next = NULL;
+		Node* node1 = sortLinkedList(node);
+		Node* node2 = sortLinkedList(nodeSplit);
+		Node* resp = mergeTwoSortedList(node1,node2);
 	}
 };

@@ -55,6 +55,7 @@
 #include "algos/searchAlgos/MajorityElement.cpp"
 #include "data_structure/LinkedList/Node.cpp"
 #include "data_structure/LinkedList/LinkedListRecursive.cpp"
+#include "data_structure/LinkedList/JosephusCircle.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -642,7 +643,7 @@ void print2De(int m, int n) {
 	}
 }
 int main() {
-	RecursiveNode samples;
+	JosephusCircle samples;
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
