@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 template<typename T>
-class Stack {
+class Stacks {
 private:
 	T* arr;
 	int size;
 	int currentIndex;
 public:
-	Stack(int size) {
+	Stacks(int size) {
 		this->size = size;
 		arr = new T[size];
 		this->currentIndex = 0;

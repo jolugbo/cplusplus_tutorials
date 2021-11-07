@@ -48,4 +48,34 @@ public:
             cout<< vecs.at(i)<<" ";
         }
     }
+
+    int calc(vector<string> ops) {
+        int* arr = new int(ops.size());
+        int pos = 0;
+        int sum = 0;
+        for (int i = 0; i < ops.size(); i++)
+        {
+            if (ops[i] == "+") {
+                arr[pos++] = arr[pos - 1] + arr[pos - 2];
+            }
+            else if (ops[i] == "D")
+            {
+                arr[pos++] = 2 * arr[pos - 1];
+            }
+            else if (ops[i] == "C")
+            {
+                arr[pos - 1] = 0;
+                pos--;
+            }
+            else
+            {
+                arr[pos] = std::atoi(ops[i].c_str());
+            }
+        }
+        for (int i = 0; i <= pos; i++)
+        {
+            sum += arr[i];
+        }
+        return sum;
+    }
 };

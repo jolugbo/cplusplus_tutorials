@@ -16,5 +16,4 @@ public:
 		delete temp;
 		size--;
 	}
-
 };
