@@ -183,6 +183,9 @@
     <ClCompile Include="data_structure\Stacks\InBuiltStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\Stacks\BalancedParenthesis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
