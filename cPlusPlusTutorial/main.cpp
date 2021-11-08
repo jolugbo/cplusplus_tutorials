@@ -60,6 +60,7 @@
 #include "data_structure/Templates/Template.cpp"
 #include "data_structure/Templates/DoubleTemplates.cpp"
 #include "data_structure/Stacks/StackWithLinkedList.cpp"
+#include "data_structure/Stacks/InBuiltStack.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -648,7 +649,7 @@ void print2De(int m, int n) {
 }
 
 void StackUse() {
-	Stack<char> s(4);
+	Stacks<char> s(4);
 	for (int i = 0; i < 4; i++)
 	{
 		s.push(i + 100);
@@ -698,7 +699,7 @@ void templateUse() {
 }
 
 int main() {
-	StackWithLinkedListUse();
+	InBuiltStack();
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
