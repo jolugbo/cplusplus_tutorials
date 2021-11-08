@@ -61,6 +61,7 @@
 #include "data_structure/Templates/DoubleTemplates.cpp"
 #include "data_structure/Stacks/StackWithLinkedList.cpp"
 #include "data_structure/Stacks/InBuiltStack.cpp"
+#include "data_structure/Stacks/BalancedParenthesis.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -699,7 +700,7 @@ void templateUse() {
 }
 
 int main() {
-	InBuiltStack();
+	BalancedParenthesis BP("(){}}{");
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
