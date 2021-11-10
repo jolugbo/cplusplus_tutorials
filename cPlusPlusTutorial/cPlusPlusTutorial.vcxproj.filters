@@ -192,6 +192,9 @@
     <ClCompile Include="data_structure\Stacks\RemoveAllAdjacentDuplicate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\Queue\QueueWithArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
