@@ -63,6 +63,7 @@
 #include "data_structure/Stacks/InBuiltStack.cpp"
 #include "data_structure/Stacks/BalancedParenthesis.cpp"
 #include "data_structure/Stacks/ReversePolishNotation.cpp"
+#include "data_structure/Stacks/RemoveAllAdjacentDuplicate.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -701,13 +702,7 @@ void templateUse() {
 }
 
 int main() {
-	array<string,13> input = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
-	vector<string> tokens;
-	for (int i = 0; i < 13; i++)
-	{
-		tokens.push_back(input[i]);
-	}
-	ReversePolishNotation rpn(tokens);
+	RemoveAllAdjacentDuplicate rad("abbaca");
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

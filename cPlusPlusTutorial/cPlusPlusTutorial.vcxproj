@@ -186,6 +186,7 @@
     <ClCompile Include="data_structure\LinkedList\Node.cpp" />
     <ClCompile Include="data_structure\Stacks\BalancedParenthesis.cpp" />
     <ClCompile Include="data_structure\Stacks\InBuiltStack.cpp" />
+    <ClCompile Include="data_structure\Stacks\RemoveAllAdjacentDuplicate.cpp" />
     <ClCompile Include="data_structure\Stacks\ReversePolishNotation.cpp" />
     <ClCompile Include="data_structure\Stacks\Stack.cpp" />
     <ClCompile Include="data_structure\Stacks\StackWithLinkedList.cpp" />
