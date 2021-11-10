@@ -27,5 +27,10 @@ public:
 			outputstr = output.top()+ outputstr;
 			output.pop();
 		}
+		while (!output.empty()) {
+			outputstr.push_back(output.top());
+			output.pop();
+		}
+		reverse(outputstr.begin(), outputstr.end());
 	}
 };
