@@ -1,3 +1,4 @@
+#include <cstdlib>
 class QueueWithArray {
 public:
 	int firstIndex = 0;
@@ -11,10 +12,25 @@ public:
 	}
 
 	void push(int value) {
+		if (currentIndex == size)
+		{
+			currentIndex = 0;
+			arr[currentIndex++] = value;
+		}
 		arr[currentIndex++] = value;
 	}
 	void pop() {
 		if (firstIndex != 0)
 			firstIndex++;
 	}
+	int front() {
+		return arr[firstIndex];
+	}
+	int size() {
+		return abs(currentIndex - firstIndex - 1);
+	}
 };
+
+// 1 2 3 4 5
+// 1 0 0 1 1
+// 1 1 0 0 0
