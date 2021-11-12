@@ -65,6 +65,7 @@
 #include "data_structure/Stacks/ReversePolishNotation.cpp"
 #include "data_structure/Stacks/RemoveAllAdjacentDuplicate.cpp"
 #include "data_structure/Queue/QueueWithArray.cpp"
+#include "data_structure/Queue/QueueWithDynamicArray.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -703,7 +704,7 @@ void templateUse() {
 }
 
 int main() {
-	QueueWithArray<int> q(5);
+	QueueWithDynamicArray<int> q(5);
 	q.push(10);
 	q.push(20);
 	q.push(30);
