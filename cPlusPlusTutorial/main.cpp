@@ -64,6 +64,7 @@
 #include "data_structure/Stacks/BalancedParenthesis.cpp"
 #include "data_structure/Stacks/ReversePolishNotation.cpp"
 #include "data_structure/Stacks/RemoveAllAdjacentDuplicate.cpp"
+#include "data_structure/Queue/QueueWithArray.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -702,7 +703,30 @@ void templateUse() {
 }
 
 int main() {
-	RemoveAllAdjacentDuplicate rad("abbaca");
+	QueueWithArray<int> q(5);
+	q.push(10);
+	q.push(20);
+	q.push(30);
+	q.push(40);
+	q.push(50);
+	q.push(60);
+	q.push(70);
+	cout << q.front() << endl;
+	q.pop();
+	q.pop();
+	q.pop();
+
+	cout << q.front() << endl;
+	cout << q.length() << endl;
+	cout << q.isEmpty() << endl;
+
+	q.push(60);
+	q.push(70);
+
+	q.pop();
+	q.pop();
+	cout << q.front() << endl;
+	cout << q.length() << endl;
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

@@ -3,24 +3,25 @@
 using namespace std;
 template<typename T>
 class QueueWithArray {
-	T x;
 public:
 	int firstIndex = 0;
 	int currentIndex = 0;
 	int size = 0;
 	int width = 0;
 	T* arr;
+
 	QueueWithArray(int len) {
 		width = len;
-		arr = new int[width];
+		arr = new T[width];
 	}
 
 	void push(T value) {
 		if (size == width)
 		{
 			cout << "queue filled" << endl;
+			return;
 		}
-		if (currentIndex == size)
+		if (currentIndex == width)
 		{
 			currentIndex = 0;
 			arr[currentIndex++] = value;
@@ -30,22 +31,33 @@ public:
 		}
 		size++;
 	}
+	
 	void pop() {
-		if (firstIndex != size)
-			firstIndex++;
-		else
+		if (!isEmpty())
 		{
-			firstIndex = ++firstIndex % width;
+			if (firstIndex != size)
+				firstIndex++;
+			if(firstIndex == width)
+			{
+				firstIndex = firstIndex % width;
+			}
+			size--;
 		}
-		size--;
 
 	}
-	int front() {
+	
+	T front() {
+		if (size == 0)
+		{
+			return 0;
+		}
 		return arr[firstIndex];
 	} 
-	int size() {
+	
+	int length() {
 		return size;
 	}
+	
 	bool isEmpty() {
 		return size == 0;
 	}
