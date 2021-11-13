@@ -69,6 +69,7 @@
 #include "data_structure/Queue/QueueWithLinkedList.cpp"
 #include "data_structure/Queue/InBuiltQueue.cpp"
 #include "data_structure/Queue/ReverseAQueue.cpp"
+#include "data_structure/Trees/Vector_Revisited.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -707,13 +708,7 @@ void templateUse() {
 }
 
 int main() {
-	queue<int> q;
-	q.push(10);
-	q.push(20);
-	q.push(30);
-	q.push(40);
-	q.push(50);
-	ReverseAQueue RQ(q);
+	Vector_Revisited q;
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

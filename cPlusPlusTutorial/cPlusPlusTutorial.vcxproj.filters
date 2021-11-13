@@ -207,6 +207,9 @@
     <ClCompile Include="data_structure\Queue\ReverseAQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
