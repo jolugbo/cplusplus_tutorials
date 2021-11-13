@@ -2,32 +2,39 @@
 using namespace std;
 template<typename T>
 class QueueWithLinkedList {
-	Node* head = NULL;
-	Node* tail = NULL;
+	Node* head;
+	Node* tail;
 	int size = 0;
 public:
-	QueueWithLinkedList(Node* startNode) {
-		head = tail = startNode;
+	QueueWithLinkedList(T newItem) {
+		Node* newNode = new Node(newItem);
+		head = tail = newNode;
 		size++;
 	}
-	void push(Node* newNode) {
+	void push(int newItem) {
+		Node* newNode = new Node(newItem);
 		tail->next = newNode;
 		tail = newNode;
 		size++;
 	}
 	void pop() {
+		if (isEmpty())
+		{
+			return;
+		}
 		Node* n = head;
 		head = head->next;
+		n->next = NULL;
 		delete n;
 		size--;
 	}
 	bool isEmpty() {
 		return size == 0;
 	}
-	int size() {
+	int getSize() {
 		return size;
 	}
-	T front() {
-		return Head ->data;
+	int front() {
+		return head ->data;
 	}
 };

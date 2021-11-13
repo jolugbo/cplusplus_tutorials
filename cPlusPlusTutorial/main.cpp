@@ -66,6 +66,7 @@
 #include "data_structure/Stacks/RemoveAllAdjacentDuplicate.cpp"
 #include "data_structure/Queue/QueueWithArray.cpp"
 #include "data_structure/Queue/QueueWithDynamicArray.cpp"
+#include "data_structure/Queue/QueueWithLinkedList.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -704,8 +705,10 @@ void templateUse() {
 }
 
 int main() {
-	QueueWithDynamicArray<int> q(5);
-	q.push(10);
+	Node n(5);
+	QueueWithLinkedList<int> q(10);
+
+	//q.push(10);
 	q.push(20);
 	q.push(30);
 	q.push(40);
@@ -718,7 +721,7 @@ int main() {
 	q.pop();
 
 	cout << q.front() << endl;
-	cout << q.length() << endl;
+	cout << q.getSize() << endl;
 	cout << q.isEmpty() << endl;
 
 	q.push(60);
@@ -727,7 +730,7 @@ int main() {
 	q.pop();
 	q.pop();
 	cout << q.front() << endl;
-	cout << q.length() << endl;
+	cout << q.getSize() << endl;
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
