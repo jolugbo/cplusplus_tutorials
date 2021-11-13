@@ -184,9 +184,11 @@
     <ClCompile Include="data_structure\LinkedList\JosephusCircle.cpp" />
     <ClCompile Include="data_structure\LinkedList\LinkedListRecursive.cpp" />
     <ClCompile Include="data_structure\LinkedList\Node.cpp" />
+    <ClCompile Include="data_structure\Queue\InBuiltQueue.cpp" />
     <ClCompile Include="data_structure\Queue\QueueWithArray.cpp" />
     <ClCompile Include="data_structure\Queue\QueueWithDynamicArray.cpp" />
     <ClCompile Include="data_structure\Queue\QueueWithLinkedList.cpp" />
+    <ClCompile Include="data_structure\Queue\ReverseAQueue.cpp" />
     <ClCompile Include="data_structure\Stacks\BalancedParenthesis.cpp" />
     <ClCompile Include="data_structure\Stacks\InBuiltStack.cpp" />
     <ClCompile Include="data_structure\Stacks\RemoveAllAdjacentDuplicate.cpp" />

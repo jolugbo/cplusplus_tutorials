@@ -67,6 +67,8 @@
 #include "data_structure/Queue/QueueWithArray.cpp"
 #include "data_structure/Queue/QueueWithDynamicArray.cpp"
 #include "data_structure/Queue/QueueWithLinkedList.cpp"
+#include "data_structure/Queue/InBuiltQueue.cpp"
+#include "data_structure/Queue/ReverseAQueue.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -705,32 +707,13 @@ void templateUse() {
 }
 
 int main() {
-	Node n(5);
-	QueueWithLinkedList<int> q(10);
-
-	//q.push(10);
+	queue<int> q;
+	q.push(10);
 	q.push(20);
 	q.push(30);
 	q.push(40);
 	q.push(50);
-	q.push(60);
-	q.push(70);
-	cout << q.front() << endl;
-	q.pop();
-	q.pop();
-	q.pop();
-
-	cout << q.front() << endl;
-	cout << q.getSize() << endl;
-	cout << q.isEmpty() << endl;
-
-	q.push(60);
-	q.push(70);
-
-	q.pop();
-	q.pop();
-	cout << q.front() << endl;
-	cout << q.getSize() << endl;
+	ReverseAQueue RQ(q);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

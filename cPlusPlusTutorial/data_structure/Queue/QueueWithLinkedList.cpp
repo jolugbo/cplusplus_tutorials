@@ -12,9 +12,12 @@ public:
 		size++;
 	}
 	void push(int newItem) {
+
 		Node* newNode = new Node(newItem);
 		tail->next = newNode;
 		tail = newNode;
+		if (isEmpty)
+			head = tail;
 		size++;
 	}
 	void pop() {
