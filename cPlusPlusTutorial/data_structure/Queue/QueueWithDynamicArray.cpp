@@ -10,7 +10,7 @@ public:
 	int width = 0;
 	T* arr;
 
-	QueueWithArray(int len) {
+	QueueWithDynamicArray(int len) {
 		width = len;
 		arr = new T[width];
 	}
