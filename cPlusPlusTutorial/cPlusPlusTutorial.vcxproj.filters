@@ -210,6 +210,9 @@
     <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\Trees\Generic_Trees\Generic_Tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">

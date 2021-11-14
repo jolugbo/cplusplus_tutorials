@@ -70,6 +70,7 @@
 #include "data_structure/Queue/InBuiltQueue.cpp"
 #include "data_structure/Queue/ReverseAQueue.cpp"
 #include "data_structure/Trees/Vector_Revisited.cpp"
+#include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -708,7 +709,11 @@ void templateUse() {
 }
 
 int main() {
-	Vector_Revisited q;
+	Generic_Tree<int>* root = new Generic_Tree<int>(1);
+	Generic_Tree<int>* n1 = new Generic_Tree<int>(2);
+	Generic_Tree<int>* n2 = new Generic_Tree<int>(3);
+	root->children.push_back(n1);
+	root->children.push_back(n2);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
