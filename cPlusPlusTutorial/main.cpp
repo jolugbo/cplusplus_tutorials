@@ -709,11 +709,9 @@ void templateUse() {
 }
 
 int main() {
-	Generic_Tree<int>* root = new Generic_Tree<int>(1);
-	Generic_Tree<int>* n1 = new Generic_Tree<int>(2);
-	Generic_Tree<int>* n2 = new Generic_Tree<int>(3);
-	root->children.push_back(n1);
-	root->children.push_back(n2);
+	Generic_Tree<int>* root = new Generic_Tree<int>(0);
+	root->TakeInput();
+	root->PrintTree(root->TakeInput());
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
