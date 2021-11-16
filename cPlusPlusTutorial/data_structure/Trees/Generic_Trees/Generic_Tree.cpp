@@ -90,16 +90,11 @@ public:
 		return nodeCount;
 	}
 	int HeightOfTree(Generic_Tree* tree) {
-		int height = 1;
-		if (tree->children.size() > 0)
+		int height = 0;
+		for (int i = 0; i < tree->children.size(); i++)
 		{
-			int currentMax = 0;
-			for (int i = 0; i < tree->children.size(); i++)
-			{
-
-			}
-			HeightOfTree()
+			height = max(height, HeightOfTree(tree->children.at(i)));
 		}
-
+		return height + 1;
 	}
 };
