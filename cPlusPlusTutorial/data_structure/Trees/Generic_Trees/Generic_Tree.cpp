@@ -97,4 +97,15 @@ public:
 		}
 		return height + 1;
 	}
+	void PrintAtKthPosition(Generic_Tree* tree,int k) {
+		if (tree == NULL)return;
+		if (k == 0) {
+			cout << tree->data;
+			return;
+		}
+		for (int i = 0; i < tree->children.size(); i++)
+		{
+			PrintAtKthPosition(tree->children.at(i),  k - 1);
+		}
+	}
 };
