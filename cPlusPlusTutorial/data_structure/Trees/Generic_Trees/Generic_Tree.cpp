@@ -81,4 +81,25 @@ public:
 		}
 		return root;
 	}
+	int CountNodes(Generic_Tree* tree) {
+		int nodeCount = 1;
+		for (int i = 0; i < tree->children.size(); i++)
+		{
+			nodeCount += CountNodes(tree->children.at(i));
+		}
+		return nodeCount;
+	}
+	int HeightOfTree(Generic_Tree* tree) {
+		int height = 1;
+		if (tree->children.size() > 0)
+		{
+			int currentMax = 0;
+			for (int i = 0; i < tree->children.size(); i++)
+			{
+
+			}
+			HeightOfTree()
+		}
+
+	}
 };

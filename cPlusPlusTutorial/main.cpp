@@ -714,6 +714,8 @@ int main() {
 	root2->PrintTreeRecursively(root2);
 	cout << endl;
 	root2->PrintTreeLevelWise(root2);
+	cout << endl;
+	cout << root2->CountNodes(root2);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
