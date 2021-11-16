@@ -710,8 +710,10 @@ void templateUse() {
 
 int main() {
 	Generic_Tree<int>* root = new Generic_Tree<int>(0);
-	root->TakeInput();
-	root->PrintTree(root->TakeInput());
+	Generic_Tree<int>* root2 = root->TakeInputLevelWise();
+	root2->PrintTreeRecursively(root2);
+	cout << endl;
+	root2->PrintTreeLevelWise(root2);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
