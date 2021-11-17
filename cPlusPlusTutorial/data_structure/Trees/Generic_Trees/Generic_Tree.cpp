@@ -108,4 +108,8 @@ public:
 			PrintAtKthPosition(tree->children.at(i),  k - 1);
 		}
 	}
+
+	int CountLeaveNode(Generic_Tree<int>* tree) {
+	
+	}
 };
