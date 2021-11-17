@@ -118,4 +118,13 @@ public:
 		}
 		return leaveCount;
 	}
+
+	void PreOrderTraversal(Generic_Tree<int>* tree) {
+		cout << tree->data <<endl;
+		for (int i = 0; i < tree->children.size(); i++)
+		{
+			PreOrderTraversal(tree->children.at(i));
+		}
+	}
+
 };

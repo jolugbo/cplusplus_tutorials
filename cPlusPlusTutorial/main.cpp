@@ -722,6 +722,8 @@ int main() {
 	root2->PrintAtKthPosition(root2, 2);
 	cout << endl;
 	cout <<"Leave node count " << root2->CountLeaveNode(root2);
+	cout << endl;
+	root2->PreOrderTraversal(root2);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
