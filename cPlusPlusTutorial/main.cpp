@@ -720,6 +720,8 @@ int main() {
 	cout << root2->HeightOfTree(root2);
 	cout << endl;
 	root2->PrintAtKthPosition(root2, 2);
+	cout << endl;
+	cout <<"Leave node count " << root2->CountLeaveNode(root2);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

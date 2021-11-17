@@ -110,6 +110,12 @@ public:
 	}
 
 	int CountLeaveNode(Generic_Tree<int>* tree) {
-	
+		int leaveCount = 0;
+		if (tree->children.size() == 0)return ++leaveCount;
+		for (int i = 0; i < tree->children.size(); i++)
+		{
+			leaveCount += CountLeaveNode(tree->children.at(i));
+		}
+		return leaveCount;
 	}
 };
