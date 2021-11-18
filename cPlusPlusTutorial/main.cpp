@@ -726,6 +726,8 @@ int main() {
 	root2->PreOrderTraversal(root2);
 	cout << "Post Order Traversal";
 	cout << endl;
+	root2->DeleteTree(root2);
+	cout << "after deleting";
 	root2->PostOrderTraversal(root2);
 	//int n, val;
 	//cin >> n; 
