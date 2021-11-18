@@ -128,7 +128,11 @@ public:
 	}
 
 	void PostOrderTraversal(Generic_Tree<int>* tree) {
-
+		for (int i = 0; i < tree->children.size(); i++)
+		{
+			PostOrderTraversal(tree->children.at(i));
+		}
+		cout << tree->data << endl;
 	}
 
 };
