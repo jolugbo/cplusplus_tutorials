@@ -71,6 +71,7 @@
 #include "data_structure/Queue/ReverseAQueue.cpp"
 #include "data_structure/Trees/Vector_Revisited.cpp"
 #include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
+#include "data_structure/Trees/Binary _Tree/Binary_Tree.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -709,26 +710,13 @@ void templateUse() {
 }
 
 int main() {
-	Generic_Tree<int>* root = new Generic_Tree<int>(0);
-	Generic_Tree<int>* root2 = root->TakeInputLevelWise();
-	root2->PrintTreeRecursively(root2);
-	cout << endl;
-	root2->PrintTreeLevelWise(root2);
-	cout << endl;
-	cout << root2->CountNodes(root2);
-	cout << endl;
-	cout << root2->HeightOfTree(root2);
-	cout << endl;
-	root2->PrintAtKthPosition(root2, 2);
-	cout << endl;
-	cout << "Leave node count " << root2->CountLeaveNode(root2);
-	cout << endl;
-	root2->PreOrderTraversal(root2);
-	cout << "Post Order Traversal";
-	cout << endl;
-	root2->DeleteTree(root2);
-	cout << "after deleting";
-	root2->PostOrderTraversal(root2);
+	Binary_Tree<int>* root = new Binary_Tree<int>(0);
+	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
+	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
+	root->leftNode = node1;
+	root->rightNode = node2;
+	cout << root->leftNode->data << endl;
+	cout << root->rightNode->data << endl;
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];

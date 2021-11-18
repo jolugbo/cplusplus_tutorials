@@ -10,6 +10,12 @@ public:
 	Generic_Tree(T value) {
 		data = value;
 	}
+	~ Generic_Tree() {
+		for (int i = 0; i < children.size(); i++)
+		{
+			delete children.at(i);
+		}
+	}
 	void PrintTreeRecursively(Generic_Tree* tree) {
 		cout << tree->data << ": ";
 		for (int i = 0; i < tree->children.size(); i++)
