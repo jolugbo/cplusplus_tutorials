@@ -13,8 +13,17 @@ public:
 	}
 	~Binary_Tree()
 	{
-		delete data;
 		delete leftNode;
 		delete rightNode;
+	}
+	void PrintTreeRecursively(Binary_Tree* tree) {
+		if (tree == NULL)
+		{
+			return;
+		}
+		cout << tree->data << endl;
+		PrintTreeRecursively(tree->leftNode);
+		PrintTreeRecursively(tree->rightNode);
+			
 	}
 };

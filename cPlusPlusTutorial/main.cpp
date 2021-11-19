@@ -715,8 +715,7 @@ int main() {
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
 	root->leftNode = node1;
 	root->rightNode = node2;
-	cout << root->leftNode->data << endl;
-	cout << root->rightNode->data << endl;
+	root->PrintTreeRecursively(root);
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
