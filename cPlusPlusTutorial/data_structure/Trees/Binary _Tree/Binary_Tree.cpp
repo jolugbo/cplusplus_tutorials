@@ -21,9 +21,21 @@ public:
 		{
 			return;
 		}
-		cout << tree->data << endl;
+		cout << tree->data << ": ";
+		if (tree->leftNode != NULL)
+		{
+			cout << tree->leftNode->data << ", ";
+		}
+		if (tree->leftNode != NULL)
+		{
+			cout << tree->rightNode->data;
+		}
+		cout <<  endl;
 		PrintTreeRecursively(tree->leftNode);
 		PrintTreeRecursively(tree->rightNode);
 			
+	}
+	void TakeInputRecursively() {
+		
 	}
 };
