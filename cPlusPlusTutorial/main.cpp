@@ -710,12 +710,12 @@ void templateUse() {
 }
 
 int main() {
-	Binary_Tree<int>* root = new Binary_Tree<int>(0);
+	//Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	/*Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
 	root->leftNode = node1;
 	root->rightNode = node2;*/
-	root->TakeInputRecursively(root);
+	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputRecursively();
 	root->PrintTreeRecursively(root);
 	//int n, val;
 	//cin >> n; 

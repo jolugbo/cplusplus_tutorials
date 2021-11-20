@@ -35,19 +35,20 @@ public:
 		PrintTreeRecursively(tree->rightNode);
 			
 	}
-	void TakeInputRecursively(Binary_Tree* tree) {
+
+	Binary_Tree<T>* TakeInputRecursively() {
 		cout << "input node data" << endl;
 		int data;
 		cin>> data;
 		if (data== -1)
 		{
-			return;
+			return NULL;
 		}
-		tree->data = data;
-		tree->leftNode = new Binary_Tree<int>(0);
-		tree->rightNode = new Binary_Tree<int>(0);
-		TakeInputRecursively(tree->leftNode);
-		TakeInputRecursively(tree->rightNode);
-		//tree->
+		Binary_Tree<T>* tree = new Binary_Tree<int>(data);
+		Binary_Tree<T>* leftNode = TakeInputRecursively();
+		Binary_Tree<T>* rightNode = TakeInputRecursively();
+		tree->leftNode = leftNode;
+		tree->rightNode = rightNode;
+		return tree;
 	}
 };
