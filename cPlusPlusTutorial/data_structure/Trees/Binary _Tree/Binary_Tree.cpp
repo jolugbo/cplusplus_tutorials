@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 template<typename T>
 class Binary_Tree {
@@ -39,8 +40,8 @@ public:
 	Binary_Tree<T>* TakeInputRecursively() {
 		cout << "input node data" << endl;
 		int data;
-		cin>> data;
-		if (data== -1)
+		cin >> data;
+		if (data == -1)
 		{
 			return NULL;
 		}
@@ -50,5 +51,38 @@ public:
 		tree->leftNode = leftNode;
 		tree->rightNode = rightNode;
 		return tree;
+	}
+
+	Binary_Tree<T>* TakeInputLevelWise() {
+		cout << "input root data " << endl;
+		int rootData;
+		cin >> rootData;
+		Binary_Tree<T>* root = new Binary_Tree<int>(rootData);
+		queue<Binary_Tree<T>*> que;
+		que.push(root);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* newNode = que.front();
+			cout << "input left node " << endl;
+			int leftData;
+			cin >> leftData;
+			if (leftData != -1)
+			{
+				Binary_Tree<T>* leftNode = new Binary_Tree<int>(leftData);
+				que.push(leftNode);
+				newNode->leftNode = leftNode;
+			}
+			cout << "input right node " << endl;
+			int rightData;
+			cin >> rightData;
+			if (rightData != -1)
+			{
+				Binary_Tree<T>* rightNode = new Binary_Tree<int>(rightData);
+				que.push(rightNode);
+				newNode->rightNode = rightNode;
+			}
+			que.pop();
+		}
+		return root;
 	}
 };

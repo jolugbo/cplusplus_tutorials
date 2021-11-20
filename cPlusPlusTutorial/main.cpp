@@ -715,7 +715,7 @@ int main() {
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
 	root->leftNode = node1;
 	root->rightNode = node2;*/
-	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputRecursively();
+	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
 	root->PrintTreeRecursively(root);
 	//int n, val;
 	//cin >> n; 
