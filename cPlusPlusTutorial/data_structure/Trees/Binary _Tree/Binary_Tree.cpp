@@ -45,22 +45,33 @@ public:
 		}
 		queue<Binary_Tree<T>*> que;
 		que.push(tree);
+		que.push(NULL);
 		while (!que.empty())
 		{
 			Binary_Tree<T>* CurrentNode = que.front();
 			que.pop();
-			cout << CurrentNode->data << ": ";
-			if (CurrentNode->leftNode != NULL)
+			if (CurrentNode == NULL && !que.empty())
 			{
-				cout << CurrentNode->leftNode->data << ", ";
-				que.push(CurrentNode->leftNode);
+				cout << endl;
+				que.push(NULL);
 			}
-			if (CurrentNode->rightNode != NULL)
+			else if (CurrentNode == NULL && que.empty()) {
+				return;
+			}
+			else
 			{
-				cout << CurrentNode->rightNode->data << ", ";
-				que.push(CurrentNode->rightNode);
+				cout << CurrentNode->data << " ";
+				if (CurrentNode->leftNode != NULL)
+				{
+					//cout << CurrentNode->leftNode->data << ", ";
+					que.push(CurrentNode->leftNode);
+				}
+				if (CurrentNode->rightNode != NULL)
+				{
+					//cout << CurrentNode->rightNode->data << ", ";
+					que.push(CurrentNode->rightNode);
+				}
 			}
-			cout << endl;
 		}
 	}
 

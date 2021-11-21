@@ -717,6 +717,7 @@ int main() {
 	root->rightNode = node2;*/
 	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
 	root->PrintTreeRecursively(root);
+	cout << endl << endl;
 	root->PrintTreeLevelWise(root);
 	//int n, val;
 	//cin >> n; 
