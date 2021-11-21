@@ -31,10 +31,37 @@ public:
 		{
 			cout << tree->rightNode->data;
 		}
-		cout <<  endl;
+		cout << endl;
 		PrintTreeRecursively(tree->leftNode);
 		PrintTreeRecursively(tree->rightNode);
-			
+
+	}
+	//1 2 3 4 5 6 7 8 9 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+		
+	void PrintTreeLevelWise(Binary_Tree* tree) {
+		if (tree == NULL)
+		{
+			return;
+		}
+		queue<Binary_Tree<T>*> que;
+		que.push(tree);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* CurrentNode = que.front();
+			que.pop();
+			cout << CurrentNode->data << ": ";
+			if (CurrentNode->leftNode != NULL)
+			{
+				cout << CurrentNode->leftNode->data << ", ";
+				que.push(CurrentNode->leftNode);
+			}
+			if (CurrentNode->rightNode != NULL)
+			{
+				cout << CurrentNode->rightNode->data << ", ";
+				que.push(CurrentNode->rightNode);
+			}
+			cout << endl;
+		}
 	}
 
 	Binary_Tree<T>* TakeInputRecursively() {
