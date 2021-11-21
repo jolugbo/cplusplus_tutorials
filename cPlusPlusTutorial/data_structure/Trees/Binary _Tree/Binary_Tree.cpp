@@ -36,6 +36,18 @@ public:
 		PrintTreeRecursively(tree->rightNode);
 
 	}
+
+	int CountNodes(Binary_Tree<T>* tree) {
+		int nodeCount = 1;
+		queue< Binary_Tree<T>*> que;
+		que.push(tree);
+		while (!que.empty())
+		{
+			nodeCount += CountNodes(tree->leftNode);
+			nodeCount += CountNodes(tree->rightNode);
+
+		}
+	}
 	//1 2 3 4 5 6 7 8 9 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 		
 	void PrintTreeLevelWise(Binary_Tree* tree) {
