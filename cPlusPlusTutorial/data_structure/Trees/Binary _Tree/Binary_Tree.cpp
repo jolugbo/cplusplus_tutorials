@@ -41,15 +41,6 @@ public:
 		{
 			return;
 		}
-		/*if (tree->leftNode != NULL)
-		{
-			cout << tree->leftNode->data << ", ";
-		}
-		if (tree->leftNode != NULL)
-		{
-			cout << tree->rightNode->data;
-		}
-		cout << endl;*/
 		PrintTreeRecursivelyInOrderTraversal(tree->leftNode);
 		cout << tree->data;
 		PrintTreeRecursivelyInOrderTraversal(tree->rightNode);
@@ -66,7 +57,7 @@ public:
 		nodeCount += CountNodes(tree->rightNode);
 	}
 	//1 2 3 4 5 6 7 8 9 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-		
+
 	void PrintTreeLevelWise(Binary_Tree* tree) {
 		if (tree == NULL)
 		{
@@ -102,6 +93,45 @@ public:
 				}
 			}
 		}
+	}
+	//3 9 20 -1 -1 15 7
+	int MaxLength(Binary_Tree* tree) {
+		if (tree == NULL)
+		{
+			return 0;
+		}
+		queue<Binary_Tree<T>*> que;
+		int maxLen = 1;
+		que.push(tree);
+		que.push(NULL);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* CurrentNode = que.front();
+			que.pop();
+			if (CurrentNode == NULL && !que.empty())
+			{
+				cout << endl;
+				que.push(NULL);
+				maxLen++;
+			}
+			else if (CurrentNode == NULL && que.empty()) {
+				//return;
+			}
+			else
+			{
+				if (CurrentNode->leftNode != NULL)
+				{
+					//cout << CurrentNode->leftNode->data << ", ";
+					que.push(CurrentNode->leftNode);
+				}
+				if (CurrentNode->rightNode != NULL)
+				{
+					//cout << CurrentNode->rightNode->data << ", ";
+					que.push(CurrentNode->rightNode);
+				}
+			}
+		}
+		return maxLen;
 	}
 
 	Binary_Tree<T>* TakeInputRecursively() {
@@ -161,6 +191,7 @@ public:
 		output.push_back(root->val);
 		printOrder(root->right, output);
 	}
+
 	vector<int> inorderTraversal(Binary_Tree<T>* root) {
 		vector<int> output;
 		printOrder(root, output);

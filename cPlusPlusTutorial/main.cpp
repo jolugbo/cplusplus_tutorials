@@ -723,6 +723,9 @@ int main() {
 	root->PrintTreeLevelWise(root);
 	cout << endl << endl;
 	cout << root->CountNodes(root);
+	cout << endl << endl;
+	cout << root->MaxLength(root);
+	
 	//int n, val;
 	//cin >> n; 
 	//Person* per[4];
