@@ -36,6 +36,25 @@ public:
 		PrintTreeRecursively(tree->rightNode);
 
 	}
+	void PrintTreeRecursivelyInOrderTraversal(Binary_Tree* tree) {
+		if (tree == NULL)
+		{
+			return;
+		}
+		/*if (tree->leftNode != NULL)
+		{
+			cout << tree->leftNode->data << ", ";
+		}
+		if (tree->leftNode != NULL)
+		{
+			cout << tree->rightNode->data;
+		}
+		cout << endl;*/
+		PrintTreeRecursivelyInOrderTraversal(tree->leftNode);
+		cout << tree->data;
+		PrintTreeRecursivelyInOrderTraversal(tree->rightNode);
+
+	}
 
 	int CountNodes(Binary_Tree<T>* tree) {
 		int nodeCount = 1;
