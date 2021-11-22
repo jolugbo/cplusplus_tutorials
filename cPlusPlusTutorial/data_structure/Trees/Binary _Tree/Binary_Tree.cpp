@@ -152,4 +152,18 @@ public:
 		}
 		return root;
 	}
+
+
+	//A leetcode quiz on Binary tree
+	void printOrder(Binary_Tree<T>* root, vector<int>& output) {
+		if (root == NULL)return;
+		printOrder(root->left, output);
+		output.push_back(root->val);
+		printOrder(root->right, output);
+	}
+	vector<int> inorderTraversal(Binary_Tree<T>* root) {
+		vector<int> output;
+		printOrder(root, output);
+		return output;
+	}
 };
