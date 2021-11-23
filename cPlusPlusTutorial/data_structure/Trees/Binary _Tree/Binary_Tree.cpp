@@ -160,7 +160,7 @@ public:
 		while (!que.empty())
 		{
 			Binary_Tree<T>* newNode = que.front();
-			cout << "input left node " << endl;
+			cout << "input left node of "<< newNode->data << endl;
 			int leftData;
 			cin >> leftData;
 			if (leftData != -1)
@@ -169,7 +169,7 @@ public:
 				que.push(leftNode);
 				newNode->leftNode = leftNode;
 			}
-			cout << "input right node " << endl;
+			cout << "input right node of " << newNode->data << endl;
 			int rightData;
 			cin >> rightData;
 			if (rightData != -1)
@@ -196,5 +196,46 @@ public:
 		vector<int> output;
 		printOrder(root, output);
 		return output;
+	}
+	// 1 2 2 3 4 4 3 -1 -1 -1 -1 -1 -1 -1 -1 
+	// 1 2 2 -1 3 -1 3 -1 -1 -1 -1
+	bool isSymmetric(Binary_Tree<T>* root) {
+		bool resp = true;
+		queue<Binary_Tree<T>*> leftQueue;
+		queue<Binary_Tree<T>*> rightQueue;
+		leftQueue.push(root->leftNode);
+		rightQueue.push(root->rightNode);
+		while (!leftQueue.empty() && !rightQueue.empty())
+		{
+			Binary_Tree<T>* leftChild = leftQueue.front();
+			Binary_Tree<T>* rightChild = rightQueue.front();
+			if (leftChild == NULL && rightChild != NULL)
+			{
+				return false;
+			}
+			else if (rightChild == NULL && leftChild != NULL)
+			{
+				return false;
+			}
+			else if (rightChild == NULL && leftChild == NULL)
+			{
+
+			}
+			else if(leftChild->data != rightChild->data)
+			{
+				return false;
+			}
+			if(leftChild != NULL)
+			leftQueue.push(leftChild->leftNode);
+			if (leftChild != NULL)
+			leftQueue.push(leftChild->rightNode);
+			if (rightChild != NULL)
+			rightQueue.push(rightChild->rightNode);
+			if (rightChild != NULL)
+			rightQueue.push(rightChild->leftNode);
+			leftQueue.pop();
+			rightQueue.pop();
+		}
+		return resp;
 	}
 };

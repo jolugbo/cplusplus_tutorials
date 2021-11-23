@@ -724,7 +724,7 @@ int main() {
 	cout << endl << endl;
 	cout << root->CountNodes(root);
 	cout << endl << endl;
-	cout << root->MaxLength(root);
+	cout << root->isSymmetric(root);
 	
 	//int n, val;
 	//cin >> n; 
