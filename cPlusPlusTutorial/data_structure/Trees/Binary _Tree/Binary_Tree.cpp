@@ -251,7 +251,27 @@ public:
 			{
 				return true;
 			}
-			if (currentChild!=NULL)
+			if (currentChild != NULL)
+			{
+				que.push(currentChild->leftNode);
+				que.push(currentChild->rightNode);
+			}
+		}
+		return resp;
+	}
+	int findMinInTree(Binary_Tree<int>* root) {
+		int resp = INT_MAX;
+		queue< Binary_Tree<int>*> que;
+		que.push(root);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* currentChild = que.front();
+			que.pop();
+			if (currentChild != NULL && currentChild->data < resp && currentChild->data != -1)
+			{
+				resp = currentChild->data;
+			}
+			if (currentChild != NULL)
 			{
 				que.push(currentChild->leftNode);
 				que.push(currentChild->rightNode);
