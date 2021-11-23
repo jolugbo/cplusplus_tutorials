@@ -305,7 +305,7 @@ public:
 		int resp = 0;
 		queue< Binary_Tree<int>*> que;
 		que.push(root);
-		while (!que.empty())
+		while(!que.empty())
 		{
 			Binary_Tree<T>* currentChild = que.front();
 			que.pop();
