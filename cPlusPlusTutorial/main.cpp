@@ -724,7 +724,7 @@ int main() {
 	cout << endl << endl;
 	cout << root->CountNodes(root);
 	cout << endl << endl;
-	cout << root->isSymmetric(root);
+	cout << root->findInTree(root, 6);
 	
 	//int n, val;
 	//cin >> n; 

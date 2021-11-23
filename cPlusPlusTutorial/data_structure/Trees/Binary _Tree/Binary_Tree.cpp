@@ -197,7 +197,7 @@ public:
 		printOrder(root, output);
 		return output;
 	}
-	// 1 2 2 3 4 4 3 -1 -1 -1 -1 -1 -1 -1 -1 
+	// 1 2 3 4 5 6 7 -1 -1 -1 -1 -1 -1 -1 -1 
 	// 1 2 2 -1 3 -1 3 -1 -1 -1 -1
 	bool isSymmetric(Binary_Tree<T>* root) {
 		bool resp = true;
@@ -235,6 +235,27 @@ public:
 			rightQueue.push(rightChild->leftNode);
 			leftQueue.pop();
 			rightQueue.pop();
+		}
+		return resp;
+	}
+
+	bool findInTree(Binary_Tree<T>* root, T data) {
+		bool resp = false;
+		queue< Binary_Tree<T>*> que;
+		que.push(root);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* currentChild = que.front();
+			que.pop();
+			if (currentChild != NULL && currentChild->data == data)
+			{
+				return true;
+			}
+			if (currentChild!=NULL)
+			{
+				que.push(currentChild->leftNode);
+				que.push(currentChild->rightNode);
+			}
 		}
 		return resp;
 	}
