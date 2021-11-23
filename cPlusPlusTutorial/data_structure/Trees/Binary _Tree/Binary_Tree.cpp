@@ -259,6 +259,7 @@ public:
 		}
 		return resp;
 	}
+
 	int findMinInTree(Binary_Tree<int>* root) {
 		int resp = INT_MAX;
 		queue< Binary_Tree<int>*> que;
@@ -279,6 +280,7 @@ public:
 		}
 		return resp;
 	}
+
 	int findMaxInTree(Binary_Tree<int>* root) {
 		int resp = INT_MIN;
 		queue< Binary_Tree<int>*> que;
@@ -290,6 +292,26 @@ public:
 			if (currentChild != NULL && currentChild->data > resp && currentChild->data != -1)
 			{
 				resp = currentChild->data;
+			}
+			if (currentChild != NULL)
+			{
+				que.push(currentChild->leftNode);
+				que.push(currentChild->rightNode);
+			}
+		}
+		return resp;
+	}
+	int CountLeafNode(Binary_Tree<int>* root) {
+		int resp = 0;
+		queue< Binary_Tree<int>*> que;
+		que.push(root);
+		while (!que.empty())
+		{
+			Binary_Tree<T>* currentChild = que.front();
+			que.pop();
+			if (currentChild != NULL && currentChild->leftNode == NULL && currentChild->rightNode == NULL)
+			{
+				resp++;
 			}
 			if (currentChild != NULL)
 			{

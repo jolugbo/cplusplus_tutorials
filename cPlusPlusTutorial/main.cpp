@@ -727,6 +727,8 @@ int main() {
 	cout << root->findMinInTree(root);
 	cout << endl << endl;
 	cout << root->findMaxInTree(root);
+	cout << endl << endl;
+	cout << root->CountLeafNode(root);
 	
 	//int n, val;
 	//cin >> n; 
