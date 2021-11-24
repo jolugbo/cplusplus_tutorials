@@ -1,0 +1,17 @@
+What are the companies with more openings in an financial service or Information tech company 
+
+which are the locations with a higher concentrations of job offers
+
+what education is expected of a CTO role obtain a masters degree in a computer science related field
+
+what is the ideal experience required for a CTO role
+
+what are the skill a typical CTO should possess, 
+1. Programming lang C++ and JS
+
+2. Frontend technologies React and Node JS
+
+3. other tech tools Machine Learning, SAAS and Azure
+4. domain knowledge Finance, Banking and Blockchain
+5. soft skills Leadership, Strategic, Managing and Design 
+communication skill

@@ -235,4 +235,7 @@
     <None Include="packages.config" />
     <None Include="..\..\..\..\Documents\Custom Office Templates\Book1.xlsx" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Path To CTO.txt" />
+  </ItemGroup>
 </Project>
