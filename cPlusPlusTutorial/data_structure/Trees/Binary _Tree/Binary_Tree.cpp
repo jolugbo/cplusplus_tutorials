@@ -321,4 +321,7 @@ public:
 		}
 		return resp;
 	}
+	void ConstructFromLeftRightTraversal() {
+	
+	}
 };
