@@ -321,7 +321,33 @@ public:
 		}
 		return resp;
 	}
-	void ConstructFromLeftRightTraversal() {
-	
+
+	Binary_Tree<int>* ConstructTreeHelper(vector<int> inOrder, vector<int> preOrder, int inOrderStart, int inOrderEnd, int preOrderStart, int preOrderEnd) {
+		if (inOrderStart == inOrderEnd || preOrderStart == PreOrderEnd)
+		{
+			return NULL;
+		}
+		int nodeData = preOrder[preOrderStart];
+
+		int leftInOrderS = inOrderStart;
+		int leftInOrderE;
+		int leftPreOrderS = preOrderStart + 1;
+		int leftPreOrderE;
+
+		int rightInOrderS;
+		int rightInOrderE = inOrderEnd;
+		int rightPreOrderS;
+		int rightPreOrderE = preOrderEnd;
+
+		Binary_Tree<int>* rootNode =  new Binary_Tree<int>(nodeData);
+		rootNode->leftNode = new ConstructTreeHelper(inOrder, preOrder, leftInOrderS, leftInOrderE, leftPreOrderS, leftPreOrderE);
+		rootNode->rightNode = new ConstructTreeHelper(inOrder, preOrder, rightInOrderS, rightInOrderE, rightPreOrderS, rightPreOrderE);
+		return rootNode;
+
+	}
+
+	Binary_Tree<int>* ConstructFromLeftRightTraversal(vector<int> inOrderTraversal, vector<int> preOrderTraversal) {
+		int n = inOrderTraversal.size()
+		return ConstructTreeHelper(inOrderTraversal, preOrderTraversal,0,n-1,0,n-1);
 	}
 };
