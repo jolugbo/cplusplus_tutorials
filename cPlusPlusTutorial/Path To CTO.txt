@@ -17,7 +17,7 @@ what are the skill a typical CTO should possess,
 communication skill
 
 TO do today 25/11/2021
-call up the guys(michael, chris and mujeeb) about the issue raised by seun
+call up the guys(michael, chris and mujeeb) about the issue raised by seun(Done ended up extending the meeting to matthew and seun)
 call up bukky on the QA hiring issue as well as the fincon followup
 complete the task ina gave you today!.
 call emma and report to ina about the QA issue

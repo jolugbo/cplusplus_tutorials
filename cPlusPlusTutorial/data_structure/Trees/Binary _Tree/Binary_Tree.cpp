@@ -323,31 +323,39 @@ public:
 	}
 
 	Binary_Tree<int>* ConstructTreeHelper(vector<int> inOrder, vector<int> preOrder, int inOrderStart, int inOrderEnd, int preOrderStart, int preOrderEnd) {
-		if (inOrderStart == inOrderEnd || preOrderStart == PreOrderEnd)
+		if (inOrderStart > inOrderEnd)
 		{
 			return NULL;
 		}
 		int nodeData = preOrder[preOrderStart];
-
+		int rootIndex = -1;
+		for (int i = inOrderStart; i <= inOrderEnd; i++)
+		{
+			if (inOrder[i] == nodeData)
+			{
+				rootIndex = i;
+				break;
+			}
+		}
 		int leftInOrderS = inOrderStart;
-		int leftInOrderE;
+		int leftInOrderE = rootIndex - 1; //root ondex in the inroder traversal minus 1 e.g given [2,4,5,1,7,6] if root index  = 1 then leftInOrderE is 5 
 		int leftPreOrderS = preOrderStart + 1;
-		int leftPreOrderE;
+		int leftPreOrderE = leftInOrderE - leftInOrderS + leftPreOrderS; // leftInOrderE - leftInOrderS = leftPreOrderE -leftPreOrderS ==> leftPreOrderE = leftInOrderE - leftInOrderS + leftPreOrderS
 
-		int rightInOrderS;
+		int rightInOrderS = rootIndex + 1;
 		int rightInOrderE = inOrderEnd;
-		int rightPreOrderS;
+		int rightPreOrderS = leftPreOrderE + 1;
 		int rightPreOrderE = preOrderEnd;
 
 		Binary_Tree<int>* rootNode =  new Binary_Tree<int>(nodeData);
-		rootNode->leftNode = new ConstructTreeHelper(inOrder, preOrder, leftInOrderS, leftInOrderE, leftPreOrderS, leftPreOrderE);
-		rootNode->rightNode = new ConstructTreeHelper(inOrder, preOrder, rightInOrderS, rightInOrderE, rightPreOrderS, rightPreOrderE);
+		rootNode->leftNode =  ConstructTreeHelper(inOrder, preOrder, leftInOrderS, leftInOrderE, leftPreOrderS, leftPreOrderE);
+		rootNode->rightNode =  ConstructTreeHelper(inOrder, preOrder, rightInOrderS, rightInOrderE, rightPreOrderS, rightPreOrderE);
 		return rootNode;
 
 	}
 
 	Binary_Tree<int>* ConstructFromLeftRightTraversal(vector<int> inOrderTraversal, vector<int> preOrderTraversal) {
-		int n = inOrderTraversal.size()
+		int n = inOrderTraversal.size();
 		return ConstructTreeHelper(inOrderTraversal, preOrderTraversal,0,n-1,0,n-1);
 	}
 };
