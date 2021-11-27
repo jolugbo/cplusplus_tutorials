@@ -27,7 +27,7 @@ public:
 		{
 			cout << tree->leftNode->data << ", ";
 		}
-		if (tree->leftNode != NULL)
+		if (tree->rightNode != NULL)
 		{
 			cout << tree->rightNode->data;
 		}
@@ -357,5 +357,41 @@ public:
 	Binary_Tree<int>* ConstructFromLeftRightTraversal(vector<int> inOrderTraversal, vector<int> preOrderTraversal) {
 		int n = inOrderTraversal.size();
 		return ConstructTreeHelper(inOrderTraversal, preOrderTraversal,0,n-1,0,n-1);
+	}
+	Binary_Tree<int>* ConstructTreeHelper2(vector<int> inOrder, vector<int> postOrder, int inOrderStart, int inOrderEnd, int postOrderStart, int postOrderEnd) {
+		if (inOrderStart > inOrderEnd)
+		{
+			return NULL;
+		}
+		int nodeData = postOrder[postOrderEnd];
+		int rootIndex = -1;
+		for (int i = inOrderStart; i <= inOrderEnd; i++)
+		{
+			if (inOrder[i] == nodeData)
+			{
+				rootIndex = i;
+				break;
+			}
+		}
+		int leftInOrderS = inOrderStart; 
+		int leftInOrderE = rootIndex - 1; 
+		int leftPostOrderS = postOrderStart; 
+		int leftPostOrderE = leftInOrderE - leftInOrderS + leftPostOrderS; 
+
+		int rightInOrderS = rootIndex + 1; 
+		int rightInOrderE = inOrderEnd; 
+		int rightPostOrderS = leftPostOrderE + 1;
+		int rightPostOrderE = postOrderEnd - 1; 
+
+		Binary_Tree<int>* rootNode = new Binary_Tree<int>(nodeData);
+		rootNode->leftNode = ConstructTreeHelper(inOrder, postOrder, leftInOrderS, leftInOrderE, leftPostOrderS, leftPostOrderE);
+		rootNode->rightNode = ConstructTreeHelper(inOrder, postOrder, rightInOrderS, rightInOrderE, rightPostOrderS, rightPostOrderE);
+		return rootNode;
+
+	}
+
+	Binary_Tree<int>* ConstructFromInOrderPostOrderTraversal(vector<int> inOrderTraversal, vector<int> postOrderTraversal) {
+		int n = inOrderTraversal.size();
+		return ConstructTreeHelper2(inOrderTraversal, postOrderTraversal, 0, n - 1, 0, n - 1);
 	}
 };

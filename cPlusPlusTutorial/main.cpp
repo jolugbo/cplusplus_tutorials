@@ -729,12 +729,12 @@ int main() {
 	cout << root->findMaxInTree(root);
 	cout << endl << endl;
 	cout << root->CountLeafNode(root);*/
-	vector<int> preorder;
-	preorder.push_back(3);
-	preorder.push_back(9);
-	preorder.push_back(20);
-	preorder.push_back(15);
-	preorder.push_back(7);
+	vector<int> postorder;
+	postorder.push_back(9);
+	postorder.push_back(15);
+	postorder.push_back(7);
+	postorder.push_back(20);
+	postorder.push_back(3);
 	vector<int> inorder;
 	inorder.push_back(9);
 	inorder.push_back(3);
@@ -742,8 +742,8 @@ int main() {
 	inorder.push_back(20);
 	inorder.push_back(7);
 	// = new vector<int>[3, 9, 20, 15, 7], inorder = [9, 3, 15, 20, 7]
-	Binary_Tree<int>* root2 = Binary_Tree<int>(0).ConstructFromLeftRightTraversal(inorder, preorder);
-	root2->PrintTreeLevelWise(root2);
+	Binary_Tree<int>* root2 = Binary_Tree<int>(0).ConstructFromInOrderPostOrderTraversal(inorder, postorder);
+	root2->PrintTreeRecursively(root2);
 	
 	//int n, val;
 	//cin >> n; 
