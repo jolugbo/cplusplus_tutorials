@@ -394,4 +394,22 @@ public:
 		int n = inOrderTraversal.size();
 		return ConstructTreeHelper2(inOrderTraversal, preOrderTraversal, 0, n - 1, 0, n - 1);
 	}
+	int height(Binary_Tree<int>* root) {
+		if (root == NULL)
+		{
+			return 0;
+		}
+		return 1 + max(height(root->leftNode), height(root->rightNode));
+	}
+
+	int DiameterOfBinaryTree(Binary_Tree<int>* root) {
+		if (root == NULL)
+		{
+			return 0;
+		}
+		int option1 = height(root->leftNode) + height(root->rightNode);
+		int option2 = DiameterOfBinaryTree(root->leftNode);
+		int option3 = DiameterOfBinaryTree(root->rightNode);
+		return max(option1, max(option2, option3));
+	}
 };
