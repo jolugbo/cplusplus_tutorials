@@ -422,8 +422,8 @@ public:
 			resp.second = 0;
 			return resp;
 		}
-		pair<int, int> leftAns = BinaryTreeHeight(root->leftNode);
-		pair<int, int> rightAns = BinaryTreeHeight(root->rightNode);
+		pair<int, int> leftAns = BinaryTreeDiameterCompute(root->leftNode);
+		pair<int, int> rightAns = BinaryTreeDiameterCompute(root->rightNode);
 		int leftHeight = leftAns.first;
 		int leftDiameter = leftAns.second;
 		int rightHeight = rightAns.first;

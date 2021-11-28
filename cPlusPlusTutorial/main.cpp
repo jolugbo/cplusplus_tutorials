@@ -722,7 +722,7 @@ int main() {
 	cout << endl << endl;
 	root->PrintTreeLevelWise(root);
 	cout << endl << endl;
-	cout << "Diameter of binary tree " << root->DiameterOfBinaryTree(root) << endl;
+	cout << "Diameter of binary tree " << root->DiameterOfBinaryTree2(root) << endl;
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);
