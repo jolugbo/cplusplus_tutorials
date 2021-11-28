@@ -451,6 +451,10 @@ public:
 			return false;
 		}
 		path->push_back(root->data);
+		if (root->data == target)
+		{
+			return true;
+		}
 		bool inLeft = getPath(root->leftNode, target, path);
 		bool inRight = getPath(root->rightNode, target, path);
 		if (inLeft | inRight)
