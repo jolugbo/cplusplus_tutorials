@@ -440,4 +440,27 @@ public:
 		pair<int, int> resp = BinaryTreeDiameterCompute(root);
 		return resp.second;
 	}
+
+	bool getPath(Binary_Tree<int>* root, int target, vector<int>* path) {
+		if (root == NULL)
+		{
+			/*if (!path->empty())
+			{
+				path->pop_back();
+			}*/
+			return false;
+		}
+		path->push_back(root->data);
+		bool inLeft = getPath(root->leftNode, target, path);
+		bool inRight = getPath(root->rightNode, target, path);
+		if (inLeft | inRight)
+		{
+			return true;
+		}
+		else
+		{
+			path->pop_back();
+			return false;
+		}
+	}
 };

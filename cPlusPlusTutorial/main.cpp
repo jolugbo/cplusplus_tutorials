@@ -723,6 +723,13 @@ int main() {
 	root->PrintTreeLevelWise(root);
 	cout << endl << endl;
 	cout << "Diameter of binary tree " << root->DiameterOfBinaryTree2(root) << endl;
+	cout << endl << endl;
+	vector<int>* path = new vector<int>();
+	root->getPath(root, 7,path);
+	for (int i = 0; i < path->size(); i++)
+	{
+		cout << path->at(i) << endl;
+	}
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);
