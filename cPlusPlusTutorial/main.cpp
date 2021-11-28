@@ -710,40 +710,41 @@ void templateUse() {
 }
 
 int main() {
-	//Binary_Tree<int>* root = new Binary_Tree<int>(0);
-	/*Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
+	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
+	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
 	root->leftNode = node1;
 	root->rightNode = node2;*/
-	/*Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
+	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
 	root->PrintTreeRecursively(root);
 	cout << endl << endl;
 	root->PrintTreeRecursivelyInOrderTraversal(root);
 	cout << endl << endl;
 	root->PrintTreeLevelWise(root);
 	cout << endl << endl;
-	cout << root->CountNodes(root);
+	cout << "Diameter of binary tree " << root->DiameterOfBinaryTree(root) << endl;
+	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);
 	cout << endl << endl;
 	cout << root->findMaxInTree(root);
 	cout << endl << endl;
 	cout << root->CountLeafNode(root);*/
-	vector<int> postorder;
-	postorder.push_back(9);
-	postorder.push_back(15);
-	postorder.push_back(7);
-	postorder.push_back(20);
-	postorder.push_back(3);
-	vector<int> inorder;
-	inorder.push_back(9);
-	inorder.push_back(3);
-	inorder.push_back(15);
-	inorder.push_back(20);
-	inorder.push_back(7);
-	// = new vector<int>[3, 9, 20, 15, 7], inorder = [9, 3, 15, 20, 7]
-	Binary_Tree<int>* root2 = Binary_Tree<int>(0).ConstructFromInOrderPostOrderTraversal(inorder, postorder);
-	root2->PrintTreeRecursively(root2);
+	//vector<int> postorder;
+	//postorder.push_back(9);
+	//postorder.push_back(15);
+	//postorder.push_back(7);
+	//postorder.push_back(20);
+	//postorder.push_back(3);
+	//vector<int> inorder;
+	//inorder.push_back(9);
+	//inorder.push_back(3);
+	//inorder.push_back(15);
+	//inorder.push_back(20);
+	//inorder.push_back(7);
+	//// = new vector<int>[3, 9, 20, 15, 7], inorder = [9, 3, 15, 20, 7]
+	//Binary_Tree<int>* root2 = Binary_Tree<int>(0).ConstructFromInOrderPostOrderTraversal(inorder, postorder);
+	//root2->PrintTreeRecursively(root2);
 	
 	//int n, val;
 	//cin >> n; 

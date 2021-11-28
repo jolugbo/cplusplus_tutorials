@@ -399,7 +399,8 @@ public:
 		{
 			return 0;
 		}
-		return 1 + max(height(root->leftNode), height(root->rightNode));
+		int ans = 1 + max(height(root->leftNode), height(root->rightNode));
+		return ans;
 	}
 
 	int DiameterOfBinaryTree(Binary_Tree<int>* root) {
@@ -411,5 +412,32 @@ public:
 		int option2 = DiameterOfBinaryTree(root->leftNode);
 		int option3 = DiameterOfBinaryTree(root->rightNode);
 		return max(option1, max(option2, option3));
+	}
+
+	pair<int, int> BinaryTreeDiameterCompute(Binary_Tree<int>* root) {
+		if (root == NULL)
+		{
+			pair<int, int> resp;
+			resp.first = 0;
+			resp.second = 0;
+			return resp;
+		}
+		pair<int, int> leftAns = BinaryTreeHeight(root->leftNode);
+		pair<int, int> rightAns = BinaryTreeHeight(root->rightNode);
+		int leftHeight = leftAns.first;
+		int leftDiameter = leftAns.second;
+		int rightHeight = rightAns.first;
+		int rightDiameter = rightAns.second;
+		int height = 1 + max(leftHeight ,rightHeight);
+		int diameter =max(leftHeight+ rightHeight, max(leftDiameter, rightDiameter));
+		pair<int, int> resp;
+		resp.first = height;
+		resp.second = diameter;
+		return resp;
+
+	}
+	int DiameterOfBinaryTree2(Binary_Tree<int>* root) {
+		pair<int, int> resp = BinaryTreeDiameterCompute(root);
+		return resp.second;
 	}
 };
