@@ -467,4 +467,16 @@ public:
 			return false;
 		}
 	}
+	Binary_Tree<int>* searchBST(Binary_Tree<int>* root, int val) {
+		if (root == NULL) {
+			return NULL;
+		}
+		if (root->data == val)
+			return root;
+		else if (root->data > val) {
+			return searchBST(root->leftNode, val);
+		}
+		else
+			return searchBST(root->rightNode, val);
+	}
 };
