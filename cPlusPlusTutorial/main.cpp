@@ -72,6 +72,7 @@
 #include "data_structure/Trees/Vector_Revisited.cpp"
 #include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
 #include "data_structure/Trees/Binary _Tree/Binary_Tree.h"
+#include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 using namespace std;
 
 int length(char arr[]) {
@@ -724,12 +725,21 @@ int main() {
 	cout << endl << endl;
 	cout << "Diameter of binary tree " << root->DiameterOfBinaryTree2(root) << endl;
 	cout << endl << endl;
+	cout << "path to a node in Binary Tree " << endl;
+	cout << endl << endl;
 	vector<int>* path = new vector<int>();
 	root->getPath(root, 7,path);
 	for (int i = 0; i < path->size(); i++)
 	{
 		cout << path->at(i) << endl;
 	}
+	BinarySearchTree newBST;
+	cout << endl << endl;
+	cout << "Minimum value in a Min Binary Tree " << endl;
+	newBST.MinValueInBST(root);
+	cout << endl << endl;
+	cout << "Maximum value in a Min Binary Tree " << endl;
+	newBST.MaxValueInBST(root);
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);

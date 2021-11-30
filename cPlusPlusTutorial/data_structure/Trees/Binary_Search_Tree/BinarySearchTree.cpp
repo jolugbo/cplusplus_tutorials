@@ -16,14 +16,24 @@ public:
 			return searchBST(root->rightNode, val);
 	}
 
-	int MinValueInBS(Binary_Tree<int>* root) {
+	int MinValueInBST(Binary_Tree<int>* root) {
 		if (root == NULL) {
 			return -1;
 		}
 		if (root->leftNode == NULL)
 			return root->data;
 		else
-			return MinValueInBS(root->leftNode);
+			return MinValueInBST(root->leftNode);
+	}
+
+	int MaxValueInBST(Binary_Tree<int>* root) {
+		if (root == NULL) {
+			return -1;
+		}
+		if (root->rightNode == NULL)
+			return root->data;
+		else
+			return MaxValueInBST(root->rightNode);
 	}
 
 };
