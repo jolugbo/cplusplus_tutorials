@@ -74,6 +74,7 @@
 #include "data_structure/Trees/Binary _Tree/Binary_Tree.h"
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 using namespace std;
+using namespace Btree;
 
 int length(char arr[]) {
 	int length = 0;
@@ -710,6 +711,7 @@ void templateUse() {
 
 }
 
+#undef main
 int main() {
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
@@ -717,7 +719,7 @@ int main() {
 	root->leftNode = node1;
 	root->rightNode = node2;*/
 	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
-	root->PrintTreeRecursively(root);
+	/*root->PrintTreeRecursively(root);
 	cout << endl << endl;
 	root->PrintTreeRecursivelyInOrderTraversal(root);
 	cout << endl << endl;
@@ -739,7 +741,7 @@ int main() {
 	newBST.MinValueInBST(root);
 	cout << endl << endl;
 	cout << "Maximum value in a Min Binary Tree " << endl;
-	newBST.MaxValueInBST(root);
+	newBST.MaxValueInBST(root);*/
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);

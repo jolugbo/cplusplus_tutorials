@@ -197,7 +197,6 @@
     <ClCompile Include="data_structure\Stacks\StackWithLinkedList.cpp" />
     <ClCompile Include="data_structure\Templates\DoubleTemplates.cpp" />
     <ClCompile Include="data_structure\Templates\Template.cpp" />
-    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.h" />
     <ClCompile Include="data_structure\Trees\Binary_Search_Tree\BinarySearchTree.cpp" />
     <ClCompile Include="data_structure\Trees\Generic_Trees\Generic_Tree.cpp" />
     <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp" />
@@ -210,6 +209,8 @@
     <ClCompile Include="vectorManipulations.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.h" />
+    <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp" />
     <ClInclude Include="dynamicArray.hpp" />
     <ClInclude Include="spiralMatrix.hpp" />
     <ClInclude Include="student.hpp" />

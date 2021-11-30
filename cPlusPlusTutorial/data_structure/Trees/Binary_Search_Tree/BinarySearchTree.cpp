@@ -1,6 +1,7 @@
 #include <iostream>
-using namespace std;
 #include "../Binary _Tree/Binary_Tree.h"
+using namespace std;
+using namespace Btree;
 class BinarySearchTree {
 public:
 	Binary_Tree<int>* searchBST(Binary_Tree<int>* root, int val) {

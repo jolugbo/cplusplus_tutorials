@@ -213,9 +213,6 @@
     <ClCompile Include="data_structure\Trees\Generic_Trees\Generic_Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.h">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="data_structure\Trees\Binary_Search_Tree\BinarySearchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -231,6 +228,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vector.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
