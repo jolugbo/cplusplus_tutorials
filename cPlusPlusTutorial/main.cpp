@@ -71,7 +71,7 @@
 #include "data_structure/Queue/ReverseAQueue.cpp"
 #include "data_structure/Trees/Vector_Revisited.cpp"
 #include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
-#include "data_structure/Trees/Binary _Tree/Binary_Tree.h"
+#include "data_structure/Trees/Binary _Tree/Binary_Tree.cpp"
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 using namespace std;
 using namespace Btree;
@@ -719,7 +719,7 @@ int main() {
 	root->leftNode = node1;
 	root->rightNode = node2;*/
 	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
-	/*root->PrintTreeRecursively(root);
+	root->PrintTreeRecursively(root);
 	cout << endl << endl;
 	root->PrintTreeRecursivelyInOrderTraversal(root);
 	cout << endl << endl;
@@ -738,10 +738,10 @@ int main() {
 	BinarySearchTree newBST;
 	cout << endl << endl;
 	cout << "Minimum value in a Min Binary Tree " << endl;
-	newBST.MinValueInBST(root);
+	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;
 	cout << "Maximum value in a Min Binary Tree " << endl;
-	newBST.MaxValueInBST(root);*/
+	cout << newBST.MaxValueInBST(root);
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);

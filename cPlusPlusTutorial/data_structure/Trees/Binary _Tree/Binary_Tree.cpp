@@ -35,7 +35,7 @@ void Binary_Tree<T>::PrintTreeRecursively(Binary_Tree* tree) {
 	{
 		cout << tree->leftNode->data << ", ";
 	}
-	if (tree->leftNode != NULL)
+	if (tree->rightNode != NULL)
 	{
 		cout << tree->rightNode->data;
 	}
@@ -66,6 +66,7 @@ int Binary_Tree<T>::CountNodes(Binary_Tree<T>* tree) {
 	nodeCount += CountNodes(tree->rightNode);
 }
 //1 2 3 4 5 6 7 8 9 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+//8 3 10 1 6 -1 14 -1 -1 4 7 13 -1 -1 -1 -1 -1 -1 -1
 template <typename T>
 void Binary_Tree<T>::PrintTreeLevelWise(Binary_Tree* tree) {
 	if (tree == NULL)

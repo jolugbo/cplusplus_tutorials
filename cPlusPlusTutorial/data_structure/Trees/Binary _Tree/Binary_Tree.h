@@ -1,4 +1,5 @@
 #ifndef Binary_Tree_H
+#pragma once
 #define Binary_Tree_H
 #include <iostream>
 #include <queue>
