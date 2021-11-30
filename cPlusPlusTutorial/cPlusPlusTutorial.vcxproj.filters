@@ -213,7 +213,10 @@
     <ClCompile Include="data_structure\Trees\Generic_Trees\Generic_Tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp">
+    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data_structure\Trees\Binary _Tree\BinarySearchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

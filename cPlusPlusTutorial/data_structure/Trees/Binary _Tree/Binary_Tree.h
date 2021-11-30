@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 template<typename T>
-class Binary_Tree {
+	 class Binary_Tree {
 public:
 	T data;
 	Binary_Tree* leftNode;
@@ -466,17 +466,5 @@ public:
 			path->pop_back();
 			return false;
 		}
-	}
-	Binary_Tree<int>* searchBST(Binary_Tree<int>* root, int val) {
-		if (root == NULL) {
-			return NULL;
-		}
-		if (root->data == val)
-			return root;
-		else if (root->data > val) {
-			return searchBST(root->leftNode, val);
-		}
-		else
-			return searchBST(root->rightNode, val);
 	}
 };

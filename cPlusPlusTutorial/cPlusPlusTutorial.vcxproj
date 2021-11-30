@@ -197,7 +197,8 @@
     <ClCompile Include="data_structure\Stacks\StackWithLinkedList.cpp" />
     <ClCompile Include="data_structure\Templates\DoubleTemplates.cpp" />
     <ClCompile Include="data_structure\Templates\Template.cpp" />
-    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp" />
+    <ClCompile Include="data_structure\Trees\Binary _Tree\Binary_Tree.h" />
+    <ClCompile Include="data_structure\Trees\Binary _Tree\BinarySearchTree.cpp" />
     <ClCompile Include="data_structure\Trees\Generic_Trees\Generic_Tree.cpp" />
     <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp" />
     <ClCompile Include="dynamicArray.cpp" />

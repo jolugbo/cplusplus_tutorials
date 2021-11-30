@@ -71,7 +71,7 @@
 #include "data_structure/Queue/ReverseAQueue.cpp"
 #include "data_structure/Trees/Vector_Revisited.cpp"
 #include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
-#include "data_structure/Trees/Binary _Tree/Binary_Tree.cpp"
+#include "data_structure/Trees/Binary _Tree/Binary_Tree.h"
 using namespace std;
 
 int length(char arr[]) {
