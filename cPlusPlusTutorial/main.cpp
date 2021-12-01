@@ -742,6 +742,8 @@ int main() {
 	cout << endl << endl;
 	cout << "Maximum value in a Min Binary Tree " << endl;
 	cout << newBST.MaxValueInBST(root);
+	cout << endl << endl;
+	newBST.rangeSumBST(root,10,14);
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);

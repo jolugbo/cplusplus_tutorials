@@ -37,5 +37,39 @@ public:
 		else
 			return MaxValueInBST(root->rightNode);
 	}
+	
+	void rangeSumBST(Binary_Tree<int>* root, int low, int high) {
+		vector<int>* vec = new vector<int>();
+		FetchRangeInBST(root,low,high,vec);
+		for (int i = 0; i < vec->size(); i++)
+		{
+			cout << vec->at(i);
+		}
+	}
 
+	void FetchRangeInBST(Binary_Tree<int>* root, int low, int high,vector<int>* vec) {
+		if (root == NULL)return;
+		if (root->data > high)
+		{
+			while (root->leftNode != NULL)
+			{
+				root = root->leftNode;
+				if (root->data >= low)
+				{
+					vec->push_back(root->data);
+				}
+			}
+		}
+		else if (root->data < high)
+		{
+			while (root->rightNode != NULL)
+			{
+				root = root->rightNode;
+				if (root->data >= low)
+				{
+					vec->push_back(root->data);
+				}
+			}
+		}
+	}
 };
