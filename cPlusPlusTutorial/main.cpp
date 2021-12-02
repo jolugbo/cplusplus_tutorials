@@ -737,13 +737,14 @@ int main() {
 	}
 	BinarySearchTree newBST;
 	cout << endl << endl;
-	cout << "Minimum value in a Min Binary Tree " << endl;
+	cout << newBST.IsBinaryTreeBST(root);
+	/*cout << "Minimum value in a Min Binary Tree " << endl;
 	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;
 	cout << "Maximum value in a Min Binary Tree " << endl;
 	cout << newBST.MaxValueInBST(root);
 	cout << endl << endl;
-	newBST.rangeSumBST(root,6,10);
+	newBST.rangeSumBST(root,6,10);*/
 	/*cout << root->CountNodes(root);
 	cout << endl << endl;
 	cout << root->findMinInTree(root);

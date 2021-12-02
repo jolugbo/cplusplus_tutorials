@@ -92,6 +92,30 @@ public:
 			}
 		}
 	}
+	bool IsBinaryTreeBST(Binary_Tree<int>* root) {
+		if (root == NULL)return false;
+
+		queue<Binary_Tree<int>*> que;
+		que.push(root);
+		while (!que.empty())
+		{
+			Binary_Tree<int>* queTop = que.front();
+			que.pop();
+			if (queTop->leftNode != NULL)
+			{
+				if (queTop->data <= queTop->leftNode->data )
+					return false;
+				que.push(queTop->leftNode);
+			}
+			if (queTop->rightNode != NULL)
+			{
+				if (queTop->data >= queTop->rightNode->data)
+					return false;
+				que.push(queTop->rightNode);
+			}
+		}
+		return true;
+	}
 };
 
 //
