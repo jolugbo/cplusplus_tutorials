@@ -38,38 +38,64 @@ public:
 			return MaxValueInBST(root->rightNode);
 	}
 	
-	void rangeSumBST(Binary_Tree<int>* root, int low, int high) {
+	int rangeSumBST(Binary_Tree<int>* root, int low, int high) {
 		vector<int>* vec = new vector<int>();
 		FetchRangeInBST(root,low,high,vec);
+		int sum = 0;
 		for (int i = 0; i < vec->size(); i++)
 		{
-			cout << vec->at(i);
+			sum += vec->at(i);
 		}
+		return sum;
 	}
 
 	void FetchRangeInBST(Binary_Tree<int>* root, int low, int high,vector<int>* vec) {
 		if (root == NULL)return;
 		if (root->data > high)
 		{
-			while (root->leftNode != NULL)
+			queue<Binary_Tree<int>*> que;
+			que.push(root->leftNode);
+			while (!que.empty())
 			{
-				root = root->leftNode;
-				if (root->data >= low)
+				Binary_Tree<int>* queTop = que.front();
+				que.pop();
+				if (queTop->data <= high && queTop->data >= low)
+					vec->push_back(queTop->data);
+				if (queTop->leftNode != NULL)
 				{
-					vec->push_back(root->data);
+					que.push(queTop->leftNode);
+				}
+				if (queTop->rightNode != NULL)
+				{
+					que.push(queTop->rightNode);
 				}
 			}
 		}
-		else if (root->data < high)
+		else if (root->data <= high)
 		{
-			while (root->rightNode != NULL)
+			queue<Binary_Tree<int>*> que;
+			que.push(root);
+			while (!que.empty())
 			{
-				root = root->rightNode;
-				if (root->data >= low)
+				Binary_Tree<int>* queTop = que.front();
+				que.pop();
+				if (queTop->data <= high && queTop->data >= low)
+					vec->push_back(queTop->data);
+				if (queTop->leftNode != NULL)
 				{
-					vec->push_back(root->data);
+					que.push(queTop->leftNode);
+				}
+				if (queTop->rightNode != NULL)
+				{
+					que.push(queTop->rightNode);
 				}
 			}
 		}
 	}
 };
+
+//
+//[10, 5, 15, 3, 7, 13, 18, 1, null, 6]
+//6
+
+//10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 
