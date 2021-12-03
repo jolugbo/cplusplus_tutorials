@@ -737,7 +737,7 @@ int main() {
 	}
 	BinarySearchTree newBST;
 	cout << endl << endl;
-	cout << newBST.IsBinaryTreeBST(root);
+	 newBST.ValidateBST(root);
 	/*cout << "Minimum value in a Min Binary Tree " << endl;
 	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;

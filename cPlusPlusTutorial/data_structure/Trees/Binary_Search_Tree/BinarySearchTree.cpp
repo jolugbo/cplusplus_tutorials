@@ -92,34 +92,37 @@ public:
 			}
 		}
 	}
-	bool IsBinaryTreeBST(Binary_Tree<int>* root) {
-		if (root == NULL)return false;
-
-		queue<Binary_Tree<int>*> que;
-		que.push(root);
-		while (!que.empty())
-		{
-			Binary_Tree<int>* queTop = que.front();
-			que.pop();
-			if (queTop->leftNode != NULL)
+	
+	bool ValidateBST(Binary_Tree<int>* root) {
+		vector<int>* vec = new vector<int>();
+		BSTValidator(root, vec);
+			for (int i = 0; i < vec->size(); i++)
 			{
-				if (queTop->data <= queTop->leftNode->data )
-					return false;
-				que.push(queTop->leftNode);
+				if (i>0)
+				{
+					if (vec->at(i)<= vec->at(i - 1))
+					{
+						return false;
+					}
+				}
+				cout<< vec->at(i);
 			}
-			if (queTop->rightNode != NULL)
-			{
-				if (queTop->data >= queTop->rightNode->data)
-					return false;
-				que.push(queTop->rightNode);
-			}
-		}
-		return true;
+			return true;
+	}
+	void BSTValidator(Binary_Tree<int>* root, vector<int>* vec) {
+		if (root == NULL)return;
+		if (root->leftNode != NULL)
+			BSTValidator(root->leftNode, vec);
+		vec->push_back(root->data);
+		if (root->rightNode != NULL)
+			BSTValidator(root->rightNode, vec);
 	}
 };
 
 //
 //[10, 5, 15, 3, 7, 13, 18, 1, null, 6]
-//6
+//[5,4,6,null,null,3,7]
 
 //10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 
+//5 4 6 -1 -1 3 7 -1 -1 -1 -1
+// 2 1 3 -1 -1 -1 -1
