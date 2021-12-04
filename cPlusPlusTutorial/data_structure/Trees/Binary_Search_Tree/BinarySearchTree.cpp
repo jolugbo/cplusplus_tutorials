@@ -37,10 +37,10 @@ public:
 		else
 			return MaxValueInBST(root->rightNode);
 	}
-	
+
 	int rangeSumBST(Binary_Tree<int>* root, int low, int high) {
 		vector<int>* vec = new vector<int>();
-		FetchRangeInBST(root,low,high,vec);
+		FetchRangeInBST(root, low, high, vec);
 		int sum = 0;
 		for (int i = 0; i < vec->size(); i++)
 		{
@@ -49,7 +49,7 @@ public:
 		return sum;
 	}
 
-	void FetchRangeInBST(Binary_Tree<int>* root, int low, int high,vector<int>* vec) {
+	void FetchRangeInBST(Binary_Tree<int>* root, int low, int high, vector<int>* vec) {
 		if (root == NULL)return;
 		if (root->data > high)
 		{
@@ -92,22 +92,22 @@ public:
 			}
 		}
 	}
-	
+
 	bool ValidateBST(Binary_Tree<int>* root) {
 		vector<int>* vec = new vector<int>();
 		BSTValidator(root, vec);
-			for (int i = 0; i < vec->size(); i++)
+		for (int i = 0; i < vec->size(); i++)
+		{
+			if (i > 0)
 			{
-				if (i>0)
+				if (vec->at(i) <= vec->at(i - 1))
 				{
-					if (vec->at(i)<= vec->at(i - 1))
-					{
-						return false;
-					}
+					return false;
 				}
-				cout<< vec->at(i);
 			}
-			return true;
+			cout << vec->at(i);
+		}
+		return true;
 	}
 	void BSTValidator(Binary_Tree<int>* root, vector<int>* vec) {
 		if (root == NULL)return;
@@ -116,6 +116,18 @@ public:
 		vec->push_back(root->data);
 		if (root->rightNode != NULL)
 			BSTValidator(root->rightNode, vec);
+	}
+
+	Binary_Tree<int>* sortedArrayToBST(vector<int>& nums) {
+		return treeHelper(nums, 0, nums.size()-1);
+	}
+	Binary_Tree<int>* treeHelper(vector<int>& nums,int start, int end) {
+		if (start >= end) return NULL;
+		int center = (end - start) / 2;
+		Binary_Tree<int>* tree = new Binary_Tree<int>(nums[center]);
+		tree->leftNode = treeHelper(nums, start, center - 1);
+		tree->rightNode = treeHelper(nums, center + 1, end);
+		return tree;
 	}
 };
 

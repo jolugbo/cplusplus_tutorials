@@ -737,7 +737,19 @@ int main() {
 	}
 	BinarySearchTree newBST;
 	cout << endl << endl;
-	 newBST.ValidateBST(root);
+	vector<int> vec;
+	vec.push_back(1);
+	vec.push_back(2);
+	vec.push_back(3);
+	vec.push_back(4);
+	vec.push_back(5);
+	vec.push_back(6);
+	vec.push_back(7);
+	vec.push_back(8);
+	vec.push_back(9);
+	vec.push_back(10);
+	Binary_Tree<int>* root2 = newBST.sortedArrayToBST(vec);
+	root2->PrintTreeLevelWise(root2);
 	/*cout << "Minimum value in a Min Binary Tree " << endl;
 	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;
