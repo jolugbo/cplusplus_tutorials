@@ -4,15 +4,30 @@ using namespace std;
 using namespace Btree;
 class BinarySearchTree {
 	//8 3 10 1 6 -1 14 -1 -1 4 7 13 -1 -1 -1 -1 -1 -1 -1
+private:
+	Binary_Tree<int>* root;
 public:
+	BinarySearchTree() {
+		root = NULL;
+	}
+	~BinarySearchTree() {
+		delete root;
+	}
 	void insert(int data) {
 
 	}
 	void deleteData(int data) {
 
 	}
-	bool hasData(int data) {
-
+	bool hasData(Binary_Tree<int>* root, int data) {
+		if (root == NULL) return false;
+		if (root->data == data) return true;
+		if (root->data > data) {
+			return hasData(root->leftNode, data);
+		}
+		else {
+			return hasData(root->rightNode, data);
+		}
 	}
 	bool printBST(int data) {
 
