@@ -13,8 +13,19 @@ public:
 	~BinarySearchTree() {
 		delete root;
 	}
-	void insert(int data) {
-
+	Binary_Tree<int>* insert(Binary_Tree<int>* root, int data) {
+		if (root == NULL)
+		{
+			Binary_Tree<int>* newNode = new Binary_Tree<int>(data);
+			return newNode;
+		}
+		if (root->data > data) {
+			root->leftNode = insert(root->leftNode, data);
+		}
+		if (root->data < data) {
+			root->rightNode = insert(root->rightNode, data);
+		}
+		return root;
 	}
 	void deleteData(int data) {
 
