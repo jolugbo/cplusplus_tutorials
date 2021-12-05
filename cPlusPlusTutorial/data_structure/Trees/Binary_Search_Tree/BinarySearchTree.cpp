@@ -5,6 +5,18 @@ using namespace Btree;
 class BinarySearchTree {
 	//8 3 10 1 6 -1 14 -1 -1 4 7 13 -1 -1 -1 -1 -1 -1 -1
 public:
+	void insert(int data) {
+
+	}
+	void deleteData(int data) {
+
+	}
+	bool hasData(int data) {
+
+	}
+	bool printBST(int data) {
+
+	}
 	Binary_Tree<int>* searchBST(Binary_Tree<int>* root, int val) {
 		if (root == NULL) {
 			return NULL;
