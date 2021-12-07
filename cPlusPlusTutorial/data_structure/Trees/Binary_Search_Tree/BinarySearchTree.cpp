@@ -156,11 +156,11 @@ public:
 			BSTValidator(root->rightNode, vec);
 	}
 
-	Binary_Tree<int>* sortedArrayToBST(vector<int>& nums) { 
-			Binary_Tree<int>* tree = treeHelper(nums, 0, nums.size()-1);
-			return tree;
+	Binary_Tree<int>* sortedArrayToBST(vector<int>& nums) {
+		Binary_Tree<int>* tree = treeHelper(nums, 0, nums.size() - 1);
+		return tree;
 	}
-	Binary_Tree<int>* treeHelper(vector<int>& nums,int start, int end) {
+	Binary_Tree<int>* treeHelper(vector<int>& nums, int start, int end) {
 		if (start > end) return NULL;
 		int center = (end + start) / 2;
 		Binary_Tree<int>* tree = new Binary_Tree<int>(nums[center]);
@@ -168,8 +168,23 @@ public:
 		tree->rightNode = treeHelper(nums, center + 1, end);
 		return tree;
 	}
-};
 
+
+	Binary_Tree<int>* insertIntoBSTTree(Binary_Tree<int>* root, int data) {
+		if (root == NULL)
+		{
+			Binary_Tree<int>* newRoot = new Binary_Tree<int>(data);
+			return newRoot;
+		}
+		else if (root->data > data)
+		{
+			root->leftNode = insertIntoBSTTree(root->leftNode, data);
+		}
+		else root->rightNode = insertIntoBSTTree(root->rightNode, data);
+		return root;
+	}
+
+};
 //
 //[10, 5, 15, 3, 7, 13, 18, 1, null, 6]
 //[5,4,6,null,null,3,7]
