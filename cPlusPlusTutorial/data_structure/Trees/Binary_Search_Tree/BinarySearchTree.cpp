@@ -183,6 +183,20 @@ public:
 		else root->rightNode = insertIntoBSTTree(root->rightNode, data);
 		return root;
 	}
+	void deleteNodeInBSTTree(Binary_Tree<int>* root, int data) {
+		if (root == NULL)return;
+		if (root->data > data)deleteNodeInBSTTree(root->leftNode, data);
+		if (root->data < data)deleteNodeInBSTTree(root->rightNode, data);
+		if (root->data == data) {
+			if (root->leftNode == NULL && root->rightNode == NULL) {
+				delete root; return;
+			}
+			if (root->leftNode == NULL ) {
+				int minValue = MinValueInBST(root->rightNode);
+			}
+		}
+		
+	}
 
 };
 //
