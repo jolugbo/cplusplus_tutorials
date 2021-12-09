@@ -183,19 +183,39 @@ public:
 		else root->rightNode = insertIntoBSTTree(root->rightNode, data);
 		return root;
 	}
-	void deleteNodeInBSTTree(Binary_Tree<int>* root, int data) {
-		if (root == NULL)return;
-		if (root->data > data)deleteNodeInBSTTree(root->leftNode, data);
-		if (root->data < data)deleteNodeInBSTTree(root->rightNode, data);
+	Binary_Tree<int>* deleteNodeInBSTTree(Binary_Tree<int>* root, int data) {
+		if (root == NULL)return root;
+		if (root->data > data) {
+			root->leftNode = deleteNodeInBSTTree(root->leftNode, data); return root;
+		}
+		if (root->data < data) {
+			root->rightNode = deleteNodeInBSTTree(root->rightNode, data); return root;
+		}
 		if (root->data == data) {
 			if (root->leftNode == NULL && root->rightNode == NULL) {
-				delete root; return;
+				root == NULL; return NULL;
 			}
-			if (root->leftNode == NULL ) {
+			else if (root->leftNode == NULL) {
 				int minValue = MinValueInBST(root->rightNode);
+				root->data = minValue;
+				root->rightNode = deleteNodeInBSTTree(root->rightNode, data);
+				return root;
+			}
+			else if (root->rightNode == NULL) {
+				int maxValue = MaxValueInBST(root->leftNode);
+				root->data = maxValue;
+				root->leftNode = deleteNodeInBSTTree(root->leftNode, data);
+				return root;
+			}
+			else
+			{
+				int minValue = MinValueInBST(root->rightNode);
+				root->data = minValue;
+				root->rightNode = deleteNodeInBSTTree(root->rightNode, minValue);
+				return root;
 			}
 		}
-		
+
 	}
 
 };
@@ -203,6 +223,6 @@ public:
 //[10, 5, 15, 3, 7, 13, 18, 1, null, 6]
 //[5,4,6,null,null,3,7]
 
-//10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 1 -1 -1 -1 -1 -1 -1 
+//10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
 //5 4 6 -1 -1 3 7 -1 -1 -1 -1
 // 2 1 3 -1 -1 -1 -1

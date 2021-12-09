@@ -748,8 +748,8 @@ int main() {
 	vec.push_back(8);
 	vec.push_back(9);
 	vec.push_back(10);
-	Binary_Tree<int>* root2 = newBST.sortedArrayToBST(vec);
-	root2->PrintTreeLevelWise(root2);
+	newBST.deleteNodeInBSTTree(root, 15);
+	root->PrintTreeLevelWise(root);
 	/*cout << "Minimum value in a Min Binary Tree " << endl;
 	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;
