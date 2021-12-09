@@ -198,13 +198,13 @@ public:
 			else if (root->leftNode == NULL) {
 				int minValue = MinValueInBST(root->rightNode);
 				root->data = minValue;
-				root->rightNode = deleteNodeInBSTTree(root->rightNode, data);
+				root->rightNode = deleteNodeInBSTTree(root->rightNode, minValue);
 				return root;
 			}
 			else if (root->rightNode == NULL) {
 				int maxValue = MaxValueInBST(root->leftNode);
 				root->data = maxValue;
-				root->leftNode = deleteNodeInBSTTree(root->leftNode, data);
+				root->leftNode = deleteNodeInBSTTree(root->leftNode, maxValue);
 				return root;
 			}
 			else
@@ -215,6 +215,7 @@ public:
 				return root;
 			}
 		}
+		return root;
 
 	}
 	//leetcode version
@@ -261,6 +262,7 @@ public:
 //10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
 //5 4 6 -1 -1 3 7 -1 -1 -1 -1
 // 2 1 3 -1 -1 -1 -1
+// 5 3 6 2 4 -1 7 -1 -1 -1 -1 -1 -1 
 
 //[5, 3, 6, 2, 4, null, 7]
 //5
