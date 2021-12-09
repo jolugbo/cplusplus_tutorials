@@ -217,6 +217,41 @@ public:
 		}
 
 	}
+	//leetcode version
+	/*TreeNode* deleteNode(TreeNode* root, int data) {
+		if (root == NULL)return root;
+		if (root->val > data) {
+			root->left = deleteNode(root->left, data); return root;
+		}
+		if (root->val < data) {
+			root->right = deleteNode(root->right, data); return root;
+		}
+		if (root->val == data) {
+			if (root->left == NULL && root->right == NULL) {
+				root = NULL; return NULL;
+			}
+			else if (root->left == NULL) {
+				int minValue = MinValueInBST(root->right);
+				root->val = minValue;
+				root->right = deleteNode(root->right, data);
+				return root;
+			}
+			else if (root->right == NULL) {
+				int maxValue = MaxValueInBST(root->left);
+				root->val = maxValue;
+				root->left = deleteNode(root->left, data);
+				return root;
+			}
+			else
+			{
+				int minValue = MinValueInBST(root->right);
+				root->val = minValue;
+				root->right = deleteNode(root->right, minValue);
+				return root;
+			}
+		}
+		return root;
+	}*/
 
 };
 //
@@ -226,3 +261,10 @@ public:
 //10 5 15 3 7 13 18 1 -1 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
 //5 4 6 -1 -1 3 7 -1 -1 -1 -1
 // 2 1 3 -1 -1 -1 -1
+
+//[5, 3, 6, 2, 4, null, 7]
+//5
+//Output
+//[6, 3, 7, 2, 4, null, 7]
+//Expected
+//[6, 3, 7, 2, 4]
