@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../Binary _Tree/Binary_Tree.h"
+#include "../../LinkedList/Node.cpp"
 using namespace std;
 using namespace Btree;
 class BinarySearchTree {
@@ -191,7 +192,7 @@ public:
 		if (root->data < data) {
 			root->rightNode = deleteNodeInBSTTree(root->rightNode, data); return root;
 		}
-		if (root->data == data) {
+		else {
 			if (root->leftNode == NULL && root->rightNode == NULL) {
 				root == NULL; return NULL;
 			}
@@ -215,10 +216,33 @@ public:
 				return root;
 			}
 		}
-		return root;
 
 	}
-	//leetcode version
+
+	void BSTToSortedLinkedList(Binary_Tree<int>* root, queue<int>* linkedList) {
+		if (root == NULL)return;
+		BSTToSortedLinkedList(root->leftNode, linkedList);
+		linkedList->push(root->data);
+		BSTToSortedLinkedList(root->rightNode, linkedList);
+		return;
+	};
+
+	Binary_Tree<int>* BSTToSortedLinkedListEntry(Binary_Tree<int>* root, queue<int>* linkedList) {
+		BSTToSortedLinkedList(root, linkedList);
+		root = NULL;
+		root = new Binary_Tree<int>(linkedList->front());
+		Binary_Tree<int>* tailRoot = root;
+		linkedList->pop();
+		while (!linkedList->empty())
+		{
+			tailRoot->rightNode = new Binary_Tree<int>(linkedList->front());
+			linkedList->pop();
+			tailRoot = tailRoot->rightNode;
+		}
+		return root;
+	};
+
+	//leetcode version2j
 	/*TreeNode* deleteNode(TreeNode* root, int data) {
 		if (root == NULL)return root;
 		if (root->val > data) {

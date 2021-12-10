@@ -337,7 +337,7 @@ void concatString() {
 // string size
 void sizeString() {
 	string s;
-	s = "testing ";
+	s = "testing";
 	cout << s.size() << "\n";
 	cout << s.length() << "\n";
 }
@@ -736,8 +736,11 @@ int main() {
 		cout << path->at(i) << endl;
 	}
 	BinarySearchTree newBST;
-	cout << endl << endl;
-	vector<int> vec;
+	queue<int>* queu = new queue<int>();
+	Binary_Tree<int>* newBST2 = newBST.BSTToSortedLinkedListEntry(root, queu);
+	cout << endl << endl; 
+	newBST2->PrintTreeLevelWise(newBST2);
+	/*vector<int> vec;
 	vec.push_back(1);
 	vec.push_back(2);
 	vec.push_back(3);
@@ -749,7 +752,7 @@ int main() {
 	vec.push_back(9);
 	vec.push_back(10);
 	newBST.deleteNodeInBSTTree(root, 5);
-	root->PrintTreeLevelWise(root);
+	root->PrintTreeLevelWise(root);*/
 	/*cout << "Minimum value in a Min Binary Tree " << endl;
 	cout << newBST.MinValueInBST(root);
 	cout << endl << endl;

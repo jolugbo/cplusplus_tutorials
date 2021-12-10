@@ -15,7 +15,9 @@ public:
 			return 0;
 		if (number == 1)
 			return 1;
-		else
-			return FibonacciCalculator(number - 1) + FibonacciCalculator(number - 2);
+		else {
+			int ans = FibonacciCalculator(number - 1) + FibonacciCalculator(number - 2);
+			return ans;
+		}
 	}
 };
