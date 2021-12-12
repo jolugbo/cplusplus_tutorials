@@ -73,6 +73,7 @@
 #include "data_structure/Trees/Generic_Trees/Generic_Tree.cpp"
 #include "data_structure/Trees/Binary _Tree/Binary_Tree.cpp"
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
+#include "data_structure/HashMap/Unordered_Map.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -713,12 +714,13 @@ void templateUse() {
 
 #undef main
 int main() {
+	Unordered_Map MP;
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
 	root->leftNode = node1;
 	root->rightNode = node2;*/
-	Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
+	/*Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();
 	root->PrintTreeRecursively(root);
 	cout << endl << endl;
 	root->PrintTreeRecursivelyInOrderTraversal(root);
@@ -739,7 +741,7 @@ int main() {
 	queue<int>* queu = new queue<int>();
 	Binary_Tree<int>* newBST2 = newBST.BSTToSortedLinkedListEntry(root, queu);
 	cout << endl << endl; 
-	newBST2->PrintTreeLevelWise(newBST2);
+	newBST2->PrintTreeLevelWise(newBST2);*/
 	/*vector<int> vec;
 	vec.push_back(1);
 	vec.push_back(2);

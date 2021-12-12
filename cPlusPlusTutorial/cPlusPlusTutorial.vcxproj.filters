@@ -219,6 +219,9 @@
     <ClCompile Include="data_structure\HashMap\HashMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\HashMap\Unordered_Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
