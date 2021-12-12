@@ -9,5 +9,12 @@ public:
 		uo_map.insert(p);
 		uo_map["def"] = 2;
 		cout << uo_map["def"]<<endl;
+		if (uo_map.count("abcd") > 0)
+		{
+			cout <<"key abcd exist" << endl;
+		}
+		cout << "Count is " << uo_map.size() << endl;
+		uo_map.erase("def");
+		cout << "Count after deleting a key " << uo_map.size() << endl;
 	}
 };
