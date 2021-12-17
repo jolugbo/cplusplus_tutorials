@@ -718,6 +718,8 @@ int lowestAbsence(vector<int> A, int counter) {
 }
 #undef main
 int main() { 
+	MajorityElement* me = new MajorityElement();
+	me->repeatedString("We test coders. Give us a try?."); 
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
