@@ -711,10 +711,13 @@ void templateUse() {
 	cout << triplet.getX().getX()<<" "<< triplet.getX().getY()<< " " << triplet.getY() <<" "<< triplet.getX().getX() + triplet.getY() << endl;
 
 }
-
+int lowestAbsence(vector<int> A, int counter) {
+	if (A.size() == 0)return 1;
+	if (counter == A.size() - 1 && A[counter] > counter) return counter;
+	else return lowestAbsence(A, ++counter);
+}
 #undef main
 int main() { 
-	Unordered_Map MP; 
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);

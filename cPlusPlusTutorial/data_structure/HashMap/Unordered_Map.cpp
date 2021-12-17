@@ -1,5 +1,7 @@
 #include <iostream>
 #include <unordered_map>
+#include <queue>
+#include <map>
 using namespace std;
 class Unordered_Map {
 public: 
@@ -16,5 +18,24 @@ public:
 		cout << "Count is " << uo_map.size() << endl;
 		uo_map.erase("def");
 		cout << "Count after deleting a key " << uo_map.size() << endl;
+	}
+};
+class FirstUnique {
+public:
+	queue <int> q;
+	map <int, int> cnt;
+	FirstUnique(vector<int>& nums) {
+		for (int i : nums) {
+			cnt[i]++;
+		}
+		for (int i : nums) {
+			if (cnt[i] == 1) {
+				q.push(i);
+			}
+		}
+	}
+	int showFirstUnique() {
+		while (!q.empty() && cnt[q.front()] > 1) q.pop();
+		return q.empty() ? -1 : q.front();
 	}
 };

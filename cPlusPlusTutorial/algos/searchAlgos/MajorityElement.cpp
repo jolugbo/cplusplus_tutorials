@@ -1,4 +1,6 @@
 #include <vector>
+#include <string>
+#include <sstream>
 #include <iostream>
 using namespace std;
 class MajorityElement {
@@ -43,5 +45,14 @@ public:
 			}
 		}
 		cout << majortyElement;
+	}
+	int repeatedString(string s) {
+		stringstream ss(s);
+		vector<string> vect;
+		for (string i; ss >> i;) {
+			vect.push_back(i);
+			if (ss.peek() == '.')
+				ss.ignore();
+		}
 	}
 };
