@@ -20,6 +20,25 @@ public:
 		uo_map.erase("def");
 		cout << "Count after deleting a key " << uo_map.size() << endl;
 	}
+	int countUnique(vector<int> input) {
+		vector<int> output(input.size());
+		unordered_map<int, int> store;
+		for (int i = 0; i < input.size(); i++)
+		{
+			if (store.count(input[i]) == 0) {
+				store[i] = input[i];
+				output[i] = input[i];
+			}
+		}
+		input = vector<int>();
+		for (int i = 0; i < input.size(); i++)
+		{
+			input[i] = output[i];
+		}
+		return output.size();
+	}
+
+
 };
 class FirstUnique {
 public:

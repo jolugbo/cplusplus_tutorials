@@ -719,13 +719,12 @@ int lowestAbsence(vector<int> A, int counter) {
 }
 #undef main
 int main() { 
-	random_codility* me = new random_codility();
+	Unordered_Map* me = new Unordered_Map();
 	vector<int> vec;
-	vec.push_back(5);
-	vec.push_back(19);
-	vec.push_back(8);
 	vec.push_back(1);
-	cout << me->solution2(vec);
+	vec.push_back(1);
+	vec.push_back(2);
+	cout << me->countUnique(vec);
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
