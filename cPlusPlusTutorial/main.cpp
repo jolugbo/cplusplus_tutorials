@@ -47,6 +47,7 @@
 #include "algos/recursions/RecursivelyPrintPermutaion.cpp"
 #include "algos/recursions/RecursivelyPrintDownLink.cpp"
 #include "algos/recursions/RecursiveTowerOfHanoi.cpp"
+#include "algos/random_codility/random_codilities.cpp"
 #include "algos/sortAlgos/MergeSort.cpp"
 #include "algos/sortAlgos/QuickSort.cpp"
 #include "algos/sortAlgos/QuickSort.cpp"
@@ -718,8 +719,13 @@ int lowestAbsence(vector<int> A, int counter) {
 }
 #undef main
 int main() { 
-	MajorityElement* me = new MajorityElement();
-	me->repeatedString("We test coders. Give us a try?."); 
+	random_codility* me = new random_codility();
+	vector<int> vec;
+	vec.push_back(5);
+	vec.push_back(19);
+	vec.push_back(8);
+	vec.push_back(1);
+	cout << me->solution2(vec);
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);

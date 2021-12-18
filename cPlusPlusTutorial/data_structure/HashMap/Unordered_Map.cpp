@@ -6,11 +6,12 @@ using namespace std;
 class Unordered_Map {
 public: 
 	Unordered_Map() {
-		unordered_map<string,int> uo_map;
 		pair<string, int> p("abc", 1);
+		unordered_map<string, int> uo_map;
 		uo_map.insert(p);
 		uo_map["def"] = 2;
-		cout << uo_map["def"]<<endl;
+		cout << uo_map["def"] << endl;
+		///cout << uo_map.at("xyz") << endl; generates out of bound error if key "xyz" does not exist
 		if (uo_map.count("abcd") > 0)
 		{
 			cout <<"key abcd exist" << endl;
