@@ -44,6 +44,15 @@ public:
 		{
 			cout << iterator->first << " " << iterator->second << endl;
 		}
+		if (uMap.find(1) == uMap.end())
+			cout << "key does not exist" << endl;
+		else
+			cout << "key exist" << endl;
+		uMap.erase(1);
+		if (uMap.find(1) == uMap.end())
+			cout << "key does not exist" << endl;
+		else
+			cout << "key exist" << endl;
 	}
 	void mapIteration() {
 		map<int, int> oMap;
@@ -56,6 +65,10 @@ public:
 		{
 			cout << iterator->first << " " << iterator->second << endl;
 		}
+		if (oMap.find(5) == oMap.end())
+			cout << "key does not exist" << endl;
+		else
+			cout << "key exist" << endl;
 	}
 	void vectorIteration() {
 		vector<int> vec;
