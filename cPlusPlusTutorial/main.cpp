@@ -717,14 +717,53 @@ int lowestAbsence(vector<int> A, int counter) {
 	if (counter == A.size() - 1 && A[counter] > counter) return counter;
 	else return lowestAbsence(A, ++counter);
 }
+long repeatedString(string s, long n) {
+
+
+	string totalLength = "";
+	long totalLengthHeight = n / s.length();
+
+	for (long i = 0; i < totalLengthHeight; i++)
+	{
+		totalLength += s;
+	}
+	long remainder = n % s.length();
+	for (int i = 0; i < remainder; i++)
+	{
+		totalLength += s[i];
+	}
+	long max = 0;
+	unordered_map<char, long> uo_map;
+	for (long i = 0; i < totalLength.length(); i++)
+	{
+		uo_map[totalLength[i]] = uo_map[totalLength[i]] + 1;
+		if (uo_map[totalLength[i]] > max) {
+			max++;
+		}
+	}
+	return max;
+}
+
 #undef main
-int main() { 
+int main() {
 	Unordered_Map* me = new Unordered_Map();
+	vector<vector<int>> vec;
+	vector<int> temp;
+	temp.push_back(1);
+	temp.push_back(2);
+	//[[1,2],[2,3]]
+	vector<int> temp2;
+	temp2.push_back(2);
+	temp2.push_back(3);
+	vec.push_back(temp);
+	vec.push_back(temp2);
+	me->findJudge(2, vec);
+	/*Unordered_Map* me = new Unordered_Map();
 	vector<int> vec;
 	vec.push_back(1);
 	vec.push_back(1);
 	vec.push_back(2);
-	cout << me->countUnique(vec);
+	cout << me->countUnique(vec);*/
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
 	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
