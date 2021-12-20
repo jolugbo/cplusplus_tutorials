@@ -38,28 +38,21 @@ public:
 		return output.size();
 	}
 	void unordered_mapIteration(unordered_map<int, int> uMap) {
-		for (unordered_map<int, int>::iterator iterator; iterator != uMap.end();iterator++)
+		for (unordered_map<int, int>::iterator iterator = uMap.begin(); iterator != uMap.end();iterator++)
 		{
-			cout << iterator->first;
-			cout << iterator->second;
+			cout << iterator->first << " "<< iterator->second<<endl;
 		}
 	}
-	//int findJudge(int n, vector<vector<int>> trust) {
-	//	unordered_map<int, int> uMap;
-	//	//trusters
-	//	for (int i = 0; i < trust.size(); i++) {
-	//		vector v = trust[i];
-	//		uMap[v[0]] = v[1];
-	//	}
-	//	//trusted//
-	//	for (int i = 0; i < trust.size(); i++) {
-	//		vector v = trust[i];
-	//		if (uMap.count(v[1]) < 1 &&) {
-	//			return v[1];
-	//		}
-	//	}
-	//	return  -1;
-	//}
+	int findJudge(int n, vector<vector<int>> trust) {
+		unordered_map<int, int> uMap;
+		//trusters
+		for (int i = 0; i < trust.size(); i++) {
+			vector v = trust[i];
+			uMap[v[0]] = v[1];
+		}
+		unordered_mapIteration(uMap);
+		return  -1;
+	}
 
 };
 class FirstUnique {
