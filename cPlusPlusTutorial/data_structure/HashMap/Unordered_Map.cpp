@@ -38,9 +38,37 @@ public:
 		return output.size();
 	}
 	void unordered_mapIteration(unordered_map<int, int> uMap) {
-		for (unordered_map<int, int>::iterator iterator = uMap.begin(); iterator != uMap.end();iterator++)
+
+		//unordered_maps are not sorted
+		for (unordered_map<int, int>::iterator iterator = uMap.begin(); iterator != uMap.end(); iterator++)
 		{
-			cout << iterator->first << " "<< iterator->second<<endl;
+			cout << iterator->first << " " << iterator->second << endl;
+		}
+	}
+	void mapIteration() {
+		map<int, int> oMap;
+		oMap[1] = 100;
+		oMap[2] = 200;
+		oMap[3] = 300;
+		oMap[4] = 400;
+		//maps are sorted
+		for (map<int, int>::iterator iterator = oMap.begin(); iterator != oMap.end(); iterator++)
+		{
+			cout << iterator->first << " " << iterator->second << endl;
+		}
+	}
+	void vectorIteration() {
+		vector<int> vec;
+		vec.push_back(1000);
+		vec.push_back(100);
+		vec.push_back(200);
+		vec.push_back(300);
+		vec.push_back(400);
+		//maps are sorted
+		cout << "iterators with vectors"<< endl;
+		for (vector<int>::iterator iterator = vec.begin(); iterator != vec.end(); iterator++)
+		{
+			cout << *iterator << endl;
 		}
 	}
 	int findJudge(int n, vector<vector<int>> trust) {
@@ -51,6 +79,8 @@ public:
 			uMap[v[0]] = v[1];
 		}
 		unordered_mapIteration(uMap);
+		mapIteration();
+		vectorIteration();
 		return  -1;
 	}
 
