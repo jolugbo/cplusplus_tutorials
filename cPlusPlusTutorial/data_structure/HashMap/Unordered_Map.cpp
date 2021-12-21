@@ -79,7 +79,7 @@ public:
 		vec.push_back(400);
 		//maps are sorted
 		cout << "iterators with vectors"<< endl;
-		for (vector<int>::iterator iterator = vec.begin(); iterator != vec.end(); iterator++)
+		for (auto iterator = vec.begin(); iterator != vec.end(); iterator++)
 		{
 			cout << *iterator << endl;
 		}
