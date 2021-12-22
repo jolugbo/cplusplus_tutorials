@@ -75,6 +75,7 @@
 #include "data_structure/Trees/Binary _Tree/Binary_Tree.cpp"
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 #include "data_structure/HashMap/Unordered_Map.cpp"
+#include "data_structure/HashMap/HashMap.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -746,18 +747,28 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
-	Unordered_Map* me = new Unordered_Map();
-	vector<vector<int>> vec;
-	vector<int> temp;
-	temp.push_back(1);
-	temp.push_back(2);
-	//[[1,2],[2,3]]
-	vector<int> temp2;
-	temp2.push_back(2);
-	temp2.push_back(3);
-	vec.push_back(temp);
-	vec.push_back(temp2);
-	me->findJudge(2, vec);
+	HashMap<int> myMap;
+	for (int i = 0; i < 10; i++)
+	{
+		char c = '0' + i;
+		string key = "abc";
+		key = key + c;
+		int value = i + 1;
+		myMap.insert(key, value);
+		cout << myMap.getLoadFactor();
+	}
+	cout << myMap.size();
+	//vector<vector<int>> vec;
+	//vector<int> temp;
+	//temp.push_back(1);
+	//temp.push_back(2);
+	////[[1,2],[2,3]]
+	//vector<int> temp2;
+	//temp2.push_back(2);
+	//temp2.push_back(3);
+	//vec.push_back(temp);
+	//vec.push_back(temp2);
+	//me->findJudge(2, vec);
 	/*Unordered_Map* me = new Unordered_Map();
 	vector<int> vec;
 	vec.push_back(1);
