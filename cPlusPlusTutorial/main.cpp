@@ -76,6 +76,7 @@
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 #include "data_structure/HashMap/Unordered_Map.cpp"
 #include "data_structure/HashMap/HashMap.cpp"
+#include "data_structure/PriorityQueue/PriorityQueue.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -747,17 +748,14 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
-	HashMap<int> myMap;
-	for (int i = 0; i < 10; i++)
-	{
-		char c = '0' + i;
-		string key = "abc";
-		key = key + c;
-		int value = i + 1;
-		myMap.insert(key, value);
-		cout << myMap.getLoadFactor();
-	}
-	cout << myMap.size();
+	PriorityQueue PQ;
+	PQ.insert(1);
+	PQ.insert(2);
+	PQ.insert(3);
+	PQ.insert(4);
+	PQ.insert(5);
+	PQ.insert(6);
+	PQ.insert(-1);
 	//vector<vector<int>> vec;
 	//vector<int> temp;
 	//temp.push_back(1);
