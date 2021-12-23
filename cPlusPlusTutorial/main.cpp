@@ -749,13 +749,14 @@ long repeatedString(string s, long n) {
 #undef main
 int main() {
 	PriorityQueue PQ;
-	PQ.insert(1);
-	PQ.insert(2);
-	PQ.insert(3);
+	PQ.insert(100);
+	PQ.insert(10);
+	PQ.insert(15);
 	PQ.insert(4);
-	PQ.insert(5);
-	PQ.insert(6);
-	PQ.insert(-1);
+	PQ.insert(17);
+	PQ.insert(21);
+	PQ.insert(67);
+	PQ.removeMinimum();
 	//vector<vector<int>> vec;
 	//vector<int> temp;
 	//temp.push_back(1);

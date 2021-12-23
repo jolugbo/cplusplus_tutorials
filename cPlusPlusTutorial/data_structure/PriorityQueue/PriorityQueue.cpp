@@ -33,4 +33,30 @@ public:
 			childIndex = parentIndex;
 		}
 	}
+
+	void removeMinimum() {
+		if (isEmpty())return;
+		int childIndex = pq.size() - 1;
+		swap(pq[0], pq[childIndex]);
+		pq.pop_back();
+		childIndex -= 1;
+		int parentIndex = 0;
+		while (parentIndex < pq.size() - 1)
+		{
+			int leftIndex = (2 * parentIndex) + 1;
+			int rightIndex = (2 * parentIndex) + 2;
+			if (leftIndex >= pq.size() - 1) return;
+			if (pq[parentIndex] > pq[leftIndex])
+			{
+				swap(pq[parentIndex], pq[leftIndex]);
+				parentIndex = leftIndex;
+			}
+			else if (pq[parentIndex] > pq[rightIndex])
+			{
+				swap(pq[parentIndex], pq[rightIndex]);
+				parentIndex = rightIndex;
+			}
+			else return;
+		}
+	}
 };
