@@ -1,0 +1,6 @@
+class PriorityQueue {
+public:
+	PriorityQueue() {
+	
+	}
+};

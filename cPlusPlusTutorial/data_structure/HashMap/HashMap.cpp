@@ -40,6 +40,10 @@ public:
 		count = 0;
 		bucketSize = 5;
 		buckets = new HashMapNode<V>*[bucketSize];
+		for (int i = 0; i < bucketSize; i++)
+		{
+			buckets[i] = NULL;
+		}
 	}
 	~HashMap() {
 		for (int i = 0; i < bucketSize; i++)
@@ -54,7 +58,6 @@ public:
 
 	V getValue(string key) {
 		int index = getBucketIndex(key);
-		if (buckets[index] == NULL)return;
 		HashMapNode<V>* headNode = buckets[index];
 		while (headNode != NULL)
 		{
@@ -69,25 +72,19 @@ public:
 
 	void insert(string key, V value) {
 		int index = getBucketIndex(key);
-		HashMapNode<V>* currentNode = buckets[index];
-		if (buckets[index] == NULL)
+		HashMapNode<V>* currentNode = new HashMapNode<V>(key,value);
+		HashMapNode<V>* headNode = buckets[index];
+		while (headNode != NULL)
 		{
-			buckets[index] = currentNode;
-		}
-		else {
-			HashMapNode<V>* headNode = buckets[index];
-			while (headNode != NULL)
+			if (headNode->key == key)
 			{
-				if (headNode->key == key)
-				{
-					headNode->value = value;
-					return;
-				}
-				headNode = headNode->next;
+				headNode->value = value;
+				return;
 			}
-			currentNode->next = buckets[index];
-			buckets[index] = currentNode;
+			headNode = headNode->next;
 		}
+		currentNode->next = buckets[index];
+		buckets[index] = currentNode;
 		count++;
 		double loadFactor = (1.0 * count) / bucketSize;
 		if (loadFactor > 0.7)

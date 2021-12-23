@@ -187,6 +187,7 @@
     <ClCompile Include="data_structure\LinkedList\JosephusCircle.cpp" />
     <ClCompile Include="data_structure\LinkedList\LinkedListRecursive.cpp" />
     <ClCompile Include="data_structure\LinkedList\Node.cpp" />
+    <ClCompile Include="data_structure\PriorityQueue\PriorityQueue.cpp" />
     <ClCompile Include="data_structure\Queue\InBuiltQueue.cpp" />
     <ClCompile Include="data_structure\Queue\QueueWithArray.cpp" />
     <ClCompile Include="data_structure\Queue\QueueWithDynamicArray.cpp" />
