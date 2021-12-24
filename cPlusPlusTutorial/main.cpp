@@ -79,6 +79,7 @@
 #include "data_structure/PriorityQueue/CustomPriorityQueue.cpp"
 #include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
 #include "algos/dynamic_programming/Fibonacci_Upgraded.cpp"
+#include "algos/dynamic_programming/MinimumStepTo1.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -743,26 +744,18 @@ long repeatedString(string s, long n) {
 		uo_map[totalLength[i]] = uo_map[totalLength[i]] + 1;
 		if (uo_map[totalLength[i]] > max) {
 			max++;
-		}
+		} 
 	}
 	return max;
 }
 
 #undef main
 int main() {
-	Fibonacci_Upgraded fiboCalc;
-	int n = 40;
-	int* arr = new int[n];
-	for (int i = 0; i <= n; i++)
-	{ 
-		arr[i] = 0;
-	}
-	cout << fiboCalc.calc_fibo2(n)<<endl;
-	cout << fiboCalc.calc_fibo1(n,arr) << endl;
-	cout << fiboCalc.calc_fibo(n) << endl;
+	MinimumStepTo1 minimumStepTo1oCalc;
+	cout << minimumStepTo1oCalc.calcMinimumStepTo1(200,0)<<endl; 
 
 	/*for (int i = 0; i < 5; i++)
-	{
+	{ 
 		cout << input[i] << endl;
 	}*/
 

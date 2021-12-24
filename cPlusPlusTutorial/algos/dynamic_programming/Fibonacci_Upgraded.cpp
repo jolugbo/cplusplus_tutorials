@@ -19,7 +19,16 @@ public:
 		{
 			arr[i] = arr[i - 1] + arr[i - 2];
 		}
-		int result =  arr[n];
+		int result = arr[n];
 		return result;
+	}
+	int calc_fibo3(int n) {
+		int holder1 = 0;
+		int holder2 = 1;
+		int holder3 = 0;
+		/*for (int i = 2; i <= n; i++)
+		{
+			arr[i] = arr[i - 1] + arr[i - 2];
+		}*/
 	}
 };
