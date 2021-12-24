@@ -59,4 +59,26 @@ public:
 			else return;
 		}
 	}
+	void inplaceHeapSort(vector<int> arr) {
+		int size = arr.size();
+		int index = 0;
+		int childIndex;
+		int parentIndex;
+		while (index < size - 1)
+		{
+			childIndex = index;
+			parentIndex = (childIndex - 1) / 2;
+			while (childIndex > 0)
+			{
+				parentIndex = (childIndex - 1) / 2;
+				if (arr[childIndex] < arr[parentIndex])
+				{
+					swap(arr[childIndex], arr[parentIndex]);
+				}
+				childIndex = parentIndex;
+			}
+
+			index++;
+		}
+	}
 };

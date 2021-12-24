@@ -748,15 +748,16 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
+	vector<int> vec;
+	vec.push_back(100);
+	vec.push_back(10);
+	vec.push_back(15);
+	vec.push_back(4);
+	vec.push_back(17);
+	vec.push_back(21);
+	vec.push_back(67);
 	PriorityQueue PQ;
-	PQ.insert(100);
-	PQ.insert(10);
-	PQ.insert(15);
-	PQ.insert(4);
-	PQ.insert(17);
-	PQ.insert(21);
-	PQ.insert(67);
-	PQ.removeMinimum();
+	PQ.inplaceHeapSort(vec);
 	//vector<vector<int>> vec;
 	//vector<int> temp;
 	//temp.push_back(1);
