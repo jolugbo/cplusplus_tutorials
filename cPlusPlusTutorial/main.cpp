@@ -78,6 +78,7 @@
 #include "data_structure/HashMap/HashMap.cpp"
 #include "data_structure/PriorityQueue/CustomPriorityQueue.cpp"
 #include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
+#include "algos/dynamic_programming/Fibonacci_Upgraded.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -749,10 +750,17 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
-	int input[] = { 5,6,9,12,3,13,2 };
-	int k = 3;
-	InBuiltPriorityQueue test;
-	test.kSmallestElement(input, 7, k);
+	Fibonacci_Upgraded fiboCalc;
+	int n = 40;
+	int* arr = new int[n];
+	for (int i = 0; i <= n; i++)
+	{ 
+		arr[i] = 0;
+	}
+	cout << fiboCalc.calc_fibo2(n)<<endl;
+	cout << fiboCalc.calc_fibo1(n,arr) << endl;
+	cout << fiboCalc.calc_fibo(n) << endl;
+
 	/*for (int i = 0; i < 5; i++)
 	{
 		cout << input[i] << endl;

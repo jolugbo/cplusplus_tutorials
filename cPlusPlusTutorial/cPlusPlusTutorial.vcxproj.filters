@@ -231,6 +231,9 @@
     <ClCompile Include="data_structure\PriorityQueue\InBuiltPriorityQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
