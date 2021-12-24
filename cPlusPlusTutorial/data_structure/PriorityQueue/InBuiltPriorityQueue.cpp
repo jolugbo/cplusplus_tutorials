@@ -19,5 +19,37 @@ public:
 			maxpq.pop();
 		}
 		priority_queue<int,vector<int>,greater<int>> minpq;
+		minpq.push(10);
+		minpq.push(100);
+		minpq.push(20);
+		minpq.push(17);
+		minpq.push(31);
+		minpq.push(210);
+		cout << minpq.size() << endl;
+		while (minpq.size() > 0)
+		{
+			cout << minpq.top() << endl;
+			minpq.pop();
+		}
+	}
+	void kSortedArr(int* arr, int n, int k) {
+		priority_queue<int> pq;
+		for (int i = 0; i < k; i++)
+		{
+			pq.push(arr[i]);
+		}
+		int s = 0;
+		for (int i = k; i < n; i++)
+		{
+			arr[s] = pq.top();
+			pq.pop();
+			s++;
+			pq.push(arr[i]);
+		}
+		while (!pq.empty())
+		{
+			arr[s++] = pq.top();
+			pq.pop();
+		}
 	}
 };

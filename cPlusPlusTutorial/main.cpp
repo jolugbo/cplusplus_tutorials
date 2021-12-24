@@ -749,7 +749,14 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
+	int input[] = { 10,12,6,7,9 };
+	int k = 3;
 	InBuiltPriorityQueue test;
+	test.kSortedArr(input, 5, k);
+	for (int i = 0; i < 5; i++)
+	{
+		cout << input[i] << endl;
+	}
 	//vector<vector<int>> vec;
 	//vector<int> temp;
 	//temp.push_back(1);
