@@ -225,7 +225,10 @@
     <ClCompile Include="algos\random_codility\random_codilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="data_structure\PriorityQueue\PriorityQueue.cpp">
+    <ClCompile Include="data_structure\PriorityQueue\CustomPriorityQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data_structure\PriorityQueue\InBuiltPriorityQueue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

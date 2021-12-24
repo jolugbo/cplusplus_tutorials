@@ -76,7 +76,8 @@
 #include "data_structure/Trees/Binary_Search_Tree/BinarySearchTree.cpp"
 #include "data_structure/HashMap/Unordered_Map.cpp"
 #include "data_structure/HashMap/HashMap.cpp"
-#include "data_structure/PriorityQueue/PriorityQueue.cpp"
+#include "data_structure/PriorityQueue/CustomPriorityQueue.cpp"
+#include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -748,16 +749,7 @@ long repeatedString(string s, long n) {
 
 #undef main
 int main() {
-	vector<int> vec;
-	vec.push_back(100);
-	vec.push_back(10);
-	vec.push_back(15);
-	vec.push_back(4);
-	vec.push_back(17);
-	vec.push_back(21);
-	vec.push_back(67);
-	PriorityQueue PQ;
-	PQ.inplaceHeapSort(vec);
+	InBuiltPriorityQueue test;
 	//vector<vector<int>> vec;
 	//vector<int> temp;
 	//temp.push_back(1);

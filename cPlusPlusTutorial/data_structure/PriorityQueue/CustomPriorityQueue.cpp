@@ -1,9 +1,9 @@
 #include <vector>
 using namespace std;
-class PriorityQueue {
+class CustomPriorityQueue {
 public:
 	vector<int> pq;
-	PriorityQueue() {
+	CustomPriorityQueue() {
 	
 	}
 
