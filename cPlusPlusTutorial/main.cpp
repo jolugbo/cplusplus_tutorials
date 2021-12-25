@@ -742,17 +742,18 @@ long repeatedString(string s, long n) {
 	for (long i = 0; i < totalLength.length(); i++)
 	{
 		uo_map[totalLength[i]] = uo_map[totalLength[i]] + 1;
-		if (uo_map[totalLength[i]] > max) {
-			max++;
-		} 
-	}
+		if (uo_map[totalLength[i]] > max) { 
+			max++; 
+		}  
+	} 
 	return max;
 }
-
+ 
 #undef main
 int main() {
 	MinimumStepTo1 minimumStepTo1oCalc;
-	cout << minimumStepTo1oCalc.calcMinimumStepTo1(200,0)<<endl; 
+	unordered_map<int, int> uo_map; 
+	cout << minimumStepTo1oCalc.calcMinimumStepTo1(10000, uo_map)<<endl;
 
 	/*for (int i = 0; i < 5; i++)
 	{ 
