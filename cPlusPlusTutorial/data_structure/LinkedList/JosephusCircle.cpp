@@ -1,6 +1,6 @@
 #include "Node.cpp"
 
-//using circular linked list execute every x osition person, what is the best position to stand
+//using circular linked list execute every x position person, what is the best position to stand
 class JosephusCircle {
 public:
 	JosephusCircle() {

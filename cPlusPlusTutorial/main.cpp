@@ -80,6 +80,7 @@
 #include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
 #include "algos/dynamic_programming/Fibonacci_Upgraded.cpp"
 #include "algos/dynamic_programming/MinimumStepTo1.cpp"
+#include "algos/random_codility/ClimbingStairs.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -751,9 +752,8 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	MinimumStepTo1 minimumStepTo1oCalc;
-	unordered_map<int, int> uo_map; 
-	cout << minimumStepTo1oCalc.calcMinimumStepTo1(10000, uo_map)<<endl;
+	ClimbingStairs calc;
+	cout << calc.climbStairs(6)<<endl; 
 
 	/*for (int i = 0; i < 5; i++)
 	{ 
@@ -779,7 +779,7 @@ int main() {
 	cout << me->countUnique(vec);*/
 	/*Binary_Tree<int>* root = new Binary_Tree<int>(0);
 	Binary_Tree<int>* node1 = new Binary_Tree<int>(1);
-	Binary_Tree<int>* node2 = new Binary_Tree<int>(2);
+	Binary_Tree<int>* node2 = new Binary_Tree<int>(2); 
 	root->leftNode = node1;
 	root->rightNode = node2;*/
 	/*Binary_Tree<int>* root =   Binary_Tree<int>(0).TakeInputLevelWise();

@@ -237,6 +237,9 @@
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\random_codility\ClimbingStairs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
