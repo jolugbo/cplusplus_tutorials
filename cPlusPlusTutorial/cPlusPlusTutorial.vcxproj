@@ -141,8 +141,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
+    <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp" />
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
-    <ClCompile Include="algos\random_codility\ClimbingStairs.cpp" />
+    <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
     <ClCompile Include="algos\recursions\CheckPalindrome.cpp" />
     <ClCompile Include="algos\recursions\CountOccuranceOfElementInArray.cpp" />

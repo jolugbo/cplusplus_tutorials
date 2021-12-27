@@ -237,7 +237,10 @@
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\random_codility\ClimbingStairs.cpp">
+    <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

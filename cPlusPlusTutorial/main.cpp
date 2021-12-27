@@ -80,7 +80,8 @@
 #include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
 #include "algos/dynamic_programming/Fibonacci_Upgraded.cpp"
 #include "algos/dynamic_programming/MinimumStepTo1.cpp"
-#include "algos/random_codility/ClimbingStairs.cpp"
+#include "algos/dynamic_programming/ClimbingStairs.cpp"
+#include "algos/dynamic_programming/LongestCommonSubsequence.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -752,8 +753,8 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	ClimbingStairs calc;
-	cout << calc.climbStairs(6)<<endl; 
+	LongestCommonSubsequence calc;
+	cout << calc.calcLongestCommonSubsequence("abc", "def")<<endl;
 
 	/*for (int i = 0; i < 5; i++)
 	{ 
