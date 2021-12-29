@@ -82,6 +82,7 @@
 #include "algos/dynamic_programming/MinimumStepTo1.cpp"
 #include "algos/dynamic_programming/ClimbingStairs.cpp"
 #include "algos/dynamic_programming/LongestCommonSubsequence.cpp"
+#include "algos/dynamic_programming/EditDistance.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -753,8 +754,8 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	LongestCommonSubsequence calc;
-	cout << calc.calcLongestCommonSubsequence("pmjghexybyrgzczy", "hafcdqbgncrcbihkd")<<endl;
+	EditDistance calc;
+	cout << calc.editDistance("horse", "ros")<<endl;
 	/*for (int i = 0; i < 5; i++)
 	{ 
 		cout << input[i] << endl;

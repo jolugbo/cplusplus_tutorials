@@ -23,7 +23,7 @@ public:
 	}
 
 
-	//works faster, but i have issues with the compiler type am using doesno't allow the us of non static declaration 0f array size
+	//works faster, but i have issues with the compiler type am using doesn't allow the use of non static declaration 0f array size
 	/*int clac2(string text1, string text2) {
 		int m = text1.size();
 		int n = text2.size();

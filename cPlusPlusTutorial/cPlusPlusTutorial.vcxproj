@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
     <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp" />
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
