@@ -354,8 +354,8 @@ void sizeString() {
 // string substring
 void substringString() {
 	string s;
-	s = "testing ";
-	cout << s.substr(4) << "\n";
+	s = "testing";
+	cout << s.substr(1) << "\n";
 	cout << s.substr(0, 4) << "\n";// one more after intended eg intend to fetch eat from eating use (0,3)
 }
 
@@ -754,8 +754,7 @@ long repeatedString(string s, long n) {
 #undef main
 int main() {
 	LongestCommonSubsequence calc;
-	cout << calc.calcLongestCommonSubsequence("abc", "def")<<endl;
-
+	cout << calc.calcLongestCommonSubsequence("pmjghexybyrgzczy", "hafcdqbgncrcbihkd")<<endl;
 	/*for (int i = 0; i < 5; i++)
 	{ 
 		cout << input[i] << endl;
