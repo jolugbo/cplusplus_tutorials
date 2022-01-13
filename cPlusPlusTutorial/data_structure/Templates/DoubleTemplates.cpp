@@ -3,6 +3,10 @@ class DoublePair {
 	T x;
 	V y;
 public:
+	DoublePair(T inputX, V inputY) {
+		x = inputX;
+		y = inputY;
+	}
 	T getX() {
 		return x;
 	}

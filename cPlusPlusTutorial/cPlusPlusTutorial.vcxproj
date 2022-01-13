@@ -142,9 +142,11 @@
   <ItemGroup>
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
+    <ClCompile Include="algos\dynamic_programming\KnapSack.cpp" />
     <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp" />
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
     <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
+    <ClCompile Include="algos\random_codility\MinWindow.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
     <ClCompile Include="algos\recursions\CheckPalindrome.cpp" />
     <ClCompile Include="algos\recursions\CountOccuranceOfElementInArray.cpp" />
@@ -231,7 +233,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Path To CTO.txt" />
+    <Text Include="Path To CEO.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

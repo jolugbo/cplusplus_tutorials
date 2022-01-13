@@ -83,6 +83,7 @@
 #include "algos/dynamic_programming/ClimbingStairs.cpp"
 #include "algos/dynamic_programming/LongestCommonSubsequence.cpp"
 #include "algos/dynamic_programming/EditDistance.cpp"
+#include "algos/dynamic_programming/KnapSack.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -333,7 +334,7 @@ void manipulateString() {
 	string s;
 	s = "testing";
 	s[2] = 'j';
-	cout << s[2] << "\n ";
+	cout << s << "\n ";
 }
 // string concat
 void concatString() {
@@ -379,7 +380,7 @@ void intToString() {
 // string to int
 void stringToInt() {
 	string num = "1234";
-	int sum = std::atoi(num.c_str());
+	int sum = atoi(num.c_str());
 	cout << sum + 9876 << "\n";
 }
 void studentClassUse() {
@@ -685,7 +686,6 @@ void StackUse() {
 	s.pop();
 	cout << s.Size() << endl;
 	cout << s.isEmpty() << endl;
-
 }
 void StackWithLinkedListUse() {
 	StackWithLinkedList swl;
@@ -704,20 +704,20 @@ void templateUse() {
 
 	cout << temp1.getY() + temp1.getX() << endl;
 
-	DoublePair<int, double> doublePairs;
 	double x = 10.55;
+	DoublePair<int, double> doublePairs(x,x);
 	doublePairs.setX(x);
 	doublePairs.setY(x);
 
 	cout << doublePairs.getX() + doublePairs.getY()<< endl;
 
-	DoublePair<DoublePair<int,double>, double> triplet;
-	DoublePair<int, double> doubles;
-	doubles.setX(10);
+	DoublePair<int, double> doubles(10,2.5);
+	//DoublePair<DoublePair<int, double>, double> triplet(doubles,12.1);
+	/*doubles.setX(10);
 	doubles.setY(2.5);
 	triplet.setY(12.1);
-	triplet.setX(doubles);
-	cout << triplet.getX().getX()<<" "<< triplet.getX().getY()<< " " << triplet.getY() <<" "<< triplet.getX().getX() + triplet.getY() << endl;
+	triplet.setX(doubles);*/
+	//cout << triplet.getX().getX()<<" "<< triplet.getX().getY()<< " " << triplet.getY() <<" "<< triplet.getX().getX() + triplet.getY() << endl;
 
 }
 int lowestAbsence(vector<int> A, int counter) {
@@ -754,17 +754,43 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	EditDistance calc;
-	cout << calc.editDistance("horse", "ros")<<endl;
+	/*KnapSack calc;
+	vector<int> vec1;
+	vector<int> vec2;
+	int A[] = { 468, 335, 501, 170, 725, 479, 359, 963, 465, 706, 146, 282, 828, 962, 492, 996, 943, 828, 437, 392, 605, 903, 154, 293, 383, 422, 717, 719, 896, 448, 727, 772, 539, 870, 913, 668, 300, 36, 895, 704, 812, 323 };
+	int B[] = { 4, 4, 5, 2, 2, 4, 9, 8, 5, 3, 8, 8, 10, 4, 2, 10, 9, 7, 6, 1, 3, 9, 7, 1, 3, 5, 9, 7, 6, 1, 10, 1, 1, 7, 2, 4, 9, 10, 4, 5, 5, 7 };
+     int arrSize1 = sizeof(A) / sizeof(A[0]);
+	 int arrSize2 = sizeof(B) / sizeof(B[0]);
+	 for (int i = 0; i < arrSize1; i++)
+	 {
+		 vec1.push_back(A[i]);horse
+	 }
+	 for (int i = 0; i < arrSize2; i++)
+	 {
+		 vec2.push_back(B[i]);
+	 }
+	int	C = 841;*/
+	//cout << calc.solve(vec1, vec2, C)<<endl;
+	EditDistance c;
+	c.calcEditDistance2("intention", "execution");
+	MinimumStepTo1 ms;
+	cout<<"output is " << ms.calcMinStepsTo1(7) << endl << endl;
 	/*for (int i = 0; i < 5; i++)
 	{ 
 		cout << input[i] << endl;
 	}*/
 
 	//vector<vector<int>> vec;
-	//vector<int> temp;
-	//temp.push_back(1);
-	//temp.push_back(2);
+	vector<int> temp;
+	temp.push_back(6);
+	temp.push_back(2);
+	temp.push_back(7);
+	temp.push_back(3);
+	temp.push_back(1);
+    sort(temp.begin(), temp.end());
+	for (int k = 0; k < 5; k++) {
+		cout << temp[k] << endl;
+	}
 	////[[1,2],[2,3]]
 	//vector<int> temp2;
 	//temp2.push_back(2);

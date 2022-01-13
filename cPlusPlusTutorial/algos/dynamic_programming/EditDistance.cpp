@@ -37,7 +37,35 @@ public:
 		int replace = calcEditDistance(word1, word1Len - 1, word2, word2Len - 1);
 		return 1 + min(insert, min(deleteOne, replace));
 	}
-
+	int calcEditDistance2(string word1, string word2) {
+		int m = word1.size();
+		int n = word2.size();
+		int dp[n + 1][m + 1];
+		for (int i = 0; i <= n; i++)
+		{
+			for (int j = 0; j <= m; j++)
+			{
+				if (i == 0 || j == 0)
+				{
+					dp[i][j] = 0;
+				}
+				else if (word1[j - 1] == word2[i - 1]) dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]);
+				else if (word1[j - 1] != word2[i - 1]) {
+					dp[i][j] = 1 + min(dp[i - 1][j], dp[i][j - 1]);
+				}
+			}
+		}
+		for (int i = 0; i <= n; i++)
+		{
+			for (int j = 0; j <= m; j++)
+			{
+				cout << dp[i][j] << " ";
+			}
+			cout << endl;
+		}
+		int output = dp[n][m];
+		return output;
+	}
 };
 //Input: word1 = "horse", word2 = "ros"
 //Output : 3
