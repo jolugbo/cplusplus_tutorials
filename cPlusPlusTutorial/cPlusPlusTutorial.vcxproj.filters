@@ -36,7 +36,7 @@
     <ClCompile Include="product.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="spiralMatrix.cpp">
+    <ClCompile Include="algos\random_codility\SpiralMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="student.cpp">
@@ -261,9 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="spiralMatrix.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="student.hpp">

@@ -5,7 +5,6 @@
 //  Created by Jolugbo on 8/23/21.
 //
 
-#include "spiralMatrix.hpp"
 #include <iostream>
 #include <vector>
 using namespace std;

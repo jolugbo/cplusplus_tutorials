@@ -218,7 +218,7 @@
     <ClCompile Include="fractor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="product.cpp" />
-    <ClCompile Include="spiralMatrix.cpp" />
+    <ClCompile Include="algos\random_codility\SpiralMatrix.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="vectorManipulations.cpp" />
   </ItemGroup>
@@ -226,7 +226,6 @@
     <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.h" />
     <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp" />
     <ClInclude Include="dynamicArray.hpp" />
-    <ClInclude Include="spiralMatrix.hpp" />
     <ClInclude Include="student.hpp" />
     <ClInclude Include="vector.hpp" />
   </ItemGroup>
