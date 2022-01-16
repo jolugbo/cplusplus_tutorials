@@ -249,6 +249,12 @@
     <ClCompile Include="algos\dynamic_programming\KnapSack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\random_codility\MinWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\dynamic_programming\LargestCombination.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
@@ -275,6 +281,6 @@
     <None Include="..\..\..\..\Documents\Custom Office Templates\Book1.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Path To CTO.txt" />
+    <Text Include="Path To CEO.txt" />
   </ItemGroup>
 </Project>

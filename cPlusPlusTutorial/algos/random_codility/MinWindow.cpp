@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
-class MinWindow{
+class MinWindow {
 public:
 	MinWindow(string A, string B) {
-		
+
 	}
 
-}
+};
 
 //Given a string S and a string T, find the minimum window in S which will contain 
 //all the characters in T in linear time complexity.
@@ -21,4 +21,4 @@ public:
 //
 //Note :
 //	If there is no such window in S that covers all characters in T, return the empty string ''.
-//	If there are multiple such windows, return the first occurring minimum window(with minimum start index)
+//	If there are multiple such windows, return the first occurring minimum window(with minimum start index 

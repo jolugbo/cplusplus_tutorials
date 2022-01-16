@@ -37,7 +37,7 @@ public:
 		int replace = calcEditDistance(word1, word1Len - 1, word2, word2Len - 1);
 		return 1 + min(insert, min(deleteOne, replace));
 	}
-	int calcEditDistance2(string word1, string word2) {
+	/*int calcEditDistance2(string word1, string word2) {
 		int m = word1.size();
 		int n = word2.size();
 		int dp[n + 1][m + 1];
@@ -65,7 +65,7 @@ public:
 		}
 		int output = dp[n][m];
 		return output;
-	}
+	}*/
 };
 //Input: word1 = "horse", word2 = "ros"
 //Output : 3
