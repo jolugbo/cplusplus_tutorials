@@ -23,18 +23,37 @@ public:
 	//solving using Dynamic ProgramminMethods
 
 	int knapsack(vector<int> A, vector<int> B, int C) {
-		knapsackCalc(A,B,C,0);
+		return knapsackCalc(A,B,C,0);
 	}
 	int knapsackCalc(vector<int> A, vector<int> B, int C,int position) {
-		int picker = 0;
 		if (position >= A.size())return 0;
-		if (B[position] > C) return 0;
+		if (B[position] > C) return knapsackCalc(A, B, C, position + 1);
 		else {
-			int include = A[position] + knapsackCalc(A, B, C - A[position], position + 1);
+			int include = A[position] + knapsackCalc(A, B, C - B[position], position + 1);
 			int exclude = knapsackCalc(A, B, C , position + 1);
 			int output = max(include, exclude);
 			return output;
 		}
+	}
+
+	int knapsackCalc(vector<int> A, vector<int> B, int C){
+		if (C == 0)return 0;
+		int dp[3][3];
+		for (int i = 0; i <= A.size(); i++)
+		{
+			for (int j = 0; j <= C; j++)
+			{
+				if (i == 0 || j == 0)dp[i][j] = 0;
+				else if (B[i - 1] > j)dp[i][j] = dp[i - 1][j];
+				else
+				{
+					int include = A[i - 1] + dp[i -1][j - B[i - 1]];
+					int exclude = dp[i - 1][j];
+					dp[i][j] = max(include,exclude);
+				}
+			}
+		}
+		return dp[A.size()][C];
 	}
 
 	/*int clac2(vector<int>& A, vector<int>& B, int C, int len) {
