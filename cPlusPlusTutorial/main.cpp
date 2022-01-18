@@ -15,7 +15,6 @@
 #include "product.cpp"
 #include "dynamicArray.cpp"
 #include "vectorManipulations.cpp"
-#include "spiralMatrix.cpp"
 #include <sstream>
 #include "ArrayIntro.cpp"
 #include "algos/searchAlgos/LinearSearch.cpp"
@@ -86,6 +85,7 @@
 #include "algos/dynamic_programming/KnapSack.cpp"
 #include "algos/dynamic_programming/LargestCombination.cpp"
 #include "algos/random_codility/RotateVector.cpp"
+#include "data_structure/Graphs/Adjacent_Matrix_Graph.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -756,14 +756,16 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	int A[] = { 14, 5, 14, 34, 42, 63, 17, 25, 39, 61, 97, 55, 33, 96, 62, 32, 98, 77, 35 };
+	Adjacent_Matrix_Graph graph(3, 3);
+
+	/*int A[] = { 14, 5, 14, 34, 42, 63, 17, 25, 39, 61, 97, 55, 33, 96, 62, 32, 98, 77, 35 };
 	int arrSize1 = sizeof(A) / sizeof(A[0]);
 	vector<int> vec1;
 	for (int i = 0; i < arrSize1; i++) 
 	{
 		vec1.push_back(A[i]);
 	}
-	RotateVector vec(vec1, 56);  
+	RotateVector vec(vec1, 56);*/  
 //A: [539, 870]
 //B : [13, 68]
 //C : 300

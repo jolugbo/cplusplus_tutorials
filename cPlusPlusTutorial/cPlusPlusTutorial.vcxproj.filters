@@ -258,6 +258,9 @@
     <ClCompile Include="algos\random_codility\RotateVector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data_structure\Graphs\Adjacent_Matrix_Graph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
