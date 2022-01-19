@@ -9,7 +9,7 @@
 #include <cstring>
 #include <vector>
 #include <array>
-#include <algorithm>
+#include <algorithm> 
 #include "student.cpp"
 #include "fractor.cpp"
 #include "product.cpp"
@@ -756,13 +756,13 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	Adjacent_Matrix_Graph graph(3, 3);
+	Adjacent_Matrix_Graph graph(4, 3);
 
 	/*int A[] = { 14, 5, 14, 34, 42, 63, 17, 25, 39, 61, 97, 55, 33, 96, 62, 32, 98, 77, 35 };
 	int arrSize1 = sizeof(A) / sizeof(A[0]);
 	vector<int> vec1;
 	for (int i = 0; i < arrSize1; i++) 
-	{
+	{ 
 		vec1.push_back(A[i]);
 	}
 	RotateVector vec(vec1, 56);*/  
