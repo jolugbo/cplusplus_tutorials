@@ -756,8 +756,15 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	Adjacent_Matrix_Graph graph(4, 3);
-
+	Adjacent_Matrix_Graph graph(7, 8);
+	/*0 1
+		0 2
+		1 3
+		1 4
+		2 6
+		3 5
+		4 5
+		6 5*/
 	/*int A[] = { 14, 5, 14, 34, 42, 63, 17, 25, 39, 61, 97, 55, 33, 96, 62, 32, 98, 77, 35 };
 	int arrSize1 = sizeof(A) / sizeof(A[0]);
 	vector<int> vec1;

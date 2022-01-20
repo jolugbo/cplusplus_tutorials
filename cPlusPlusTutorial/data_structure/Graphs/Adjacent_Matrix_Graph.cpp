@@ -1,5 +1,6 @@
 #include <vector>
 #include <iostream>
+#include <queue>
 using namespace std;
 class Adjacent_Matrix_Graph {
 public:
@@ -13,9 +14,10 @@ public:
 			matrix[sv][fv] = 1;
 		}
 		vector<bool> visited(vertices,false);
-		printGraph(matrix, 0, visited);
+		//printGraphDFS(matrix, 0, visited);
+		printGraphBFS(matrix, 0, visited);
 	}
-	void printGraph(vector<vector<int>> matrix, int startingVertics, vector<bool>& visited) {
+	void printGraphDFS(vector<vector<int>> matrix, int startingVertics, vector<bool>& visited) {
 		cout << startingVertics;
 		int size = matrix.size();
 		visited[startingVertics] = true;
@@ -23,8 +25,28 @@ public:
 		{
 			if (matrix[startingVertics][i] == 1 && visited[i] == false)
 			{
-				printGraph(matrix, i, visited);
+				printGraphDFS(matrix, i, visited);
 			}
+		}
+	}
+	void printGraphBFS(vector<vector<int>> matrix, int startingVertics, vector<bool>& visited) {
+		queue<int> que;
+		que.push(startingVertics);
+		int size = matrix.size();
+		while (!que.empty())
+		{
+			int top = que.front();	
+			cout << top;
+			visited[top] = true;
+			for (int i = 0; i < size; i++)
+			{
+				if (matrix[top][i] == 1 && visited[i] == false)
+				{
+					visited[i] = true;
+					que.push(i);
+				}
+			}
+			que.pop();
 		}
 	}
 };
