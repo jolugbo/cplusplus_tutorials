@@ -192,6 +192,7 @@
     <ClCompile Include="complexNumber.cpp" />
     <ClCompile Include="cPlusPlusTutorial.cpp" />
     <ClCompile Include="data_structure\Graphs\Adjacent_Matrix_Graph.cpp" />
+    <ClCompile Include="data_structure\Graphs\Kruskal.cpp" />
     <ClCompile Include="data_structure\HashMap\HashMap.cpp" />
     <ClCompile Include="data_structure\HashMap\Unordered_Map.cpp" />
     <ClCompile Include="data_structure\LinkedList\JosephusCircle.cpp" />

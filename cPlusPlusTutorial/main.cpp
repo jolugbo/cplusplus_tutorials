@@ -756,7 +756,8 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	Adjacent_Matrix_Graph graph(7, 8);
+	//Adjacent_Matrix_Graph graph(8, 6); 
+	
 	/*0 1
 		0 2
 		1 3

@@ -14,8 +14,35 @@ public:
 			matrix[sv][fv] = 1;
 		}
 		vector<bool> visited(vertices,false);
+		printDisconnectedGraph(matrix, vertices);
 		//printGraphDFS(matrix, 0, visited);
-		printGraphBFS(matrix, 0, visited);
+		//printGraphBFS(matrix, 0, visited);
+	}
+	void printDisconnectedGraph(vector<vector<int>> matrix, int vertices) {
+		vector<bool> visited(vertices, false);
+		for (int i = 0; i < vertices; i++)
+		{
+			if (!visited[i])
+			{
+				printGraphBFS(matrix, i, visited);
+				//printGraphDFS(matrix, 0, visited);
+			}
+		}
+	}
+	int countConnectedComponent(vector<vector<int>> matrix, int vertices) {
+		vector<bool> visited(vertices, false);
+		int count = 0;
+		for (int i = 0; i < vertices; i++)
+		{
+			if (!visited[i])
+			{
+				count++;
+				printGraphBFS(matrix, i, visited);
+				//printGraphDFS(matrix, 0, visited);
+			}
+		}
+		cout << count;
+		return count;
 	}
 	void printGraphDFS(vector<vector<int>> matrix, int startingVertics, vector<bool>& visited) {
 		cout << startingVertics;
