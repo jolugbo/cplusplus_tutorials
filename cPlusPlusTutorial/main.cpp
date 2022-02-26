@@ -759,7 +759,15 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	InBuiltPriorityQueue();
+	InBuiltPriorityQueue iBPQ;
+	int* arr = new int[5];
+	arr[0] = 10;
+	arr[1] = 12;
+	arr[2] = 9;
+	arr[3] = 6;
+	arr[4] = 15;
+	iBPQ.kSortedArrRemix(arr,5,3);
+
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();

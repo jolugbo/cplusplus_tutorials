@@ -1,5 +1,8 @@
 #include <queue>
 #include <iostream>
+#include <algorithm>
+#include <iterator>
+
 using namespace std;
 
 class InBuiltPriorityQueue {
@@ -65,6 +68,38 @@ public:
 				pq.pop();
 				pq.push(arr[i]);
 			}
+		}
+	}
+
+	void kSortedArrRemix(int *arr,int n, int k) {
+		priority_queue<int> pq;
+		vector<int> vec1;
+		vector<int> vec2;
+		for (int i = 0; i < n; i++)
+		{
+			pq.push(arr[i]);
+		}
+		for (int i = 0; i < n; i++)
+		{
+			vec1.push_back(arr[i]);
+			//pq.push(arr[i]);
+		}
+		for (int i = 0; i < n; i++)
+		{
+			vec2.push_back(pq.top());
+			pq.pop();
+		}
+		for (int i = 0; i < n; i++)
+		{
+			const auto it = std::find(vec2.cbegin(), vec2.cend(), vec1[i]);
+			const auto position = std::distance(vec2.cbegin(), it);
+			cout << position << endl;
+			if (abs(position - i) < k)
+			{
+				cout << "Within range" << endl;
+			}
+			else
+				cout << "out of range" << endl;
 		}
 	}
 };
