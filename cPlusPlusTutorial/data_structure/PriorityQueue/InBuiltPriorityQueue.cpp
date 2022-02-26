@@ -82,7 +82,6 @@ public:
 		for (int i = 0; i < n; i++)
 		{
 			vec1.push_back(arr[i]);
-			//pq.push(arr[i]);
 		}
 		for (int i = 0; i < n; i++)
 		{
