@@ -16,18 +16,21 @@ public:
 		cout << q.front() << endl;
 		q.pop();
 		q.pop();
-		q.pop();
 
 		cout << q.front() << endl;
 		cout << q.size() << endl;
 		cout << q.empty() << endl;
 
-		q.push(60);
-		q.push(70);
+		q.push(600);
+		q.push(700);
 
 		q.pop();
 		q.pop();
 		cout << q.front() << endl;
 		cout << q.size() << endl;
+		while (!q.empty()) {
+			cout << q.front()<< "";
+			q.pop();
+		}
 	}
 };
