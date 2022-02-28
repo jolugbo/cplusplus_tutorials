@@ -89,6 +89,7 @@
 #include "algos/random_codility/RotateVector.cpp"
 #include "data_structure/Graphs/Adjacent_Matrix_Graph.cpp"
 #include "data_structure/Graphs/CommutableIsland.cpp"
+#include "algos/searchAlgos/TownJudge.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -759,15 +760,26 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
-	InBuiltPriorityQueue iBPQ;
+	/*InBuiltPriorityQueue iBPQ;
 	int* arr = new int[5];
 	arr[0] = 10;
 	arr[1] = 12;
 	arr[2] = 9;
 	arr[3] = 6;
 	arr[4] = 15;
-	iBPQ.kSortedArrRemix(arr,5,3);
+	iBPQ.kSortedArrRemix(arr,5,3);*/
 
+	TownJudge TJ; 
+	vector<vector<int>> vec;
+	vector<int> vec1; 
+	vector<int> vec2; 
+	vec1.push_back(1);
+	vec1.push_back(2);
+	vec2.push_back(2);
+	vec2.push_back(3);
+	vec.push_back(vec1);
+	vec.push_back(vec2);
+	cout<< TJ.findJudge(3, vec);
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();

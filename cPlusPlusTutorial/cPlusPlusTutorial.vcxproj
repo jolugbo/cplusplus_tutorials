@@ -232,6 +232,7 @@
     <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp" />
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fractor.cpp" />
+    <ClCompile Include="Gold\ParseArrayToVector.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="product.cpp" />
     <ClCompile Include="algos\random_codility\SpiralMatrix.cpp" />
