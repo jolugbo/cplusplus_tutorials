@@ -7,8 +7,6 @@
 //#include <GLFW/glfw3.h>
 #include <google/cloud/storage/client.h>
 #include <iostream>
-#include <iostream>
-#include <cstring>
 #include <vector>
 #include <array>
 #include <algorithm> 
@@ -101,7 +99,7 @@ int length(char arr[]) {
 	return length;
 }
 
-// reverse a string e.g first becomes last, second becomes second to the last etc
+// reverse a string e.g first becomes last, second becomes second to the last etc using thhe swap function
 string ReverseStrings() {
 	char name[100];
 	cout << "please enter record \n";
@@ -113,16 +111,6 @@ string ReverseStrings() {
 	return name;
 }
 
-//read string input
-void stringReading(char name[]) {
-	cout << "Enter your name: ";
-	cin.getline(name, 10);//>>name;
-	//name[3] = 'i';
-	name[4] = 'x';
-	cout << "your new name is: " << name << "\n";
-	cout << "length of name is: " << length(name) << "\n";
-}
-
 //Array size cannot exceed size 10^5
 void arraySize() {
 	int arr[100000];
@@ -131,6 +119,16 @@ void arraySize() {
 	}
 	cout << "\n the end";
 
+}
+
+//read string input
+void stringReading(char name[]) {
+	cout << "Enter your name: ";
+	cin.getline(name, 10);//>>name;
+	//name[3] = 'i';
+	name[4] = 'x';
+	cout << "your new name is: " << name << "\n";
+	cout << "length of name is: " << length(name) << "\n";
 }
 
 //print reverse array...
@@ -147,23 +145,6 @@ void reverseArray(int arr[]) {
 	}
 }
 
-// print sum of array...
-int sumArray() {
-	cout << "input array size\n";
-	int n;
-	cin >> n;
-	int* a = new int[n];
-	for (int i = 0; i < n; i++) {
-		cout << "input value for position " << i << ": ";
-		cin >> a[i];
-	}
-	int sum = 0;
-	for (int i = 0; i < n; i++) {
-		sum = sum + a[i];
-	}
-	cout << "the sum is " << sum << "\n";
-	return sum;
-}
 
 // SWAP 2 NUMBERS 1...
 void performSwaps1() {
@@ -194,6 +175,24 @@ void performSwaps3() {
 	cout << "a = " << a << "\nb = " << b << "\n";
 }
 
+// print sum of array...
+int sumArray() {
+	cout << "input array size\n";
+	int n;
+	cin >> n;
+	int* a = new int[n];
+	for (int i = 0; i < n; i++) {
+		cout << "input value for position " << i << ": ";
+		cin >> a[i];
+	}
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum = sum + a[i];
+	}
+	cout << "the sum is " << sum << "\n";
+	return sum;
+}
+
 // print largest number in array...
 int largestNumberInArray() {
 	cout << "input 5 array numbers\n";
@@ -203,7 +202,6 @@ int largestNumberInArray() {
 		cin >> arr[i];
 	}
 	int highest = INT8_MIN;// c++ universal minimum integer
-	cout << "the highest number is " << highest << "\n";
 
 	for (int i = 0; i < 5; i++) {
 		if (arr[i] > highest) {
@@ -221,7 +219,7 @@ long getStringLength(char input[]) {
 	return len;
 }
 
-//c++ strlen default comparing string
+//c++ strcmp default comparing string
 bool stringCompare(char str1[], char str2[]) {
 	bool same = true;
 	if (strcmp(str1, str2) < 0) {
@@ -264,6 +262,7 @@ void prefixesOfAString(char str1[]) {
 		cout << str2 << "\n";
 	}
 }
+
 //all surfixes of a string
 void  surfixesOfAString(char str1[]) {
 	const long len = strlen(str1);
@@ -297,7 +296,6 @@ void  printString() {
 	cout << "*s3 = " << *s3 << "\n";
 	cout << "s3 = " << s3 << "\n";
 }
-
 
 // array of vector
 void stringVector() {

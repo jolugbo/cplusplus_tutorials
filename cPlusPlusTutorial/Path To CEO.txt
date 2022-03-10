@@ -40,12 +40,15 @@ frankly speaking i feel better and positive about the next events, can't wait fo
 Done today 05/12/22
 spoke with a lawyer about a defence against a client the response i gave to the lawyer is as below
 We spoke with the client on the said matter, after redemption issue was resolved, 
-We asked client to retry redemption as their might have been a remption barier of 500,000 at a go placed to restrict fraud
-However, client maintained that since he has had to obtain a loan he no longer
-has a need for the funds at the moment and that he would attempt access the next time he is in need
+We asked client to retry redemption as their might have been a remption barrier of 500,000 at a go placed to restrict fraud
+However, client maintained that he no longer has a need for the funds at the moment and that he would attempt access the next time he is in need
 
 Done today 06/01/2022
 shut down aws service the trial was over and it cost me about $25 for december expenses, janury cost already $3.58. monitoring 
 
 Done today 16/01/2022
 i had a mock test today, i could not sort my camera and microphone i guess the mock interviewer got upset and ended the interview
+
+Done today 18/03/2022
+been away for a while from my computer, got some materials on bloomberg i need to explore, also am going to complete the algo tutorial 
+and commence active 100 days of programming

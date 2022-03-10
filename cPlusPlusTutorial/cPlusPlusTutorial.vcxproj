@@ -195,6 +195,7 @@
     <ClCompile Include="algos\searchAlgos\MajorityElement.cpp" />
     <ClCompile Include="algos\searchAlgos\SearchInReverseSorted.cpp" />
     <ClCompile Include="algos\searchAlgos\TownJudge.cpp" />
+    <ClCompile Include="algos\searchAlgos\TwoSums.cpp" />
     <ClCompile Include="algos\sortAlgos\BubbleSort.cpp" />
     <ClCompile Include="algos\sortAlgos\InBuiltSort.cpp" />
     <ClCompile Include="algos\searchAlgos\LinearSearch.cpp" />
