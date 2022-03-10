@@ -4,23 +4,28 @@ using namespace std;
 
 class TownJudge {
 public:
-	int findJudge(int n, vector<vector<int>>& trust) {
-		unordered_map<int, int> uo_map;
-		for (int i = 0; i < trust.size(); i++)
+	int findJudge(int n, vector<vector<int>>& pairs) {
+		unordered_map<int, vector<int>> judge_map;
+		unordered_map<int, bool> citizens_map;
+		for (int i = 1; i <= n; i++)
 		{
 			vector<int> Citizens;
-			Citizens = trust[i];
-			if (!uo_map.count(Citizens[i]) > 0) {
-				vector<int> v = trust[i];
-				uo_map[v[0]] = uo_map[v[0]] + 1;
+			for (int j = 0; j < pairs.size(); j++)
+			{
+				vector<int> pair = pairs[j];
+				if (pair[1] == i)
+					Citizens.push_back(pair[0]);
+				if (!citizens_map.count(pair[0]))
+					citizens_map[pair[0]] = true;
 			}
+			judge_map[i] = Citizens;
 		}
-
-		for (int i = 0; i < trust.size(); i++)
+		for (int i = 1; i <= n; i++)
 		{
-			vector<int> potentialJudges = trust[i];
-			if (uo_map.count(potentialJudges[1]) < 1) {
-				return potentialJudges[1];
+			if (judge_map.count(i) && !citizens_map.count(i)) {
+				vector<int> Citizens = judge_map[i];
+				if (Citizens.size() == (n - 1))
+					return i;
 			}
 		}
 		return -1;
