@@ -88,6 +88,7 @@
 #include "data_structure/Graphs/Adjacent_Matrix_Graph.cpp"
 #include "data_structure/Graphs/CommutableIsland.cpp"
 #include "algos/searchAlgos/TownJudge.cpp"
+#include "algos/searchAlgos/TwoSums.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -724,6 +725,17 @@ void templateUse() {
 	//cout << triplet.getX().getX()<<" "<< triplet.getX().getY()<< " " << triplet.getY() <<" "<< triplet.getX().getX() + triplet.getY() << endl;
 
 }
+
+void twoSumUse() {
+	vector<int> vec1;
+	vec1.push_back(3);//[3,2,95,4,-3]
+	vec1.push_back(2);
+	vec1.push_back(95);
+	vec1.push_back(4); 
+	vec1.push_back(-3);
+	TwoSums ts(vec1, 92); 
+}
+
 int lowestAbsence(vector<int> A, int counter) {
 	if (A.size() == 0)return 1;
 	if (counter == A.size() - 1 && A[counter] > counter) return counter;
@@ -758,6 +770,7 @@ long repeatedString(string s, long n) {
  
 #undef main
 int main() {
+	twoSumUse();
 	/*InBuiltPriorityQueue iBPQ;
 	int* arr = new int[5];
 	arr[0] = 10;
@@ -767,7 +780,7 @@ int main() {
 	arr[4] = 15;
 	iBPQ.kSortedArrRemix(arr,5,3);*/
 
-	TownJudge TJ; 
+	/*TownJudge TJ; 
 	vector<vector<int>> vec;
 	vector<int> vec1; 
 	vector<int> vec2; 
@@ -777,7 +790,7 @@ int main() {
 	vec2.push_back(3);
 	vec.push_back(vec1);
 	vec.push_back(vec2);
-	cout<< TJ.findJudge(3, vec);
+	cout<< TJ.findJudge(3, vec);*/
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();
