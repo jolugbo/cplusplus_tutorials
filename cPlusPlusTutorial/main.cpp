@@ -779,17 +779,15 @@ int main() {
 	arr[4] = 15;
 	iBPQ.kSortedArrRemix(arr,5,3);*/
 
-	TownJudge TJ; 
 	vector<vector<int>> vec;
-	vector<int> vec1; 
-	vector<int> vec2; 
-	vec1.push_back(1);
-	vec1.push_back(3);
-	vec2.push_back(2);
-	vec2.push_back(3); 
-	vec.push_back(vec1);
-	vec.push_back(vec2);
-	cout<< TJ.findJudge(3, vec);
+	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
+	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
+	vec2.push_back(2); vec2.push_back(3); vec2.push_back(4);
+	vec3.push_back(1); vec3.push_back(4); vec3.push_back(3);
+	vec4.push_back(4); vec4.push_back(3); vec4.push_back(2);
+	vec5.push_back(1); vec5.push_back(3); vec5.push_back(10);
+	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);
+	CommutableIsland C(4, vec);
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();
