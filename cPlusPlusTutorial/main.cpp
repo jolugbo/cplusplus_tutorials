@@ -377,7 +377,7 @@ void findString() {
 // int convert to string
 void intToString() {
 	int num = 1234;
-	string s;
+	string s; 
 	s = "testing " + to_string(num);
 	cout << s << "\n";
 }
@@ -780,20 +780,25 @@ int main() {
 	arr[4] = 15;
 	iBPQ.kSortedArrRemix(arr,5,3);*/
 	AddTwoNumbers add2;
-	Node n1(2);
-	//[2, 4, 3] , l2 = [5, 6, 4]
+	Node n1(9);
+	//[9]
+	//[1, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 	Node* node1 = new Node(n1.data);
-	Node n2(4);
-	Node n3(3);
-	node1 = &n1;
-	n1.next = &n2;
-	n2.next = &n3;
-	Node n5(5);
-	Node* node2 = new Node(n5.data);
-	Node n4(4);
-	Node n6(6);
+	node1 = &n1; 
+	Node n5(1);
+	Node* node2 = new Node(n5.data); 
+	Node n7(9); 
+	Node n8(9);
+	Node n9(9);
+	Node n10(9);
+	Node n11(9);
+	Node n12(9);
+	Node n13(9);  
+	Node n14(9);   
+	Node n15(9); 
 	node2 = &n5;
-	n5.next = &n6;
+	n5.next = &n5;n5.next = &n7;n7.next = &n8; n8.next = &n9; n9.next = &n10;
+	n10.next = &n11; n11.next = &n12; n12.next = &n13; n13.next = &n14; n14.next = &n15;
 	add2.addTwoNumbers(node1,node2); 
 	/*vector<vector<int>> vec;
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
