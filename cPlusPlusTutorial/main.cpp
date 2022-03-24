@@ -89,6 +89,7 @@
 #include "data_structure/Graphs/CommutableIsland.cpp"
 #include "algos/searchAlgos/TownJudge.cpp"
 #include "algos/searchAlgos/TwoSums.cpp"
+#include "algos/linked_list/AddTwoNumbers.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -778,8 +779,23 @@ int main() {
 	arr[3] = 6;
 	arr[4] = 15;
 	iBPQ.kSortedArrRemix(arr,5,3);*/
-
-	vector<vector<int>> vec;
+	AddTwoNumbers add2;
+	Node n1(2);
+	//[2, 4, 3] , l2 = [5, 6, 4]
+	Node* node1 = new Node(n1.data);
+	Node n2(4);
+	Node n3(3);
+	node1 = &n1;
+	n1.next = &n2;
+	n2.next = &n3;
+	Node n5(5);
+	Node* node2 = new Node(n5.data);
+	Node n4(4);
+	Node n6(6);
+	node2 = &n5;
+	n5.next = &n6;
+	add2.addTwoNumbers(node1,node2); 
+	/*vector<vector<int>> vec;
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
 	vec2.push_back(2); vec2.push_back(3); vec2.push_back(4);
@@ -787,7 +803,7 @@ int main() {
 	vec4.push_back(4); vec4.push_back(3); vec4.push_back(2);
 	vec5.push_back(1); vec5.push_back(3); vec5.push_back(10);
 	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);
-	CommutableIsland C(4, vec);
+	CommutableIsland C(4, vec);*/
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();
