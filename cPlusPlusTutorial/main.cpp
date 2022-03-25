@@ -780,9 +780,18 @@ int main() {
 	arr[4] = 15;
 	iBPQ.kSortedArrRemix(arr,5,3);*/
 	AddTwoNumbers add2;
+	//l1 = [2, 4, 3], l2 = [5, 6, 4]
+	Node v1(2);
+    Node * l1 = new Node(v1.data);
+	Node v2(4);
+	Node v3(3);
+	l1 = &v1; v1.next = &v2; v2.next = &v3;
+	Node v4(5);
+	Node* l2 = new Node(v4.data);
+	Node v5(6);
+	Node v6(4);
+	l2 = &v4; v4.next = &v5; v5.next = &v6;
 	Node n1(9);
-	//[9]
-	//[1, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 	Node* node1 = new Node(n1.data);
 	node1 = &n1; 
 	Node n5(1);
@@ -793,13 +802,13 @@ int main() {
 	Node n10(9);
 	Node n11(9);
 	Node n12(9);
-	Node n13(9);  
+	Node n13(9);
 	Node n14(9);   
 	Node n15(9); 
-	node2 = &n5;
+	node2 = &n5; 
 	n5.next = &n5;n5.next = &n7;n7.next = &n8; n8.next = &n9; n9.next = &n10;
 	n10.next = &n11; n11.next = &n12; n12.next = &n13; n13.next = &n14; n14.next = &n15;
-	add2.addTwoNumbers(node1,node2); 
+	add2.addTwoNumbers(l1,l2); 
 	/*vector<vector<int>> vec;
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
