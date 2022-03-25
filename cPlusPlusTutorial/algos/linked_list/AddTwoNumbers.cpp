@@ -3,7 +3,7 @@
 class AddTwoNumbers {
 
 public:
-	Node addTwoNumbers(Node* l1, Node* l2) {
+	Node* addTwoNumbers(Node* l1, Node* l2) {
 		Node* temp1 = l1;
 		int carry{ 0 };
 		Node* returnNode = new Node(0);
