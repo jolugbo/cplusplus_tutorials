@@ -1429,23 +1429,24 @@ int main() {
 		{13, 9, 645},
 		{14, 9, 363},
 	};
-	/*InBuiltPriorityQueue iBPQ;
-	int* arr = new int[5]; 
-	arr[0] = 10;
-	arr[1] = 12;
-	arr[2] = 9;
-	arr[3] = 6;
-	arr[4] = 15;
-	iBPQ.kSortedArrRemix(arr,5,3);*/  
-	vector<vector<int>> vec; 
+	vector<vector<int>> vec;
+	for (int i = 0; i < 656; i++)
+	{
+		vector<int> vec1;
+		vec1.push_back(test[i][0]);
+		vec1.push_back(test[i][1]);
+		vec1.push_back(test[i][2]);
+		vec.push_back(vec1);
+	}
+	/*vector<vector<int>> vec; 
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
 	vec2.push_back(2); vec2.push_back(3); vec2.push_back(4); 
-	vec3.push_back(1); vec3.push_back(4); vec3.push_back(3);
-	vec4.push_back(4); vec4.push_back(3); vec4.push_back(2);
+	vec3.push_back(1); vec3.push_back(4); vec3.push_back(3);     
+	vec4.push_back(4); vec4.push_back(3); vec4.push_back(2); 
 	vec5.push_back(1); vec5.push_back(3); vec5.push_back(10);  
-	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);
-	CommutableIsland C(4, vec);
+	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);*/
+	CommutableIsland C(78, vec);    
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();

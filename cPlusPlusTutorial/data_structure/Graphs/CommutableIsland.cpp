@@ -10,21 +10,51 @@ public:
 	{
 		return (v1[2] < v2[2]);
 	}
-
+	int find(int a, vector<int> parentMatch) {
+		while (parentMatch[a] != a)
+		{
+			a = parentMatch[a];
+		}
+		return a;
+	}
 	CommutableIsland(int A, vector<vector<int> >& B) {
-		vector<vector<int> > output;
-		unordered_map<int, vector<int>> route_path_map;
+		vector<int> pathCost(A + 1,INT32_MAX);
+		vector<int> parentMatch(A + 1);
+		unordered_map<int, vector<int>> set_map;
+		for (int i = 1; i <= A; i++)
+		{
+			parentMatch[i] = i;
+		}
 		int totalCost = 0;
 		sort(B.begin(), B.end(), compareInterval);
-		for (int i = 0; i < A - 1; i++)
+		for (int i = 0; i < B.size(); i++)
 		{
 			vector<int> islandDetails = B[i];
-			totalCost += islandDetails[2];
-			int originIsland = islandDetails[0] - 1;
-			int destinationIsland = islandDetails[1] - 1;
-			int journeyCost = islandDetails[2];
-			cout << islandDetails[0] << " " << islandDetails[1] << " " << islandDetails[2] <<endl;
+			int originIsland = islandDetails[0];
+			int destinationIsland = islandDetails[1];
+			pathCost[originIsland] = islandDetails[2];
+			int parentOfOrigin = find(originIsland, parentMatch);
+			int parentOfDestination = find(destinationIsland, parentMatch);
+			if (parentOfOrigin != parentOfDestination)
+			{
+				totalCost += islandDetails[2];
+				parentMatch[parentOfDestination] = parentMatch[parentOfOrigin];
+				//vector<int> sets = set_map[parentOfOrigin];
+				//set_map[parentOfOrigin].push_back(destinationIsland);
+				/*if (pathCost[destinationIsland] < pathCost[originIsland])
+				{
+					parentMatch[originIsland] = parentMatch[destinationIsland];
+					pathCost[destinationIsland] = islandDetails[2];
+				}
+				else
+				{
+					totalCost += islandDetails[2];
+					parentMatch[destinationIsland] = parentMatch[originIsland];
+				}*/
+			}
+			//int journeyCost = islandDetails[2];
 		}
+		cout << totalCost << endl;
 		/*for (int i = 1; i < A; i++)
 		{
 			totalCost+=output[i][2];
