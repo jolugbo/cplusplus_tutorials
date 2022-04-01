@@ -203,6 +203,7 @@
     <ClCompile Include="algos\sortAlgos\MergeSort.cpp" />
     <ClCompile Include="algos\sortAlgos\QuickSort.cpp" />
     <ClCompile Include="algos\sortAlgos\SelectionSort.cpp" />
+    <ClCompile Include="algos\sortAlgos\TopologicalSort.cpp" />
     <ClCompile Include="ArrayIntro.cpp" />
     <ClCompile Include="complexNumber.cpp" />
     <ClCompile Include="cPlusPlusTutorial.cpp" />
