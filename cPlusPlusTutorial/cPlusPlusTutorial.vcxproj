@@ -236,6 +236,7 @@
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fractor.cpp" />
     <ClCompile Include="Gold\ParseArrayToVector.cpp" />
+    <ClCompile Include="Gold\Sort_Matrix.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="product.cpp" />
     <ClCompile Include="algos\random_codility\SpiralMatrix.cpp" />
