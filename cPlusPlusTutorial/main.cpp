@@ -773,7 +773,7 @@ long repeatedString(string s, long n) {
 #undef main 
 int main() {
 	vector<vector<int>> vec;
-	vector<int> vec1;  
+	vector<int> vec1;   
 	vec1.push_back(1); vec1.push_back(0);
 	vector<int> vec2;
 	vec2.push_back(0); vec2.push_back(1);//[[1,0],[0,1]]

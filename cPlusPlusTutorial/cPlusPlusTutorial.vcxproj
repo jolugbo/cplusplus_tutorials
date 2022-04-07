@@ -160,6 +160,7 @@
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
     <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
     <ClCompile Include="algos\linked_list\AddTwoNumbers.cpp" />
+    <ClCompile Include="algos\LongestUniqueLengthInString.cpp" />
     <ClCompile Include="algos\random_codility\MinWindow.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
     <ClCompile Include="algos\random_codility\RotateVector.cpp" />
