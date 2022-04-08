@@ -8,7 +8,7 @@ public:
 		string arr;
 		string output = "";
 		cin >> arr;
-		vector< string > outArr;
+		vector< string > outArr; 
 		string outArray[100];
 		RecursivelygetSubString(arr, output);
 		//RecursivelyStoreSubString(arr, output, outArr);

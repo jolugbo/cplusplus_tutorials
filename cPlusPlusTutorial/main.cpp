@@ -764,7 +764,7 @@ long repeatedString(string s, long n) {
 	for (long i = 0; i < totalLength.length(); i++)
 	{
 		uo_map[totalLength[i]] = uo_map[totalLength[i]] + 1;
-		if (uo_map[totalLength[i]] > max) { 
+		if (uo_map[totalLength[i]] > max) {  
 			max++; 
 		}   
 	}  
@@ -772,8 +772,8 @@ long repeatedString(string s, long n) {
 }
  
 #undef main 
-int main() {
-	LongestUniqueLengthInString Ls("pwwkew");  
+int main() { 
+	LongestUniqueLengthInString Ls("pwwkew");         
 	 
 	/*vector<vector<int>> vec; 
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
