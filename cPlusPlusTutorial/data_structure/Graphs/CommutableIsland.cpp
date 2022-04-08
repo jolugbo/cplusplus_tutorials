@@ -79,7 +79,7 @@ public:
 		for (auto v : prerequisites) {
 			graph[v[1]].push_back(v[0]);
 		}
-		bool b1[numCourses + 1], b2[numCourses + 1];
+		bool b1[5 + 1], b2[5 + 1];//placehoder here replace 5 with numcourses
 		memset(b1, false, sizeof(b1));      //general boolean to mark the visited vertices
 		memset(b2, false, sizeof(b2));      //it marks the vertices in the current loop cycle
 		for (int i = 0; i < numCourses; i++) {    //loop for all the unmarked vertices 

@@ -91,6 +91,7 @@
 #include "algos/searchAlgos/TwoSums.cpp"
 #include "algos/linked_list/AddTwoNumbers.cpp"
 #include "algos/sortAlgos/TopologicalSort.cpp"
+#include "algos/LongestUniqueLengthInString.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -362,7 +363,7 @@ void sizeString() {
 
 // string substring
 void substringString() {
-	string s;
+	string s;  
 	s = "testing";
 	cout << s.substr(1) << "\n";
 	cout << s.substr(0, 4) << "\n";// one more after intended eg intend to fetch eat from eating use (0,3)
@@ -765,21 +766,15 @@ long repeatedString(string s, long n) {
 		uo_map[totalLength[i]] = uo_map[totalLength[i]] + 1;
 		if (uo_map[totalLength[i]] > max) { 
 			max++; 
-		}  
-	} 
+		}   
+	}  
 	return max;
 }
  
 #undef main 
 int main() {
-	vector<vector<int>> vec;
-	vector<int> vec1;   
-	vec1.push_back(1); vec1.push_back(0);
-	vector<int> vec2;
-	vec2.push_back(0); vec2.push_back(1);//[[1,0],[0,1]]
-	vec.push_back(vec1);
-	vec.push_back(vec2);
-	TopologicalSort(2, vec);
+	LongestUniqueLengthInString Ls("pwwkew");  
+	 
 	/*vector<vector<int>> vec; 
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
