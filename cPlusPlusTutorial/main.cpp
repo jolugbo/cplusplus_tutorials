@@ -773,8 +773,8 @@ long repeatedString(string s, long n) {
  
 #undef main 
 int main() { 
-	LongestUniqueLengthInString Ls("pwwkew");         
-	 
+	LongestUniqueLengthInString Ls("zznieckitkhwynawcgdfjzgmqmrygbaicpqiudqpnylnnoksupzdofphuifcjhk");   
+	
 	/*vector<vector<int>> vec; 
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);

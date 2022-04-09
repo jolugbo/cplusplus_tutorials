@@ -4,7 +4,7 @@ using namespace std;
 class PrintAllSubstringOfString {
 public:
 	PrintAllSubstringOfString() {
-		cout << "input items " << endl;
+		cout << "input items " << endl; 
 		string arr;
 		string output = "";
 		cin >> arr;
