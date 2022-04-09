@@ -1,13 +1,19 @@
+using namespace std;
+#include <vector>;
+
 class FindMedianSortedArrays {
 public:
 	FindMedianSortedArrays() {
+
+	}
+	double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 
 	}
 };
 
 
 //
-//Given two sorted arrays nums1and nums2 of size mand n respectively, return the median of the two sorted arrays.
+//Given two sorted arrays nums1and nums2 of size m and n respectively, return the median of the two sorted arrays.
 //
 //The overall run time complexity should be O(log(m + n)).
 
