@@ -92,6 +92,7 @@
 #include "algos/linked_list/AddTwoNumbers.cpp"
 #include "algos/sortAlgos/TopologicalSort.cpp"
 #include "algos/LongestUniqueLengthInString.cpp"
+#include "algos/random_codility/FindMedianSortedArrays.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -773,16 +774,18 @@ long repeatedString(string s, long n) {
  
 #undef main 
 int main() { 
-	LongestUniqueLengthInString Ls("zznieckitkhwynawcgdfjzgmqmrygbaicpqiudqpnylnnoksupzdofphuifcjhk");   
-	
-	/*vector<vector<int>> vec; 
+	//LongestUniqueLengthInString Ls("zznieckitkhwynawcgdfjzgmqmrygbaicpqiudqpnylnnoksupzdofphuifcjhk");   
+	//nums1 = [1, 3], nums2 = [2]
+	vector<vector<int>> vec;     
 	vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
-	vec1.push_back(1);vec1.push_back(2);vec1.push_back(1);
-	vec2.push_back(2); vec2.push_back(3); vec2.push_back(4); 
-	vec3.push_back(1); vec3.push_back(4); vec3.push_back(3);     
+	vec1.push_back(1);vec1.push_back(3);//vec1.push_back(1);
+	vec2.push_back(2); vec2.push_back(4); 
+	FindMedianSortedArrays(vec1,vec2);
+	// vec2.push_back(3); //vec2.push_back(4); 
+	/*vec3.push_back(1); vec3.push_back(4); vec3.push_back(3);     
 	vec4.push_back(4); vec4.push_back(3); vec4.push_back(2); 
 	vec5.push_back(1); vec5.push_back(3); vec5.push_back(10);  
-	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);*/  
+	vec.push_back(vec1); vec.push_back(vec2); vec.push_back(vec3); vec.push_back(vec4); vec.push_back(vec5);  */
 	//InBuiltStack();
 	//Adjacent_Matrix_Graph graph(8, 6); 
 	//int a = glfwInit();
