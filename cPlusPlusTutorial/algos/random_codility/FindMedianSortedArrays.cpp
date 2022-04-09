@@ -1,0 +1,6 @@
+class FindMedianSortedArrays {
+public:
+	FindMedianSortedArrays() {
+
+	}
+};
