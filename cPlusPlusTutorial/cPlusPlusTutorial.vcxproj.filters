@@ -291,6 +291,15 @@
     <ClCompile Include="algos\random_codility\FindMedianSortedArrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\random_codility\LongestPalindrome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\random_codility\Longest PalindromicSubstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\random_codility\LongestPalindromicSubstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
