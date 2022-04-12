@@ -297,7 +297,7 @@
     <ClCompile Include="algos\random_codility\Longest PalindromicSubstring.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\random_codility\LongestPalindromicSubstring.cpp">
+    <ClCompile Include="algos\random_codility\LongestPalindromic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Gold\AllSubstringOfString.cpp">

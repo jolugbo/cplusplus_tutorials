@@ -79,21 +79,21 @@
 #include "data_structure/PriorityQueue/InBuiltPriorityQueue.cpp"
 #include "algos/dynamic_programming/Fibonacci_Upgraded.cpp"
 #include "algos/dynamic_programming/MinimumStepTo1.cpp"
-#include "algos/dynamic_programming/ClimbingStairs.cpp"
+#include "algos/dynamic_programming/ClimbingStairs.cpp" 
 #include "algos/dynamic_programming/LongestCommonSubsequence.cpp"
-#include "algos/dynamic_programming/EditDistance.cpp"
+#include "algos/dynamic_programming/EditDistance.cpp"  
 #include "algos/dynamic_programming/KnapSack.cpp"
 #include "algos/dynamic_programming/LargestCombination.cpp"
-#include "algos/random_codility/RotateVector.cpp"
+#include "algos/random_codility/RotateVector.cpp" 
 #include "data_structure/Graphs/Adjacent_Matrix_Graph.cpp"
-#include "data_structure/Graphs/CommutableIsland.cpp"
+#include "data_structure/Graphs/CommutableIsland.cpp" 
 #include "algos/searchAlgos/TownJudge.cpp"
 #include "algos/searchAlgos/TwoSums.cpp"
 #include "algos/linked_list/AddTwoNumbers.cpp"
 #include "algos/sortAlgos/TopologicalSort.cpp"
 #include "algos/LongestUniqueLengthInString.cpp"
 #include "algos/random_codility/FindMedianSortedArrays.cpp"
-#include "algos/random_codility/LongestPalindromicSubstring.cpp"
+#include "algos/random_codility/LongestPalindromic.cpp" 
 using namespace std;
 using namespace Btree;
 
@@ -775,7 +775,7 @@ long repeatedString(string s, long n) {
  
 #undef main 
 int main() { 
-	LongestPalindromicSubstring Ls("babad");   
+	LongestPalindromicSubstring Ls("babad");    
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
