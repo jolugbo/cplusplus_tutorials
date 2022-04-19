@@ -167,6 +167,7 @@
     <ClCompile Include="algos\random_codility\MinWindow.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
     <ClCompile Include="algos\random_codility\RotateVector.cpp" />
+    <ClCompile Include="algos\random_codility\ZigzagConvo.cpp" />
     <ClCompile Include="algos\recursions\CheckPalindrome.cpp" />
     <ClCompile Include="algos\recursions\CountOccuranceOfElementInArray.cpp" />
     <ClCompile Include="algos\recursions\CountZeros.cpp" />

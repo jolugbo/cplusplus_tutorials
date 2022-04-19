@@ -300,6 +300,9 @@
     <ClCompile Include="Gold\AllSubstringOfString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\random_codility\ZigzagConvo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
