@@ -1,9 +1,54 @@
 #include "iostream"
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 class LongestPalindromicSubstring {
 public:
+	LongestPalindromicSubstring(string s) {
+		unordered_map<char, int> m;
+
+		for (int i = 0; i < s.length(); i++) {
+			m[s[i]]++;
+		}
+		if (m[s[0]] == s.length())
+		{
+			//return s;
+		}
+		int longest = 0;
+		int currentSize = 0;
+		string longestString = "";
+		for (int i = 0; i < s.length(); i++)
+		{
+			string substr;
+			for (int j = i; j < s.length(); j++)
+			{
+				currentSize = 0;
+				substr += s[j];
+				for (int k = 0; k < substr.length(); k++)
+				{
+					char end = substr[substr.length() - k - 1];
+					char start = substr[k];
+					if (start == end)
+					{
+						currentSize = currentSize + 1;
+					}
+					else {
+						currentSize = 0;
+						break;
+					}
+				}
+				if (longest < currentSize)
+				{
+					longest = currentSize;
+					longestString = substr;
+					if (longestString == s) {
+						//return longestString;
+					}
+				}
+			}
+		}
+	}
 	string longestPalindrome(string s) {
 		if (s.size() <= 1)
 			return s;
@@ -37,20 +82,20 @@ public:
 	{
 		return (v2.length() < v1.length());
 	}
-	LongestPalindromicSubstring(string s) {
-		string newSt = longestPalindrome(s);
-		/*vector<string> allSubstring;
-		string longest = "";
-		AllSubstringOfAString(s, allSubstring);
-		sort(allSubstring.begin(), allSubstring.end(), compareInterval);
-		for (int i = 0; i < allSubstring.size(); i++)
-		{
-			if (isPalindrome(allSubstring[i], allSubstring[i].length(), 0)) {
-				cout << allSubstring[i];
-			}
-		}*/
+	//LongestPalindromicSubstring(string s) {
+	//	string newSt = longestPalindrome(s);
+	//	/*vector<string> allSubstring;
+	//	string longest = "";
+	//	AllSubstringOfAString(s, allSubstring);
+	//	sort(allSubstring.begin(), allSubstring.end(), compareInterval);
+	//	for (int i = 0; i < allSubstring.size(); i++)
+	//	{
+	//		if (isPalindrome(allSubstring[i], allSubstring[i].length(), 0)) {
+	//			cout << allSubstring[i];
+	//		}
+	//	}*/
 
-	}
+	//}
 
 	bool isPalindrome(string value, int length, int current) {
 		if (current > length / 2) {

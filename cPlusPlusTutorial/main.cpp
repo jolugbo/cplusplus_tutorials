@@ -772,10 +772,10 @@ long repeatedString(string s, long n) {
 	}  
 	return max;
 }
- 
+  
 #undef main 
-int main() { 
-	LongestPalindromicSubstring Ls("babad");    
+int main() {     
+	LongestPalindromicSubstring Ls("rqpkkrltvnktmvkvjveskvwnecaaxgidudyifsaepnpgvvnvgshauaupfupnmispfpoezbeqmhhtiazcvmeryalldltsccicvxjpbpmaxhmeytowhlkzctbvldfgsnnekmflctusrjkcvwvfolvptyymgydscruxaqaoiqybuzrftlzlamquhhznmbhqebvtmnyefxajohkkvapcorecndbrmumebfqdgdfqbsbleijubpuvgiwzarubfmqpmjwoggifajfmeghsrzelvovwwksykmgicrfdzqfcxchcjdfsjuzgqtdpasofdufjoizfooycziyxqpvoaerbwmmxswmivzmipdbtbdhxtzkqbrisphswkdahwioclxefweisptgmwzhsaqhkpbchfvbgzezpljzyvgvyhznupfjdgrglksgtiesxxfqugeeguqfxxseitgsklgrgdjfpunzhyvgvyzjlpzezgbvfhcbpkhqashzwmgtpsiewfexlcoiwhadkwshpsirbqkztxhdbtbdpimzvimwsxmmwbreaovpqxyizcyoofziojfudfosapdtqgzujsfdjchcxcfqzdfrcigmkyskwwvovlezrshgemfjafiggowjmpqmfburazwigvupbujielbsbqfdgdqfbemumrbdncerocpavkkhojaxfeynmtvbeqhbmnzhhuqmalzltfrzubyqioaqaxurcsdygmyytpvlofvwvckjrsutclfmkennsgfdlvbtczklhwotyemhxampbpjxvciccstldllayremvczaithhmqebzeopfpsimnpufpuauahsgvnvvgpnpeasfiydudigxaacenwvksevjvkvmtknvtlrkkpqr");     
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
