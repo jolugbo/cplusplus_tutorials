@@ -15,6 +15,7 @@ public:
 				{
 					j--;
 					uo_map[j] = uo_map[j] + s[i++];
+					if (i >= s.length())break;
 				}
 				j++; i--;
 			}
