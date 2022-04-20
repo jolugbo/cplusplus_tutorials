@@ -94,6 +94,7 @@
 #include "algos/LongestUniqueLengthInString.cpp"
 #include "algos/random_codility/FindMedianSortedArrays.cpp"
 #include "algos/random_codility/LongestPalindromic.cpp" 
+#include "algos/random_codility/ZigzagConvo.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -775,7 +776,7 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	LongestPalindromicSubstring Ls("rqpkkrltvnktmvkvjveskvwnecaaxgidudyifsaepnpgvvnvgshauaupfupnmispfpoezbeqmhhtiazcvmeryalldltsccicvxjpbpmaxhmeytowhlkzctbvldfgsnnekmflctusrjkcvwvfolvptyymgydscruxaqaoiqybuzrftlzlamquhhznmbhqebvtmnyefxajohkkvapcorecndbrmumebfqdgdfqbsbleijubpuvgiwzarubfmqpmjwoggifajfmeghsrzelvovwwksykmgicrfdzqfcxchcjdfsjuzgqtdpasofdufjoizfooycziyxqpvoaerbwmmxswmivzmipdbtbdhxtzkqbrisphswkdahwioclxefweisptgmwzhsaqhkpbchfvbgzezpljzyvgvyhznupfjdgrglksgtiesxxfqugeeguqfxxseitgsklgrgdjfpunzhyvgvyzjlpzezgbvfhcbpkhqashzwmgtpsiewfexlcoiwhadkwshpsirbqkztxhdbtbdpimzvimwsxmmwbreaovpqxyizcyoofziojfudfosapdtqgzujsfdjchcxcfqzdfrcigmkyskwwvovlezrshgemfjafiggowjmpqmfburazwigvupbujielbsbqfdgdqfbemumrbdncerocpavkkhojaxfeynmtvbeqhbmnzhhuqmalzltfrzubyqioaqaxurcsdygmyytpvlofvwvckjrsutclfmkennsgfdlvbtczklhwotyemhxampbpjxvciccstldllayremvczaithhmqebzeopfpsimnpufpuauahsgvnvvgpnpeasfiydudigxaacenwvksevjvkvmtknvtlrkkpqr");     
+	ZigzagConvo Ls("ABCD",3);            
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
