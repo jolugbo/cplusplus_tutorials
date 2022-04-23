@@ -96,6 +96,7 @@
 #include "algos/random_codility/LongestPalindromic.cpp" 
 #include "algos/random_codility/ZigzagConvo.cpp"
 #include "algos/random_codility/ReverseInteger.cpp"
+#include "algos/random_codility/MyAtoi.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -777,7 +778,7 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	ReverseInteger Ls(1534236469);        
+	MyAtoi Ls("42");
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
