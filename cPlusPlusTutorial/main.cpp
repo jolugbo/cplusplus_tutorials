@@ -5,14 +5,14 @@
 //  Created by Jolugbo on 7/20/21.
 //
 //#include <GLFW/glfw3.h>
-#include <google/cloud/storage/client.h>
+//#include <google/cloud/storage/client.h>
 #include <iostream>
 #include <vector>
 #include <array>
 #include <algorithm> 
 #include "student.cpp"
 #include "fractor.cpp"
-#include "product.cpp"
+#include "product.cpp"  
 #include "dynamicArray.cpp"
 #include "vectorManipulations.cpp"
 #include <sstream>
@@ -778,7 +778,7 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	MyAtoi Ls("-91283472332"); 
+	MyAtoi Ls("-91283472332");    
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
