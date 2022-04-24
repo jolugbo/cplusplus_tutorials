@@ -16,7 +16,10 @@ public:
 		}
 		for (int i = 0; i < s.length(); i++)
 		{
-			if (!isNegative && i != 0)
+			if (isNegative && i == 0)
+			{
+			}
+			else
 			{
 				if (isdigit(s[i]))
 				{
@@ -29,7 +32,8 @@ public:
 		{
 			output += holder[i];
 		}
-		unsigned int result = isNegative? atoi('-'+output.c_str()): atoi(output.c_str());
+		int test = atoi(output.c_str()) - INT32_MAX;
+	    int result = isNegative? atoi(output.c_str()): atoi(output.c_str());
 		if (holder.size() == 0)
 		{
 			result = 0;
