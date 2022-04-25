@@ -166,6 +166,7 @@
     <ClCompile Include="algos\random_codility\LongestPalindromic.cpp" />
     <ClCompile Include="algos\random_codility\MinWindow.cpp" />
     <ClCompile Include="algos\random_codility\MyAtoi.cpp" />
+    <ClCompile Include="algos\random_codility\PalindromeNumber.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
     <ClCompile Include="algos\random_codility\ReverseInteger.cpp" />
     <ClCompile Include="algos\random_codility\RotateVector.cpp" />

@@ -1,0 +1,6 @@
+class PalindromeNumber {
+public:
+	PalindromeNumber() {
+		
+	}
+};
