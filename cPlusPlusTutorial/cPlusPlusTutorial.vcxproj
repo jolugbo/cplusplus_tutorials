@@ -168,6 +168,7 @@
     <ClCompile Include="algos\random_codility\MyAtoi.cpp" />
     <ClCompile Include="algos\random_codility\PalindromeNumber.cpp" />
     <ClCompile Include="algos\random_codility\random_codilities.cpp" />
+    <ClCompile Include="algos\random_codility\RegularExpressionMatching.cpp" />
     <ClCompile Include="algos\random_codility\ReverseInteger.cpp" />
     <ClCompile Include="algos\random_codility\RotateVector.cpp" />
     <ClCompile Include="algos\random_codility\ZigzagConvo.cpp" />

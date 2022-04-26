@@ -312,6 +312,9 @@
     <ClCompile Include="algos\random_codility\PalindromeNumber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\random_codility\RegularExpressionMatching.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
