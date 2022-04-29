@@ -4,10 +4,22 @@ using namespace std;
 class RegularExpressionMatching {
 public:
 	RegularExpressionMatching(string s, string p) {
-        if (regex_match("softwareTesting", regex("(soft)(.*)")))
-            cout << "string:literal => matched\n";
-
-        const char mystr[] = "SoftwareTestingHelp";
+        if (p.find('.*') != std::string::npos)
+        {
+            if (regex_match(s, regex(p + "(.*)")))
+                cout << "matched\n";
+        }
+        else if(p.find('.') != std::string::npos)
+        {
+            if (regex_match(s, regex(p + "(.)")))
+                cout << "string:literal => matched\n";
+        }
+        else
+        {
+            if (regex_match(s, regex(p )))
+                cout << "string:literal => matched\n";
+        }
+      /*  const char mystr[] = "SoftwareTestingHelp";
         string str("software");
         regex str_expr("(soft)(.*)");
 
@@ -32,7 +44,7 @@ public:
         cout << "the matches are: ";
         for (unsigned i = 0; i < sm.size(); ++i) {
             cout << "[" << sm[i] << "] ";
-        }
+        }*/
 
         cout << endl;
 	}

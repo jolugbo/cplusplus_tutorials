@@ -98,6 +98,7 @@
 #include "algos/random_codility/ReverseInteger.cpp"
 #include "algos/random_codility/MyAtoi.cpp"
 #include "algos/random_codility/PalindromeNumber.cpp"
+#include "algos/random_codility/RegularExpressionMatching.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -779,7 +780,7 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	RegularExpressionMatching(-121);
+	RegularExpressionMatching("aa","a");    
 	//nums1 = [1, 3], nums2 = [2]
 	//vector<vector<int>> vec;     
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
