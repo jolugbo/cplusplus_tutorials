@@ -780,11 +780,11 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	RegularExpressionMatching("aab", "c*a*b*"); 
+	RegularExpressionMatching("aa", "a*"); 
 	/*
 s: aa
 p: a*
-
+"aaaaaaaaaaaaab","a*a*a*a*a*a*a*a*a*a*c"
 s: ab
 p: a.
 

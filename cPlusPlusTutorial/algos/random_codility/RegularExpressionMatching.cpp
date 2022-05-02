@@ -32,7 +32,7 @@ public:
 				resp = matchFound(s, p, start + 1, end+1, lenS, lenP, dp);
 			}
 		}
-		else if (end != lenS - 1 && p[end + 1] == '*') resp = matchFound(s, p, start, end + 2, lenS, lenP, dp);
+		else if (end != lenP - 1 && p[end + 1] == '*') resp = matchFound(s, p, start, end + 2, lenS, lenP, dp);
 		dp[start][end] = resp;
 		return dp[start][end];
 	}
