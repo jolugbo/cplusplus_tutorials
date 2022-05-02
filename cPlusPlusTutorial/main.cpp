@@ -780,9 +780,35 @@ long repeatedString(string s, long n) {
   
 #undef main 
 int main() {     
-	RegularExpressionMatching("aa","a");    
+	RegularExpressionMatching("aa","a"); 
+	/*
+s: aa
+p: a*
+
+s: ab
+p: a.
+
+S: abc
+p: a.*
+"mississippi","mis*is*p*."
+s: bc
+p: .*
+
+s: c
+p: .*
+
+s: aab
+p: c*a*b
+
+s: aab
+p: a*b True
+
+s: ab
+p: a*b
+
+*/
 	//nums1 = [1, 3], nums2 = [2]
-	//vector<vector<int>> vec;     
+	//vector<vector<int>> vec;     "aab","c*a*b"
 	//vector<int> vec1;vector<int> vec2;vector<int> vec3;vector<int> vec4;vector<int> vec5;
 	//vec1.push_back(1);vec1.push_back(3);//vec1.push_back(1);
 	//vec2.push_back(2); vec2.push_back(4); 
