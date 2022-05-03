@@ -11,7 +11,17 @@ public:
 	}
 
 	bool matchFound(string s, string p, int start, int end, int lenS, int lenP, vector<vector<int>> dp) {
-		if (start == lenS && end == lenP)return true;
+		if (start >= lenS && end >= lenP)return true;
+		if (end >= lenP)return false;
+		if (dp[start][end] != -1) return dp[start][end];
+		bool match = start < lenS and (s[start] == p[end] or p[end] == '.');
+		if (end+1 < lenP and p[end+1] == '*')
+		{
+			return dp[start][end] = matchFound(s, p, start, end + 2, lenS, lenP, dp) or matchFound(s, p, start + 1, end, lenS, lenP, dp);
+		}
+		if(match) return dp[start][end] = matchFound(s, p, start + 1, end + 1, lenS, lenP, dp);
+		return dp[start][end] = false;
+		/*if (start == lenS && end == lenP)return true;
 		if (end == lenP) return false;
 		if (start == lenS)
 		{
@@ -34,6 +44,6 @@ public:
 		}
 		else if (end != lenP - 1 && p[end + 1] == '*') resp = matchFound(s, p, start, end + 2, lenS, lenP, dp);
 		dp[start][end] = resp;
-		return dp[start][end];
+		return dp[start][end];*/
 	}
 };
