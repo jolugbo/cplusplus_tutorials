@@ -161,6 +161,7 @@
     <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
     <ClCompile Include="algos\linked_list\AddTwoNumbers.cpp" />
     <ClCompile Include="algos\LongestUniqueLengthInString.cpp" />
+    <ClCompile Include="algos\random_codility\ContainerWithMostWater.cpp" />
     <ClCompile Include="algos\random_codility\FindMedianSortedArrays.cpp" />
     <ClCompile Include="algos\random_codility\Longest PalindromicSubstring.cpp" />
     <ClCompile Include="algos\random_codility\LongestPalindromic.cpp" />
