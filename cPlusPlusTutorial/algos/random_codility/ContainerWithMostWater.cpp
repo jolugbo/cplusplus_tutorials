@@ -1,4 +1,5 @@
 #include "vector";
+#include "iostream";
 #include <algorithm>
 using namespace std;
 class ContainerWithMostWater {
@@ -15,33 +16,39 @@ public:
 		{
 			for (int j = 0; j < height.size(); j++)
 			{
-				if (i < j)
+				if (i == 0 and j == 0)dp[i][j] = 0;
+				else if (i == 0)
 				{
-					dp[i][j] = 0;
+					int holder = min(height[i], height[j]) * (j);
+					dp[i][j] = max(holder, dp[i][j - 1]);
 				}
 				else if (i == j)
 				{
-					dp[i][j] = height[j] > dp[i -1][j] ? height[j] : dp[i - 1][j];
+					dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+				}
+				else if (i > j)
+				{
+					int holder = min(height[i], height[j]) * (i - j);
+					dp[i][j] = max(holder, max(j > 0 ? dp[i][j - 1] : 0, dp[i - 1][j]));
 				}
 				else
 				{
 					if (height[j] <= height[i])
 					{
 						int multiplier = height[j] * (j - i);
-						dp[i][j] = max( multiplier, max(dp[i][j - 1], dp[i-1][j]));
+						dp[i][j] = max(multiplier, max(dp[i][j - 1], dp[i - 1][j]));
 					}
 					else
-						dp[i][j] = max(dp[i][j - 1], dp[i - 1][j]);
-					
+						dp[i][j] = max(min(height[i], height[j]) * (j - i), max(dp[i][j - 1], dp[i - 1][j]));
+
+				}
+				if (i == height.size() - 1 and j == height.size() - 1)
+				{
+					output = dp[i][j];
 				}
 			}
-#
 		}
-		sort(dp.begin(), dp.end());
-		for (int j = 0; j < height.size(); j++)
-		{
-			output = output >= dp[height.size() - 1][j] ? output : dp[height.size() - 1][j];
-		}
+		cout << output;
 		//return output;
 	}
 };
