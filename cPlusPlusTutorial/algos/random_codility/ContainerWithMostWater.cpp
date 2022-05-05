@@ -1,4 +1,5 @@
 #include "vector";
+#include <algorithm>
 using namespace std;
 class ContainerWithMostWater {
 public:
@@ -14,23 +15,30 @@ public:
 		{
 			for (int j = 0; j < height.size(); j++)
 			{
-				if (i == 0)
+				if (i == 0 or j == 0)
 				{
-					dp[i][j] = height[i] * j;
+					dp[i][j] = 0;
 				}
 				else
 				{
-					int multiplier = height[i] <= height[j] ? height[i] : height[j];
-					if (j > 0)
+					if (j > i)
 					{
-						int calc = multiplier * (j - 1);
+						int multiplier = height[i];
+						int calc = multiplier * (j - i);
+						dp[i][j] = calc >= dp[i][j - 1] ? calc : dp[i][j - 1];
+					}
+					else if (j == i)
+					{
+						int multiplier = height[i];
+						int calc = multiplier * (j - i);
 						dp[i][j] = calc >= dp[i][j - 1] ? calc : dp[i][j - 1];
 					}
 					else
-						dp[i][j] = multiplier * j;
+						dp[i][j] = dp[i][j - 1] >= dp[i - 1][j] ? dp[i][j - 1] : dp[i - 1][j];
 				}
 			}
 		}
+		sort(dp.begin(), dp.end());
 		for (int j = 0; j < height.size(); j++)
 		{
 			output = output >= dp[height.size() - 1][j] ? output : dp[height.size() - 1][j];
