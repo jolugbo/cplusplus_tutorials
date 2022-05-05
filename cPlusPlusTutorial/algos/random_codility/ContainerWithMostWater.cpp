@@ -15,28 +15,27 @@ public:
 		{
 			for (int j = 0; j < height.size(); j++)
 			{
-				if (i == 0 or j == 0)
+				if (i < j)
 				{
 					dp[i][j] = 0;
 				}
+				else if (i == j)
+				{
+					dp[i][j] = height[j] > dp[i -1][j] ? height[j] : dp[i - 1][j];
+				}
 				else
 				{
-					if (j > i)
+					if (height[j] <= height[i])
 					{
-						int multiplier = height[i];
-						int calc = multiplier * (j - i);
-						dp[i][j] = calc >= dp[i][j - 1] ? calc : dp[i][j - 1];
-					}
-					else if (j == i)
-					{
-						int multiplier = height[i];
-						int calc = multiplier * (j - i);
-						dp[i][j] = calc >= dp[i][j - 1] ? calc : dp[i][j - 1];
+						int multiplier = height[j] * (j - i);
+						dp[i][j] = max( multiplier, max(dp[i][j - 1], dp[i-1][j]));
 					}
 					else
-						dp[i][j] = dp[i][j - 1] >= dp[i - 1][j] ? dp[i][j - 1] : dp[i - 1][j];
+						dp[i][j] = max(dp[i][j - 1], dp[i - 1][j]);
+					
 				}
 			}
+#
 		}
 		sort(dp.begin(), dp.end());
 		for (int j = 0; j < height.size(); j++)
