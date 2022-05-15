@@ -12,14 +12,22 @@ public:
 			vector<int> row(height.size() + 1);
 			dp.push_back(row);
 		}
-		for (int i = 0; i < height.size(); i++)
+		for (int i = height.size(); i >= 0; i--)
 		{
-			for (int j = 0; j < height.size(); j++)
+			for (int j = height.size(); j >= 0 ; j--)
 			{
-				
+				if (j>= height.size() || i >= height.size())dp[i][j] = 0;
+				else if(j == i)dp[i][j] = max(dp[i + 1][j], dp[i][j + 1]);
+				else {
+					int lesser = height[i];
+					int greater = height[j];
+					int  multiplier = lesser <= greater ? lesser : greater;
+					int value = multiplier * abs(i - j);
+					dp[i][j] = max(value, max(dp[i + 1][j], dp[i][j + 1]));
+				}
 			}
 		}
-		cout << output;
+		cout << dp[0][0];
 		//return output;
 	}
 };
