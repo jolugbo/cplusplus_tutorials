@@ -1,0 +1,6 @@
+class GenerateParenthesis {
+public:
+	GenerateParenthesis() {
+	
+	}
+};
