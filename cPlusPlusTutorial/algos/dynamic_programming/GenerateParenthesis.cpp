@@ -29,5 +29,4 @@ public:
 			current.pop_back();
 		}
 	}
-	
 };

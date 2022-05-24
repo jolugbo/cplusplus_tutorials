@@ -158,6 +158,7 @@
     <ClCompile Include="algos\dynamic_programming\KnapSack.cpp" />
     <ClCompile Include="algos\dynamic_programming\LargestCombination.cpp" />
     <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp" />
+    <ClCompile Include="algos\dynamic_programming\LongestValidParentheses.cpp" />
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
     <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
     <ClCompile Include="algos\linked_list\AddTwoNumbers.cpp" />
