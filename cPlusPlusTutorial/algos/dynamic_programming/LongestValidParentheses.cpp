@@ -7,8 +7,9 @@ using namespace std;
 class LongestValidParentheses {
 public:
 	LongestValidParentheses(string s) {
-		cout << calc(s);
+		cout << calc2(s);
 	}
+	
 	int calc(string s) {
 		stack<char> stackPile;
 		vector<int> longestList;
@@ -47,11 +48,32 @@ public:
 		sort(longestList.begin(), longestList.end());
 		return longestList[0];
 	}
+	
 	static bool compareInterval(int& v1, const int& v2)
 	{
 		return (v1 > v2);
 	}
+
 	int calc2(string s) {
-		int start = s.length()/2;
+		int len = s.length();
+		int counter = 0;
+		bool chainBroken;
+		stack<char> stackPile;
+		stackPile.push(-1);
+		for (int i = 0; i < len; i++)
+		{
+			if (s[i] == '(')stackPile.push(i);
+			else {
+				stackPile.pop();
+				if (stackPile.empty()) {
+					stackPile.push(i);
+				}
+				else
+				{
+					counter = max(counter, i - stackPile.top());
+				}
+			}
+		}
+		return counter;
 	}
 };
