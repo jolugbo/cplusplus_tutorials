@@ -260,7 +260,6 @@
     <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.h" />
     <ClInclude Include="data_structure\Trees\Binary _Tree\Binary_Tree.cpp" />
     <ClInclude Include="dynamicArray.hpp" />
-    <ClInclude Include="student.hpp" />
     <ClInclude Include="vector.hpp" />
   </ItemGroup>
   <ItemGroup>

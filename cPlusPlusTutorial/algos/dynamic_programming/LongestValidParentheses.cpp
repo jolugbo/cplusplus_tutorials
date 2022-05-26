@@ -10,38 +10,48 @@ public:
 		cout << calc(s);
 	}
 	int calc(string s) {
-		stack<char> pile;
+		stack<char> stackPile;
 		vector<int> longestList;
-		bool chainBroken = true;
+		bool justPoped = false;
 		int count = 0;
-		pile.push(s[0]);
+		stackPile.push(s[0]);
 		for (int i = 1; i < s.length(); i++) {
-			if (!pile.empty()) {
-				char top = pile.top();
-				if ((top == '(' and s[i] == ')') or ( top == '(' and s[i] == ')')) {
-					pile.pop();
-					count += 2;
-					longestList.push_back(count);
-				}
-				else {
-					pile.push(s[i]);
-					chainBroken = true;
-					count = 0;
-				}
+			if (!stackPile.empty()) {
+				char top = stackPile.top();
+				//if () {
+					if (top == '(' and s[i] == ')') {
+						stackPile.pop();
+						count += 2;
+						justPoped = true;
+					}
+					else {
+						stackPile.push(s[i]); 
+						if (justPoped && top == ')') {
+							longestList.push_back(count);
+							count = 0;
+						}
+						justPoped = false;
+					}
+				//}
 			}
-			else {
-				pile.push(s[i]);
+			else if (!justPoped) {
+				stackPile.push(s[i]);
+				longestList.push_back(count);
 				count = 0;
 			}
+			else{
+				stackPile.push(s[i]);
+			}
 		}
-		if (longestList.size() > 0) {
-			sort(longestList.begin(), longestList.end(),compareInterval);
-			return longestList.front();
-		}
-		return count;
+		longestList.push_back(count);
+		sort(longestList.begin(), longestList.end());
+		return longestList[0];
 	}
 	static bool compareInterval(int& v1, const int& v2)
 	{
 		return (v1 > v2);
+	}
+	int calc2(string s) {
+		int start = s.length()/2;
 	}
 };
