@@ -324,12 +324,12 @@
     <ClCompile Include="algos\dynamic_programming\LongestValidParentheses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\vectors_algos\MissingNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="student.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vector.hpp">

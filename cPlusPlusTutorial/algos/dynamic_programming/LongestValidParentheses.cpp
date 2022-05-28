@@ -7,7 +7,7 @@ using namespace std;
 class LongestValidParentheses {
 public:
 	LongestValidParentheses(string s) {
-		cout << calc2(s);
+		cout << calc3(s);
 	}
 	
 	int calc(string s) {
@@ -75,5 +75,29 @@ public:
 			}
 		}
 		return counter;
+	}
+
+	int calc3(string s) {
+		int count = 0;
+		stack<int> stackPile;
+		stackPile.push(-1);
+		for (int i = 0; i < s.length(); i++)
+		{
+			if (s[i] == '(') {
+				stackPile.push(i);
+			}
+			else {
+				stackPile.pop();
+				if (!stackPile.empty()) {
+					int validParenthesis = i - stackPile.top();
+					count = max(count, validParenthesis);
+				}
+				else
+				{
+					stackPile.push(i);
+				}
+			}
+		}
+		return count;
 	}
 };
