@@ -318,13 +318,16 @@
     <ClCompile Include="algos\random_codility\ContainerWithMostWater.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\dynamic_programming\GenerateParenthesis.cpp">
+    <ClCompile Include="algos\vectors_algos\GenerateParenthesis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\dynamic_programming\LongestValidParentheses.cpp">
+    <ClCompile Include="algos\stacks\LongestValidParentheses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\vectors_algos\MissingNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\dynamic_programming\MaximumProductOfWordLengths.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -154,11 +154,12 @@
   <ItemGroup>
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
-    <ClCompile Include="algos\dynamic_programming\GenerateParenthesis.cpp" />
+    <ClCompile Include="algos\vectors_algos\GenerateParenthesis.cpp" />
     <ClCompile Include="algos\dynamic_programming\KnapSack.cpp" />
     <ClCompile Include="algos\dynamic_programming\LargestCombination.cpp" />
     <ClCompile Include="algos\dynamic_programming\LongestCommonSubsequence.cpp" />
-    <ClCompile Include="algos\dynamic_programming\LongestValidParentheses.cpp" />
+    <ClCompile Include="algos\stacks\LongestValidParentheses.cpp" />
+    <ClCompile Include="algos\dynamic_programming\MaximumProductOfWordLengths.cpp" />
     <ClCompile Include="algos\dynamic_programming\MinimumStepTo1.cpp" />
     <ClCompile Include="algos\dynamic_programming\ClimbingStairs.cpp" />
     <ClCompile Include="algos\linked_list\AddTwoNumbers.cpp" />
