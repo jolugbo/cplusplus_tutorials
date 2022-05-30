@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
+    <ClCompile Include="algos\random_codility\DivideTwoIntegers.cpp" />
     <ClCompile Include="algos\vectors_algos\GenerateParenthesis.cpp" />
     <ClCompile Include="algos\dynamic_programming\KnapSack.cpp" />
     <ClCompile Include="algos\dynamic_programming\LargestCombination.cpp" />

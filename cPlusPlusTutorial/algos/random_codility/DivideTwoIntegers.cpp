@@ -1,0 +1,6 @@
+class DivideTwoIntegers {
+public:
+	DivideTwoIntegers() {
+		
+	}
+};
