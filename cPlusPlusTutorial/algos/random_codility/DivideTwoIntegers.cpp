@@ -10,21 +10,6 @@ public:
 		long int absDivisor = abs(divisor);
 
 		int count = 0;
-		bool isPositiveDivisor = true;
-		bool isPositiveDividend = true;
-		if (dividend <= dividend) {
-		
-		}
-		if (dividend < 0)
-		{
-			dividend = abs(dividend);
-			isPositiveDividend = false;
-		}
-		if (divisor < 0)
-		{
-			dividend = abs(divisor);
-			isPositiveDivisor = false;
-		}
 		while (absDividend >= absDivisor) {
 			long int mul = absDivisor, tempHolder = 1;
 			while (mul <= absDividend - mul) {

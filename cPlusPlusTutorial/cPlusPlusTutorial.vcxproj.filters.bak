@@ -333,7 +333,7 @@
     <ClCompile Include="algos\random_codility\DivideTwoIntegers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\random_codility\HasAllValidBinary.cpp">
+    <ClCompile Include="algos\random_codility\StringHasAllValidBinary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

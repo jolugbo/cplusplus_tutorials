@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.210913.7\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.210913.7\build\native\Microsoft.Windows.CppWinRT.props')" />
   <ItemGroup Label="ProjectConfigurations">
@@ -155,6 +155,7 @@
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
     <ClCompile Include="algos\random_codility\DivideTwoIntegers.cpp" />
+    <ClCompile Include="algos\random_codility\HasAllValidBinary.cpp" />
     <ClCompile Include="algos\vectors_algos\GenerateParenthesis.cpp" />
     <ClCompile Include="algos\dynamic_programming\KnapSack.cpp" />
     <ClCompile Include="algos\dynamic_programming\LargestCombination.cpp" />
