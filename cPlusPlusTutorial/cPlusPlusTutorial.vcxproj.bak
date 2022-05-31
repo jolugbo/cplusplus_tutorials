@@ -168,6 +168,7 @@
     <ClCompile Include="algos\LongestUniqueLengthInString.cpp" />
     <ClCompile Include="algos\random_codility\ContainerWithMostWater.cpp" />
     <ClCompile Include="algos\random_codility\FindMedianSortedArrays.cpp" />
+    <ClCompile Include="algos\random_codility\Longest PalindromicSubstring.cpp" />
     <ClCompile Include="algos\random_codility\LongestPalindromic.cpp" />
     <ClCompile Include="algos\random_codility\MinWindow.cpp" />
     <ClCompile Include="algos\random_codility\MyAtoi.cpp" />
