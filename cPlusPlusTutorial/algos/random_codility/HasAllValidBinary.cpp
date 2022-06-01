@@ -2,7 +2,6 @@
 #include <vector>
 #include <bitset>
 #include <string>
-//#include <boost/algorithm/string.hpp>
 using namespace std;
 
 class HasAllValidBinary {
