@@ -291,9 +291,6 @@
     <ClCompile Include="algos\random_codility\FindMedianSortedArrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\random_codility\Longest PalindromicSubstring.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="algos\random_codility\LongestPalindromic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -334,6 +331,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\random_codility\HasAllValidBinary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\vectors_algos\RunningSum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\vectors_algos\MatrixTranspose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
