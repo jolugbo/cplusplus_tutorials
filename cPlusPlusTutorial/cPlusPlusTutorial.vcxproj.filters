@@ -339,6 +339,9 @@
     <ClCompile Include="algos\vectors_algos\MatrixTranspose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\vectors_algos\NumMatrix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
