@@ -797,7 +797,7 @@ int main() {
 	matrix.push_back(numbers);   
 	matrix.push_back(numbers2);   
 	matrix.push_back(numbers3);  */
-	SolveNQueens MR(4);
+	SolveNQueens MR(4);     
 	//LongestValidParentheses cwmw(")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())");  //"()(()",   ()()  )()())       
 	//nums1 = [1, 3], nums2 = [2]      
 	//vector<vector<int>> vec;     "aab","c*a*b" 
