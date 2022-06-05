@@ -342,7 +342,7 @@
     <ClCompile Include="algos\vectors_algos\NumMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\vectors_algos\SolveNQueens.cpp">
+    <ClCompile Include="algos\recursions\back_trackings\SolveNQueens.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
