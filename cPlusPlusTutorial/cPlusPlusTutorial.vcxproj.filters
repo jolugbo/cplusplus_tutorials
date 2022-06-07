@@ -348,6 +348,9 @@
     <ClCompile Include="algos\recursions\back_trackings\TotalNQueens.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\linked_list\GetIntersectionNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">

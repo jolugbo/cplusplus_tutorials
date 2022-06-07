@@ -107,6 +107,7 @@
 #include "algos/vectors_algos/RunningSum.cpp"
 #include "algos/vectors_algos/MatrixTranspose.cpp"
 #include "algos/recursions/back_trackings/SolveNQueens.cpp"
+#include "algos/linked_list/GetIntersectionNode.cpp"
 using namespace std;
 using namespace Btree;
 
@@ -795,9 +796,30 @@ int main() {
 	vector<int> numbers3(arr3, arr3 + sizeof(arr3) / sizeof(int));*/
 	/*vector<vector<int>> matrix;
 	matrix.push_back(numbers);   
-	matrix.push_back(numbers2);   
+	matrix.push_back(numbers2);    5,6,1,8,4,5
 	matrix.push_back(numbers3);  */
-	SolveNQueens MR(4);     
+	Node n1(4);
+	Node* head = new Node(n1.data); 
+	Node n2(1);Node n3(8);
+	Node n4(4);Node n5(5);Node n6(5);
+	Node* head2 = new Node(n6.data);
+	Node n7(6);
+	Node n8(1);
+	Node n9(8);
+	Node n10(4);
+	Node n11(5);
+	head = &n1;
+	n1.next = &n2;
+	n2.next = &n3;
+	n3.next = &n4;
+	n4.next = &n5;
+	head2 = &n6;
+	n6.next = &n7;
+	n7.next = &n8;
+	n8.next = &n8;
+	n9.next = &n10;
+	n10.next = &n11;
+	GetIntersectionNode MR(head, head2);
 	//LongestValidParentheses cwmw(")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())");  //"()(()",   ()()  )()())       
 	//nums1 = [1, 3], nums2 = [2]      
 	//vector<vector<int>> vec;     "aab","c*a*b" 
