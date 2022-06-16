@@ -819,7 +819,8 @@ int main() {
 	n8.next = &n9;
 	n9.next = &n10;
 	n10.next = &n11;
-	GetIntersectionNode MR(head, head2);
+	//GetIntersectionNode MR(head, head2);
+	 SolveNQueens SQ(4);    
 	//LongestValidParentheses cwmw(")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())");  //"()(()",   ()()  )()())       
 	//nums1 = [1, 3], nums2 = [2]      
 	//vector<vector<int>> vec;     "aab","c*a*b" 
