@@ -815,7 +815,7 @@ int main() {
 	n4.next = &n5;
 	head2 = &n6; 
 	n6.next = &n7;
-	n7.next = &n8;
+	n7.next = &n8;  
 	n8.next = &n9;
 	n9.next = &n10;
 	n10.next = &n11;

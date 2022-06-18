@@ -12,8 +12,7 @@ public:
 			vector<string> row(n);
 			matrix.push_back(row);
 		}
-		compute2(matrix, 0);
-		cout << "done";
+		if(compute2(matrix, 0))cout << "Solution Exist";
 		//if (n == 1) {
 		//	vector<string> val = { "Q" };
 		//	resp.push_back(val);
@@ -54,34 +53,36 @@ public:
 				respList[i][columnCount] = ".";
 			}
 		}
+		return false;
 	}
 
 	bool isSafe(vector<vector<string>>& respList, int row,int column) {
 		int i, j;
 		int size = respList.size();
-		for (int i = column; i >= 0; i--)
+		for ( i = column; i >= 0; i--)
 		{
 			if (respList[row][i] == "Q")
 			{
 				return false;
 			}
 		}
-		for (int i = row, j = column; i >= 0 && j >= 0; i--, j--)
+		for ( i = row, j = column; i >= 0 && j >= 0; i--, j--)
 		{
-			if (respList[row][column] == "Q")
+			if (respList[i][j] == "Q")
 			{
 				return false;
 			}
 		}
-		for (int i = row, j = column; i <= size && j >= 0; i++, j--)
+		for ( i = row, j = column; i < size && j >= 0; i++, j--)
 		{
-			if (respList[row][column] == "Q")
+			if (respList[i][j] == "Q")
 			{
 				return false;
 			}
 		}
 		return true;
 	}
+
 	void compute(int queenCount, vector<vector<string>>& respList, int& CurrentQueenCount) {
 		if (CurrentQueenCount > 0) {
 			for (int i = 0; i < queenCount; i++)
