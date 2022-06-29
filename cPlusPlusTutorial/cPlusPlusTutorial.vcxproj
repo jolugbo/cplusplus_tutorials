@@ -152,6 +152,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp" />
+    <ClCompile Include="algos\amazon\twosums.cpp" />
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
     <ClCompile Include="algos\linked_list\GetIntersectionNode.cpp" />

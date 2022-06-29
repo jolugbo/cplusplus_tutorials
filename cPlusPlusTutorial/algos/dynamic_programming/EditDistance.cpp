@@ -1,13 +1,15 @@
 #include<iostream>
+#include <vector>
 using namespace std;
 class EditDistance {
 public:
 	//works faster, but i have issues with the compiler type am using doesn't allow the use of non static declaration 0f array size
 
-	/*int editDistance(string word1,string word2) {
+	int editDistance(string word1,string word2) {
 		int len1 = word1.size();
 		int len2 = word2.size();
-		int dynamicArrangment[len1 + 1][len2 + 1];
+		//int dynamicArrangment[len1 + 1][len2 + 1];
+		vector < vector<int>> dynamicArrangment(len1 + 1, vector<int>(len2 + 1));
 		for (int i = 0; i <= len1; i++)
 		{
 			for (int j = 0; j <= len2; j++)
@@ -24,7 +26,7 @@ public:
 			}
 		}
 		 return dynamicArrangment[len1][len2];
-	}*/
+	}
 	int calcEditDistance(string word1,int word1Len, string word2, int word2Len) {
 		if (word1Len == 0)return word2Len;
 		if (word2Len == 0)return word1Len;

@@ -351,6 +351,12 @@
     <ClCompile Include="algos\linked_list\GetIntersectionNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\amazon\twosums.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
