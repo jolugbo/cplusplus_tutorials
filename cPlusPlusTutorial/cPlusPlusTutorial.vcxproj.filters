@@ -303,7 +303,7 @@
     <ClCompile Include="algos\random_codility\ReverseInteger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="algos\random_codility\MyAtoi.cpp">
+    <ClCompile Include="algos\amazon\MyAtoi.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\random_codility\PalindromeNumber.cpp">
