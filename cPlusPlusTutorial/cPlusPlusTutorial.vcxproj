@@ -152,7 +152,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algos\amazon\firstUniqChar.cpp" />
     <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp" />
+    <ClCompile Include="algos\amazon\maxArea.cpp" />
     <ClCompile Include="algos\amazon\twosums.cpp" />
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
