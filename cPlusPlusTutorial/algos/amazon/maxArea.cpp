@@ -6,11 +6,22 @@ public:
     maxArea(vector<int>& height) {
         int start = 0;
         int end = height.size() - 1;
+        int maxVolume = 0;
         while (start < end)
         {
-
+            int multiplier = end - start;
+            int current = min(height[start],height[end]);
+            maxVolume = max(maxVolume, current * multiplier);
+            if (height[start] > height[end])
+            {
+                end--;
+            }
+            else start++;
         }
+        cout << maxVolume;
     }
+
+
     void maxAreaSlow(vector<int>& height) {
         vector<vector<int>> dp(height.size() + 1, vector<int>(height.size() + 1));
         for (int i = height.size(); i >= 0; i--) {
