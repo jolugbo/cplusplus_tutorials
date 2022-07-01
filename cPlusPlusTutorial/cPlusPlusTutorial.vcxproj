@@ -157,6 +157,8 @@
     <ClCompile Include="algos\amazon\IntToRoman.cpp" />
     <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp" />
     <ClCompile Include="algos\amazon\maxArea.cpp" />
+    <ClCompile Include="algos\amazon\romanToInt.cpp" />
+    <ClCompile Include="algos\amazon\threeSum.cpp" />
     <ClCompile Include="algos\amazon\twosums.cpp" />
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
