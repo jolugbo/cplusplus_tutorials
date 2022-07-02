@@ -271,6 +271,7 @@
     <ClCompile Include="product.cpp" />
     <ClCompile Include="algos\random_codility\SpiralMatrix.cpp" />
     <ClCompile Include="student.cpp" />
+    <ClCompile Include="system_design\lru_cache.cpp" />
     <ClCompile Include="vectorManipulations.cpp" />
   </ItemGroup>
   <ItemGroup>

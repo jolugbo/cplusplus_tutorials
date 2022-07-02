@@ -375,6 +375,9 @@
     <ClCompile Include="algos\amazon\threeSum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="system_design\lru_cache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
