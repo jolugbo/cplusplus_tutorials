@@ -31,6 +31,7 @@ public:
 			outputstr.push_back(output.top());
 			output.pop();
 		}
-		reverse(outputstr.begin(), outputstr.end());
+		//reverse(outputstr.begin(), outputstr.end());
+		cout << outputstr;
 	}
 };
