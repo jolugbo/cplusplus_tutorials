@@ -158,6 +158,7 @@
     <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp" />
     <ClCompile Include="algos\amazon\maxArea.cpp" />
     <ClCompile Include="algos\amazon\minimalHeaviestSetA.cpp" />
+    <ClCompile Include="algos\amazon\numIslands.cpp" />
     <ClCompile Include="algos\amazon\romanToInt.cpp" />
     <ClCompile Include="algos\amazon\threeSum.cpp" />
     <ClCompile Include="algos\amazon\twosums.cpp" />

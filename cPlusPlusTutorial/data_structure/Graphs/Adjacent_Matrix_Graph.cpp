@@ -4,18 +4,18 @@
 using namespace std;
 class Adjacent_Matrix_Graph {
 public:
-	Adjacent_Matrix_Graph(int vertices,int edges) {
-		vector<vector<int>>matrix(vertices,vector<int>(vertices,0));
+	Adjacent_Matrix_Graph(vector<vector<int>>matrix) {
+		/*vector<vector<int>>matrix(vertices,vector<int>(vertices,0));
 		for (int i = 1; i <= edges; i++)
 		{
 			int fv, sv;
 			cin >> fv >> sv;
 			matrix[fv][sv] = 1;
 			matrix[sv][fv] = 1;
-		}
-		vector<bool> visited(vertices,false);
-		printDisconnectedGraph(matrix, vertices);
-		//printGraphDFS(matrix, 0, visited);
+		}*/
+		vector<bool> visited(matrix.size(),false);
+		//printDisconnectedGraph(matrix, vertices);
+		printGraphDFS(matrix, 0, visited);
 		//printGraphBFS(matrix, 0, visited);
 	}
 	void printDisconnectedGraph(vector<vector<int>> matrix, int vertices) {
@@ -45,7 +45,6 @@ public:
 		return count;
 	}
 	void printGraphDFS(vector<vector<int>> matrix, int startingVertics, vector<bool>& visited) {
-		cout << startingVertics;
 		int size = matrix.size();
 		visited[startingVertics] = true;
 		for (int i = 0; i < size; i++)

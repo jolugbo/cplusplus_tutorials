@@ -6,16 +6,20 @@ template<typename T>
 class Generic_Tree {
 public:
 	T data;
+
 	vector<Generic_Tree<T>*> children;
+
 	Generic_Tree(T value) {
 		data = value;
 	}
+
 	~ Generic_Tree() {
 		for (int i = 0; i < children.size(); i++)
 		{
 			delete children.at(i);
 		}
 	}
+
 	void PrintTreeRecursively(Generic_Tree* tree) {
 		cout << tree->data << ": ";
 		for (int i = 0; i < tree->children.size(); i++)
@@ -28,6 +32,7 @@ public:
 			PrintTreeRecursively(tree->children[i]);
 		}
 	}
+
 	void PrintTreeLevelWise(Generic_Tree* tree) {
 		queue<Generic_Tree<int>*> q;
 		q.push(tree);
@@ -60,6 +65,7 @@ public:
 		}
 		return rootTree;
 	}
+
 	Generic_Tree* TakeInputLevelWise() {
 		cout << "Input root data " << endl;
 		int rootData;
@@ -87,6 +93,7 @@ public:
 		}
 		return root;
 	}
+
 	int CountNodes(Generic_Tree* tree) {
 		int nodeCount = 1;
 		for (int i = 0; i < tree->children.size(); i++)
@@ -95,6 +102,7 @@ public:
 		}
 		return nodeCount;
 	}
+
 	int HeightOfTree(Generic_Tree* tree) {
 		int height = 0;
 		for (int i = 0; i < tree->children.size(); i++)
@@ -103,6 +111,7 @@ public:
 		}
 		return height + 1;
 	}
+
 	void PrintAtKthPosition(Generic_Tree* tree,int k) {
 		if (tree == NULL)return;
 		if (k == 0) {
@@ -144,6 +153,7 @@ public:
 		}
 		cout << tree->data << endl;
 	}
+
 	void DeleteTree(Generic_Tree<int>* tree) {
 		for (int i = 0; i < tree->children.size(); i++)
 		{

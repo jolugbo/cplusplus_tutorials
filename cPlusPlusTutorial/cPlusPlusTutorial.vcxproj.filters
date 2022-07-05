@@ -384,6 +384,9 @@
     <ClCompile Include="algos\amazon\minimalHeaviestSetA.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="algos\amazon\numIslands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dynamicArray.hpp">
