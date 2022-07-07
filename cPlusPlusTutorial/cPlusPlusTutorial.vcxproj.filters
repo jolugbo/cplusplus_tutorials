@@ -270,7 +270,7 @@
     <ClCompile Include="algos\searchAlgos\TownJudge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gold\ParseArrayToVector.cpp">
+    <ClCompile Include="gold\ParseArrayToVector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\searchAlgos\TwoSums.cpp">
@@ -282,7 +282,7 @@
     <ClCompile Include="algos\sortAlgos\TopologicalSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gold\Sort_Matrix.cpp">
+    <ClCompile Include="gold\Sort_Matrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\LongestUniqueLengthInString.cpp">
@@ -294,7 +294,7 @@
     <ClCompile Include="algos\random_codility\LongestPalindromic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gold\AllSubstringOfString.cpp">
+    <ClCompile Include="gold\AllSubstringOfString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\random_codility\ZigzagConvo.cpp">
@@ -385,6 +385,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="algos\amazon\numIslands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gold\vectorArithmetics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

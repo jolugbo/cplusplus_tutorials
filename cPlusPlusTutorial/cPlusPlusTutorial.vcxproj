@@ -267,9 +267,10 @@
     <ClCompile Include="data_structure\Trees\Vector_Revisited.cpp" />
     <ClCompile Include="dynamicArray.cpp" />
     <ClCompile Include="fractor.cpp" />
-    <ClCompile Include="Gold\AllSubstringOfString.cpp" />
-    <ClCompile Include="Gold\ParseArrayToVector.cpp" />
-    <ClCompile Include="Gold\Sort_Matrix.cpp" />
+    <ClCompile Include="gold\AllSubstringOfString.cpp" />
+    <ClCompile Include="gold\ParseArrayToVector.cpp" />
+    <ClCompile Include="gold\Sort_Matrix.cpp" />
+    <ClCompile Include="gold\vectorArithmetics.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="product.cpp" />
     <ClCompile Include="algos\random_codility\SpiralMatrix.cpp" />
