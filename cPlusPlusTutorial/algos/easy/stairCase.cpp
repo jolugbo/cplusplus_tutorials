@@ -1,0 +1,5 @@
+class stairCase {
+public:
+	stairCase() {
+	}
+};

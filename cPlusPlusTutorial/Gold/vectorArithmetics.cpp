@@ -9,8 +9,14 @@ public:
 	vectorArithmetics() {
 
 	}
-	void vectorAccumulate(vector<int> input) {
-		cout<< accumulate(input.begin(), input.end(), 0);
+	void vectorAccumulate(vector<long> input) {
+		cout<< accumulate(input.begin(), input.end(), 0ll) <<endl;
+		long resp = 0;
+		for (int i = 1; i < input[0]; i++)
+		{
+			resp += input[1];
+		}
+		cout << resp;
 	}
 	void lcmCalculator(int a, int b) {
 		cout << lcm(a, b);

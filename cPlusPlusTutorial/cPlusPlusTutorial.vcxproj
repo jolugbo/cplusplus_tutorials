@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="algos\amazon\convertToWords.cpp" />
+    <ClCompile Include="algos\easy\diagonalDifference.cpp" />
     <ClCompile Include="algos\amazon\firstUniqChar.cpp" />
     <ClCompile Include="algos\amazon\IntToRoman.cpp" />
     <ClCompile Include="algos\amazon\lengthOfLongestSubstring.cpp" />
@@ -164,6 +165,9 @@
     <ClCompile Include="algos\amazon\twosums.cpp" />
     <ClCompile Include="algos\dynamic_programming\EditDistance.cpp" />
     <ClCompile Include="algos\dynamic_programming\Fibonacci_Upgraded.cpp" />
+    <ClCompile Include="algos\easy\plusMinus.cpp" />
+    <ClCompile Include="algos\easy\stairCase.cpp" />
+    <ClCompile Include="algos\easy\TimeConversion.cpp" />
     <ClCompile Include="algos\linked_list\GetIntersectionNode.cpp" />
     <ClCompile Include="algos\random_codility\DivideTwoIntegers.cpp" />
     <ClCompile Include="algos\random_codility\HasAllValidBinary.cpp" />
